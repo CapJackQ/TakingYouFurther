@@ -16,7 +16,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.parentViewController.navigationItem.title = @"我的";
+    
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settingIcon"]
+                                                             style:UIBarButtonItemStyleDone
+                                                            target:self
+                                                            action:@selector(leftAction)];
+    self.tabBarController.navigationItem.leftBarButtonItem = left;
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"NotificationIcon"]
+                                                              style:UIBarButtonItemStyleDone
+                                                             target:self
+                                                             action:@selector(rightAction)];
+    self.tabBarController.navigationItem.rightBarButtonItem = right;
+}
+
+#pragma - mark - 设置和消息按钮
+
+- (void)leftAction {
+    
+}
+
+- (void)rightAction {
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.parentViewController.navigationItem.title = nil;
+    
+    self.tabBarController.navigationItem.leftBarButtonItem = nil;
+    
+    self.tabBarController.navigationItem.rightBarButtonItem = nil;
 }
 
 - (void)didReceiveMemoryWarning {
