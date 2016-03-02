@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C22509CA1C85C1E20069B350 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22509C81C85C1E20069B350 /* UserTableViewCell.m */; };
+		C22509CB1C85C1E20069B350 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22509C91C85C1E20069B350 /* UserTableViewCell.xib */; };
+		C22509D31C85C71F0069B350 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C22509D21C85C71F0069B350 /* UserModel.m */; };
 		C2431EF01C84672A0061FAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EEF1C84672A0061FAB1 /* main.m */; };
 		C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2431EF71C84672A0061FAB1 /* Main.storyboard */; };
 		C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2431EFA1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld */; };
@@ -30,6 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C22509C71C85C1E20069B350 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		C22509C81C85C1E20069B350 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		C22509C91C85C1E20069B350 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		C22509D11C85C71F0069B350 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		C22509D21C85C71F0069B350 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		C2431EEB1C84672A0061FAB1 /* TakingYouFurther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakingYouFurther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2431EEF1C84672A0061FAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2431EF81C84672A0061FAB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				C2431F1C1C8468BE0061FAB1 /* file3 */,
+				C22509D11C85C71F0069B350 /* UserModel.h */,
+				C22509D21C85C71F0069B350 /* UserModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +227,9 @@
 			isa = PBXGroup;
 			children = (
 				C2431F261C8468E60061FAB1 /* file7 */,
+				C22509C71C85C1E20069B350 /* UserTableViewCell.h */,
+				C22509C81C85C1E20069B350 /* UserTableViewCell.m */,
+				C22509C91C85C1E20069B350 /* UserTableViewCell.xib */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -290,6 +303,7 @@
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2431F1F1C8468C60061FAB1 /* file4 in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* file3 in Resources */,
+				C22509CB1C85C1E20069B350 /* UserTableViewCell.xib in Resources */,
 				C2431F251C8468DD0061FAB1 /* file6 in Resources */,
 				C2431F211C8468CE0061FAB1 /* file5 in Resources */,
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
@@ -310,11 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22509CA1C85C1E20069B350 /* UserTableViewCell.m in Sources */,
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
 				C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */,
 				C2431F171C84687E0061FAB1 /* AppDelegate.m in Sources */,
+				C22509D31C85C71F0069B350 /* UserModel.m in Sources */,
 				C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,14 +6,29 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLLUserViewController">
             <connections>
+                <outlet property="tableview" destination="mZb-bs-iiN" id="NnN-mz-sxi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="64" width="600" height="536"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mZb-bs-iiN">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="0.50520833330000003" green="0.1200818147" blue="0.005468206374" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mZb-bs-iiN" secondAttribute="bottom" id="2Zd-nN-ctV"/>
+                <constraint firstAttribute="trailing" secondItem="mZb-bs-iiN" secondAttribute="trailing" id="AO5-Lb-Erx"/>
+                <constraint firstItem="mZb-bs-iiN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="W6n-bp-WAM"/>
+                <constraint firstItem="mZb-bs-iiN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="prO-zt-3nS"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
         </view>
     </objects>
 </document>
