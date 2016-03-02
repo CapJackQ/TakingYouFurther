@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C214DBBF1C872021000C269E /* WLLSearchedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C214DBBD1C872021000C269E /* WLLSearchedCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C214DBC01C872021000C269E /* WLLSearchedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C214DBBE1C872021000C269E /* WLLSearchedCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C214DBC41C872A2C000C269E /* WLLGuidanceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C214DBC21C872A2C000C269E /* WLLGuidanceCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C214DBC51C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C214DBC31C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C2431EF01C84672A0061FAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EEF1C84672A0061FAB1 /* main.m */; };
 		C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2431EF71C84672A0061FAB1 /* Main.storyboard */; };
 		C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2431EFA1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld */; };
@@ -19,7 +23,6 @@
 		C2431F1F1C8468C60061FAB1 /* File4 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F1E1C8468C60061FAB1 /* File4 */; settings = {ASSET_TAGS = (); }; };
 		C2431F211C8468CE0061FAB1 /* File5 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F201C8468CE0061FAB1 /* File5 */; settings = {ASSET_TAGS = (); }; };
 		C2431F251C8468DD0061FAB1 /* File6 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F241C8468DD0061FAB1 /* File6 */; settings = {ASSET_TAGS = (); }; };
-		C2431F271C8468E60061FAB1 /* File7 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F261C8468E60061FAB1 /* File7 */; settings = {ASSET_TAGS = (); }; };
 		C2431F291C8468EE0061FAB1 /* File8 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F281C8468EE0061FAB1 /* File8 */; settings = {ASSET_TAGS = (); }; };
 		C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -30,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C214DBBC1C872021000C269E /* WLLSearchedCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLSearchedCollectionViewCell.h; sourceTree = "<group>"; };
+		C214DBBD1C872021000C269E /* WLLSearchedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLSearchedCollectionViewCell.m; sourceTree = "<group>"; };
+		C214DBBE1C872021000C269E /* WLLSearchedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLSearchedCollectionViewCell.xib; sourceTree = "<group>"; };
+		C214DBC11C872A2C000C269E /* WLLGuidanceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLGuidanceCollectionViewCell.h; sourceTree = "<group>"; };
+		C214DBC21C872A2C000C269E /* WLLGuidanceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLGuidanceCollectionViewCell.m; sourceTree = "<group>"; };
+		C214DBC31C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLGuidanceCollectionViewCell.xib; sourceTree = "<group>"; };
 		C2431EEB1C84672A0061FAB1 /* TakingYouFurther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakingYouFurther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2431EEF1C84672A0061FAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2431EF81C84672A0061FAB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +54,6 @@
 		C2431F1E1C8468C60061FAB1 /* File4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File4; sourceTree = "<group>"; };
 		C2431F201C8468CE0061FAB1 /* File5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File5; sourceTree = "<group>"; };
 		C2431F241C8468DD0061FAB1 /* File6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File6; sourceTree = "<group>"; };
-		C2431F261C8468E60061FAB1 /* File7 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File7; sourceTree = "<group>"; };
 		C2431F281C8468EE0061FAB1 /* File8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File8; sourceTree = "<group>"; };
 		C2431F2F1C846B870061FAB1 /* WLLHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLHomePageViewController.h; sourceTree = "<group>"; };
 		C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLHomePageViewController.m; sourceTree = "<group>"; };
@@ -69,6 +77,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C214DBB61C871FFB000C269E /* HomePageViews */ = {
+			isa = PBXGroup;
+			children = (
+				C214DBBC1C872021000C269E /* WLLSearchedCollectionViewCell.h */,
+				C214DBBD1C872021000C269E /* WLLSearchedCollectionViewCell.m */,
+				C214DBBE1C872021000C269E /* WLLSearchedCollectionViewCell.xib */,
+				C214DBC11C872A2C000C269E /* WLLGuidanceCollectionViewCell.h */,
+				C214DBC21C872A2C000C269E /* WLLGuidanceCollectionViewCell.m */,
+				C214DBC31C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib */,
+			);
+			path = HomePageViews;
+			sourceTree = "<group>";
+		};
 		C2431EE21C84672A0061FAB1 = {
 			isa = PBXGroup;
 			children = (
@@ -216,7 +237,7 @@
 		C2431F151C84687E0061FAB1 /* BaseViews */ = {
 			isa = PBXGroup;
 			children = (
-				C2431F261C8468E60061FAB1 /* File7 */,
+				C214DBB61C871FFB000C269E /* HomePageViews */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -287,13 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2431F191C8468A90061FAB1 /* File1 in Resources */,
+				C214DBC51C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2431F1F1C8468C60061FAB1 /* File4 in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* File3 in Resources */,
+				C214DBC01C872021000C269E /* WLLSearchedCollectionViewCell.xib in Resources */,
 				C2431F251C8468DD0061FAB1 /* File6 in Resources */,
 				C2431F211C8468CE0061FAB1 /* File5 in Resources */,
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
-				C2431F271C8468E60061FAB1 /* File7 in Resources */,
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
 				C2431F291C8468EE0061FAB1 /* File8 in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
@@ -310,10 +332,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C214DBC41C872A2C000C269E /* WLLGuidanceCollectionViewCell.m in Sources */,
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
 				C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */,
+				C214DBBF1C872021000C269E /* WLLSearchedCollectionViewCell.m in Sources */,
 				C2431F171C84687E0061FAB1 /* AppDelegate.m in Sources */,
 				C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */,
 			);
