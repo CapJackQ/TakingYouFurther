@@ -1,0 +1,108 @@
+//
+//  WLLLogInViewController.m
+//  TakingYouFurther
+//
+//  Created by lanou3g on 16/3/2.
+//  Copyright © 2016年 lanou3g. All rights reserved.
+//
+
+#import "WLLLogInViewController.h"
+
+@interface WLLLogInViewController ()
+
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *trailingContraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonTwoLeadingContraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonThreeTrailingContraint;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonOne;
+@property (weak, nonatomic) IBOutlet UIButton *buttonTwo;
+@property (weak, nonatomic) IBOutlet UIButton *buttonThree;
+@property (weak, nonatomic) IBOutlet UIButton *logInButton;
+@property (weak, nonatomic) IBOutlet UITextField *accountTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passWordTextField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segement;
+@property (weak, nonatomic) IBOutlet UIView *phoneVerify;
+
+@end
+@implementation WLLLogInViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    
+    
+    CGFloat screenWidth = self.view.frame.size.width;
+    CGFloat trailingWidth = self.trailingContraint.constant;
+    CGFloat buttonWidth = self.buttonOne.frame.size.width;
+    CGFloat constantSpace = (screenWidth - 2 * trailingWidth - 4 * buttonWidth) / 3;
+    
+    self.buttonTwo.translatesAutoresizingMaskIntoConstraints = NO;
+    self.buttonTwoLeadingContraint.constant = constantSpace;
+    self.buttonTwoLeadingContraint.active = YES;
+    
+    self.buttonThree.translatesAutoresizingMaskIntoConstraints = NO;
+    self.buttonThreeTrailingContraint.constant = constantSpace;
+    self.buttonThreeTrailingContraint.active = YES;
+    
+    //是view从(0, 64)开始
+    self.edgesForExtendedLayout = NO;
+    
+    //设置边框width和颜色
+    self.logInButton.layer.borderWidth = 2.0;
+    self.logInButton.layer.borderColor = [UIColor greenColor].CGColor;
+    
+   
+    self.accountTextField.layer.borderWidth = 1.0;
+    self.accountTextField.layer.borderColor = [UIColor grayColor].CGColor;
+    self.accountTextField.borderStyle = UITextBorderStyleRoundedRect;
+    
+    self.passWordTextField.layer.borderWidth = 1.0;
+    self.passWordTextField.layer.borderColor = [UIColor grayColor].CGColor;
+    self.passWordTextField.borderStyle = UITextBorderStyleRoundedRect;
+    
+    self.segement.selectedSegmentIndex = 0;
+    [self.segement addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
+    self.phoneVerify.hidden = YES;
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)switchAction:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0: {
+            if (self.phoneVerify.hidden == YES) {
+                return;
+            } else {
+                self.phoneVerify.hidden = YES;
+            }
+            break;
+        }
+        case 1: {
+            if (self.phoneVerify.hidden == NO) {
+                return;
+            } else {
+                self.phoneVerify.hidden = NO;
+            }
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

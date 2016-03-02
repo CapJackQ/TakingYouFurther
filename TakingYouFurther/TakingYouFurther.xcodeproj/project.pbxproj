@@ -30,6 +30,8 @@
 		C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */; };
 		C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */; };
 		C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */; };
+		C2A6578E1C868C7000A35999 /* WLLLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */; };
+		C2A6578F1C868C7000A35999 /* WLLLogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,9 @@
 		C2431F391C846BD60061FAB1 /* WLLUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewController.h; sourceTree = "<group>"; };
 		C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewController.m; sourceTree = "<group>"; };
 		C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLUserViewController.xib; sourceTree = "<group>"; };
+		C2A6578B1C868C7000A35999 /* WLLLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLLogInViewController.h; sourceTree = "<group>"; };
+		C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLLogInViewController.m; sourceTree = "<group>"; };
+		C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLLogInViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +215,9 @@
 			isa = PBXGroup;
 			children = (
 				C2431F241C8468DD0061FAB1 /* file6 */,
+				C2A6578B1C868C7000A35999 /* WLLLogInViewController.h */,
+				C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */,
+				C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */,
 			);
 			path = NormalViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +309,7 @@
 			files = (
 				C2431F191C8468A90061FAB1 /* file1 in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
+				C2A6578F1C868C7000A35999 /* WLLLogInViewController.xib in Resources */,
 				C2431F1F1C8468C60061FAB1 /* file4 in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* file3 in Resources */,
 				C22509CB1C85C1E20069B350 /* UserTableViewCell.xib in Resources */,
@@ -330,6 +339,7 @@
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
 				C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */,
 				C2431F171C84687E0061FAB1 /* AppDelegate.m in Sources */,
+				C2A6578E1C868C7000A35999 /* WLLLogInViewController.m in Sources */,
 				C22509D31C85C71F0069B350 /* UserModel.m in Sources */,
 				C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */,
 			);

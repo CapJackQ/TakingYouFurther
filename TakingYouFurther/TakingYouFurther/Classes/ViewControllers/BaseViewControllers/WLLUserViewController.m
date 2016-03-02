@@ -9,6 +9,7 @@
 #import "WLLUserViewController.h"
 #import "UserModel.h"
 #import "UserTableViewCell.h"
+#import "WLLLogInViewController.h"
 
 #define kReuseIdentifier @"CWCell"
 
@@ -175,6 +176,12 @@
     [self.data addObject:array5];
     
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WLLLogInViewController *logInVC = [[WLLLogInViewController alloc] initWithNibName:@"WLLLogInViewController" bundle:nil];
+    [self.navigationController pushViewController:logInVC animated:YES];
+}
+
 /*
 #pragma mark - Navigation
 
