@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recommend_item" id="gTV-IL-0wX" customClass="WLLRecommendDestinationCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="229" height="305"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="229" height="305"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZ2-Fo-Qps">
+                        <rect key="frame" x="0.0" y="0.0" width="229" height="229"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.50520833330000003" green="0.46814966190000001" blue="0.1823215326" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="tZ2-Fo-Qps" secondAttribute="height" id="yJh-4M-yeZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxS-HZ-9zY">
+                        <rect key="frame" x="93" y="244" width="42" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-bH-Ylc">
+                        <rect key="frame" x="-1" y="275" width="230" height="16"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <color key="backgroundColor" red="0.88457073500000005" green="0.82565792599999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="tZ2-Fo-Qps" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="5Lq-mn-QzF"/>
+                <constraint firstItem="v4b-bH-Ylc" firstAttribute="centerX" secondItem="tZ2-Fo-Qps" secondAttribute="centerX" id="9hH-4L-7PL"/>
+                <constraint firstItem="tZ2-Fo-Qps" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="E82-Rj-Qvq"/>
+                <constraint firstItem="tZ2-Fo-Qps" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="M7x-6A-xML"/>
+                <constraint firstItem="sxS-HZ-9zY" firstAttribute="centerX" secondItem="tZ2-Fo-Qps" secondAttribute="centerX" id="Sgz-0d-eRf"/>
+                <constraint firstItem="v4b-bH-Ylc" firstAttribute="top" secondItem="sxS-HZ-9zY" secondAttribute="bottom" constant="10" id="Xct-nc-yav"/>
+                <constraint firstItem="sxS-HZ-9zY" firstAttribute="top" secondItem="tZ2-Fo-Qps" secondAttribute="bottom" constant="15" id="dfH-aU-NLK"/>
+                <constraint firstItem="v4b-bH-Ylc" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="oeO-KA-Vg1"/>
+            </constraints>
+            <size key="customSize" width="229" height="305"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="v4b-bH-Ylc" id="aUt-bg-gvJ"/>
+                <outlet property="monthLabel" destination="sxS-HZ-9zY" id="m2F-TS-6xY"/>
+                <outlet property="recommendImage" destination="tZ2-Fo-Qps" id="AHi-Am-Zjy"/>
+            </connections>
+            <point key="canvasLocation" x="249.5" y="327.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searched_cell" rowHeight="129" id="KGk-i7-Jjw" customClass="WLLSearchedTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mVK-8g-KDs">
+                        <rect key="frame" x="0.0" y="0.0" width="404" height="128"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.88457073500000005" green="0.82565792599999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P5X-Oe-aQ2">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="mVK-8g-KDs" secondAttribute="bottom" id="2nU-NV-jAt"/>
+                    <constraint firstItem="mVK-8g-KDs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TzP-gt-ESt"/>
+                    <constraint firstItem="mVK-8g-KDs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ugj-wW-HNE"/>
+                    <constraint firstAttribute="trailing" secondItem="mVK-8g-KDs" secondAttribute="trailing" id="zTR-pW-dKf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="searchedCollectionView" destination="mVK-8g-KDs" id="9Bv-ac-gei"/>
+            </connections>
+            <point key="canvasLocation" x="296" y="212.5"/>
+        </tableViewCell>
+    </objects>
+</document>

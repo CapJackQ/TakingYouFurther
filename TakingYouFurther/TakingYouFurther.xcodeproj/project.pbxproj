@@ -30,6 +30,21 @@
 		C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C26E9BA31C87D086001EACFB /* WLLTodayNotesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BA11C87D086001EACFB /* WLLTodayNotesTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C26E9BA41C87D086001EACFB /* WLLTodayNotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BA21C87D086001EACFB /* WLLTodayNotesTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C26E9BA81C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BA61C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C26E9BA91C87E821001EACFB /* WLLPopDestinationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BA71C87E821001EACFB /* WLLPopDestinationCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C26E9BAD1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BAB1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C26E9BAE1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BAC1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C26E9BF21C886CF3001EACFB /* WLLFistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BF01C886CF3001EACFB /* WLLFistTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C26E9BF31C886CF3001EACFB /* WLLFistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BF11C886CF3001EACFB /* WLLFistTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C26E9BF51C886F92001EACFB /* 6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BF41C886F92001EACFB /* 6.jpeg */; settings = {ASSET_TAGS = (); }; };
+		C26E9BF91C887317001EACFB /* WLLSearchedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BF71C887317001EACFB /* WLLSearchedTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C26E9BFA1C887317001EACFB /* WLLSearchedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BF81C887317001EACFB /* WLLSearchedTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C26E9BFE1C887A57001EACFB /* WLLGuidanceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BFC1C887A57001EACFB /* WLLGuidanceTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C26E9BFF1C887A57001EACFB /* WLLGuidanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BFD1C887A57001EACFB /* WLLGuidanceTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C26E9C031C8889DE001EACFB /* WLLPopDstinationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9C011C8889DE001EACFB /* WLLPopDstinationTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C26E9C041C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9C021C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +79,28 @@
 		C2431F391C846BD60061FAB1 /* WLLUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewController.h; sourceTree = "<group>"; };
 		C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewController.m; sourceTree = "<group>"; };
 		C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLUserViewController.xib; sourceTree = "<group>"; };
+		C26E9BA01C87D086001EACFB /* WLLTodayNotesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLTodayNotesTableViewCell.h; sourceTree = "<group>"; };
+		C26E9BA11C87D086001EACFB /* WLLTodayNotesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLTodayNotesTableViewCell.m; sourceTree = "<group>"; };
+		C26E9BA21C87D086001EACFB /* WLLTodayNotesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLTodayNotesTableViewCell.xib; sourceTree = "<group>"; };
+		C26E9BA51C87E821001EACFB /* WLLPopDestinationCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPopDestinationCollectionViewCell.h; sourceTree = "<group>"; };
+		C26E9BA61C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPopDestinationCollectionViewCell.m; sourceTree = "<group>"; };
+		C26E9BA71C87E821001EACFB /* WLLPopDestinationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPopDestinationCollectionViewCell.xib; sourceTree = "<group>"; };
+		C26E9BAA1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLRecommendDestinationCollectionViewCell.h; sourceTree = "<group>"; };
+		C26E9BAB1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLRecommendDestinationCollectionViewCell.m; sourceTree = "<group>"; };
+		C26E9BAC1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLRecommendDestinationCollectionViewCell.xib; sourceTree = "<group>"; };
+		C26E9BEF1C886CF3001EACFB /* WLLFistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLFistTableViewCell.h; sourceTree = "<group>"; };
+		C26E9BF01C886CF3001EACFB /* WLLFistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLFistTableViewCell.m; sourceTree = "<group>"; };
+		C26E9BF11C886CF3001EACFB /* WLLFistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLFistTableViewCell.xib; sourceTree = "<group>"; };
+		C26E9BF41C886F92001EACFB /* 6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpeg; sourceTree = "<group>"; };
+		C26E9BF61C887317001EACFB /* WLLSearchedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLSearchedTableViewCell.h; sourceTree = "<group>"; };
+		C26E9BF71C887317001EACFB /* WLLSearchedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLSearchedTableViewCell.m; sourceTree = "<group>"; };
+		C26E9BF81C887317001EACFB /* WLLSearchedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLSearchedTableViewCell.xib; sourceTree = "<group>"; };
+		C26E9BFB1C887A57001EACFB /* WLLGuidanceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLGuidanceTableViewCell.h; sourceTree = "<group>"; };
+		C26E9BFC1C887A57001EACFB /* WLLGuidanceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLGuidanceTableViewCell.m; sourceTree = "<group>"; };
+		C26E9BFD1C887A57001EACFB /* WLLGuidanceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLGuidanceTableViewCell.xib; sourceTree = "<group>"; };
+		C26E9C001C8889DE001EACFB /* WLLPopDstinationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPopDstinationTableViewCell.h; sourceTree = "<group>"; };
+		C26E9C011C8889DE001EACFB /* WLLPopDstinationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPopDstinationTableViewCell.m; sourceTree = "<group>"; };
+		C26E9C021C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPopDstinationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +117,33 @@
 		C214DBB61C871FFB000C269E /* HomePageViews */ = {
 			isa = PBXGroup;
 			children = (
+				C26E9BEF1C886CF3001EACFB /* WLLFistTableViewCell.h */,
+				C26E9BF01C886CF3001EACFB /* WLLFistTableViewCell.m */,
+				C26E9BF11C886CF3001EACFB /* WLLFistTableViewCell.xib */,
+				C26E9BF61C887317001EACFB /* WLLSearchedTableViewCell.h */,
+				C26E9BF71C887317001EACFB /* WLLSearchedTableViewCell.m */,
+				C26E9BF81C887317001EACFB /* WLLSearchedTableViewCell.xib */,
 				C214DBBC1C872021000C269E /* WLLSearchedCollectionViewCell.h */,
 				C214DBBD1C872021000C269E /* WLLSearchedCollectionViewCell.m */,
 				C214DBBE1C872021000C269E /* WLLSearchedCollectionViewCell.xib */,
+				C26E9BFB1C887A57001EACFB /* WLLGuidanceTableViewCell.h */,
+				C26E9BFC1C887A57001EACFB /* WLLGuidanceTableViewCell.m */,
+				C26E9BFD1C887A57001EACFB /* WLLGuidanceTableViewCell.xib */,
 				C214DBC11C872A2C000C269E /* WLLGuidanceCollectionViewCell.h */,
 				C214DBC21C872A2C000C269E /* WLLGuidanceCollectionViewCell.m */,
 				C214DBC31C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib */,
+				C26E9BA01C87D086001EACFB /* WLLTodayNotesTableViewCell.h */,
+				C26E9BA11C87D086001EACFB /* WLLTodayNotesTableViewCell.m */,
+				C26E9BA21C87D086001EACFB /* WLLTodayNotesTableViewCell.xib */,
+				C26E9C001C8889DE001EACFB /* WLLPopDstinationTableViewCell.h */,
+				C26E9C011C8889DE001EACFB /* WLLPopDstinationTableViewCell.m */,
+				C26E9C021C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib */,
+				C26E9BA51C87E821001EACFB /* WLLPopDestinationCollectionViewCell.h */,
+				C26E9BA61C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m */,
+				C26E9BA71C87E821001EACFB /* WLLPopDestinationCollectionViewCell.xib */,
+				C26E9BAA1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.h */,
+				C26E9BAB1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.m */,
+				C26E9BAC1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib */,
 			);
 			path = HomePageViews;
 			sourceTree = "<group>";
@@ -207,6 +265,7 @@
 				C2431F2F1C846B870061FAB1 /* WLLHomePageViewController.h */,
 				C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */,
 				C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */,
+				C26E9BF41C886F92001EACFB /* 6.jpeg */,
 				C2431F341C846BBE0061FAB1 /* WLLDestinationViewController.h */,
 				C2431F351C846BBE0061FAB1 /* WLLDestinationViewController.m */,
 				C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */,
@@ -307,18 +366,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26E9BF51C886F92001EACFB /* 6.jpeg in Resources */,
 				C2431F191C8468A90061FAB1 /* File1 in Resources */,
 				C214DBC51C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2431F1F1C8468C60061FAB1 /* File4 in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* File3 in Resources */,
+				C26E9BFA1C887317001EACFB /* WLLSearchedTableViewCell.xib in Resources */,
 				C214DBC01C872021000C269E /* WLLSearchedCollectionViewCell.xib in Resources */,
+				C26E9BA91C87E821001EACFB /* WLLPopDestinationCollectionViewCell.xib in Resources */,
 				C2431F251C8468DD0061FAB1 /* File6 in Resources */,
 				C2431F211C8468CE0061FAB1 /* File5 in Resources */,
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
+				C26E9BF31C886CF3001EACFB /* WLLFistTableViewCell.xib in Resources */,
 				C2431F291C8468EE0061FAB1 /* File8 in Resources */,
+				C26E9BA41C87D086001EACFB /* WLLTodayNotesTableViewCell.xib in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
+				C26E9BFF1C887A57001EACFB /* WLLGuidanceTableViewCell.xib in Resources */,
+				C26E9C041C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib in Resources */,
+				C26E9BAE1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib in Resources */,
 				C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */,
 				C2431F1B1C8468B40061FAB1 /* File2 in Resources */,
 				C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */,
@@ -333,13 +400,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C214DBC41C872A2C000C269E /* WLLGuidanceCollectionViewCell.m in Sources */,
+				C26E9C031C8889DE001EACFB /* WLLPopDstinationTableViewCell.m in Sources */,
+				C26E9BAD1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.m in Sources */,
+				C26E9BA31C87D086001EACFB /* WLLTodayNotesTableViewCell.m in Sources */,
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
 				C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */,
+				C26E9BFE1C887A57001EACFB /* WLLGuidanceTableViewCell.m in Sources */,
 				C214DBBF1C872021000C269E /* WLLSearchedCollectionViewCell.m in Sources */,
+				C26E9BA81C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m in Sources */,
+				C26E9BF21C886CF3001EACFB /* WLLFistTableViewCell.m in Sources */,
 				C2431F171C84687E0061FAB1 /* AppDelegate.m in Sources */,
 				C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */,
+				C26E9BF91C887317001EACFB /* WLLSearchedTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
