@@ -10,6 +10,8 @@
 #import "UserModel.h"
 #import "UserTableViewCell.h"
 #import "WLLLogInViewController.h"
+#import "WLLMyDownloadViewController.h"
+#import "SettingInTableViewController.h"
 
 #define kReuseIdentifier @"CWCell"
 
@@ -26,7 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     [self update];
+    
     
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
@@ -57,7 +61,8 @@
 #pragma mark - 设置和消息按钮
 
 - (void)leftAction {
-    
+    SettingInTableViewController *stVC = [[SettingInTableViewController alloc] initWithNibName:@"SettingInTableViewController" bundle:nil];
+    [self.navigationController pushViewController:stVC animated:YES];
 }
 
 - (void)rightAction {
@@ -114,14 +119,32 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifier forIndexPath:indexPath];
     if (!cell) {
-        cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kReuseIdentifier];
+        cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kReuseIdentifier];
     }
     
     UserModel *model = self.data[indexPath.section][indexPath.row];
     cell.photoImageView.image = model.photoImage;
     cell.activityLabel.text = model.myActivity;
+
+    if (indexPath.section != 0) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 60;
+    }
+    return 30;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
 
 #pragma mark - 给self.data 数组添加数据，加载tableview
 
@@ -179,7 +202,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     WLLLogInViewController *logInVC = [[WLLLogInViewController alloc] initWithNibName:@"WLLLogInViewController" bundle:nil];
-    [self.navigationController pushViewController:logInVC animated:YES];
+    WLLMyDownloadViewController *downloadVC = [[WLLMyDownloadViewController alloc] initWithNibName:@"WLLMyDownloadViewController" bundle:nil];
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        [self.navigationController pushViewController:downloadVC animated:YES];
+    } else {
+        [self.navigationController pushViewController:logInVC animated:YES];
+    }
 }
 
 /*

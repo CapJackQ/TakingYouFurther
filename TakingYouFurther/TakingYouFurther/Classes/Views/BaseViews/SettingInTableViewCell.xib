@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="KGk-i7-Jjw" customClass="SettingInTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="let's go recommended" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr7-4j-Ybh">
+                        <rect key="frame" x="13" y="13" width="171" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="of0-cC-7hw">
+                        <rect key="frame" x="13" y="44" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="of0-cC-7hw" secondAttribute="height" multiplier="1:1" id="7U3-Rq-MAA"/>
+                        </constraints>
+                        <state key="normal" image="128recommendOne"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSl-cA-tSl">
+                        <rect key="frame" x="181" y="44" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="YSl-cA-tSl" secondAttribute="height" multiplier="1:1" id="mK3-mO-eUB"/>
+                        </constraints>
+                        <state key="normal" image="bookshelf_128px"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-7X-7Fj">
+                        <rect key="frame" x="97" y="44" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="KQm-7X-7Fj" secondAttribute="height" multiplier="1:1" id="gj2-ch-gVA"/>
+                        </constraints>
+                        <state key="normal" image="book_128px"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gr7-4j-Ybh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="98u-3F-kD9"/>
+                    <constraint firstItem="of0-cC-7hw" firstAttribute="top" secondItem="gr7-4j-Ybh" secondAttribute="bottom" constant="10" id="EJ5-Dl-cTn"/>
+                    <constraint firstItem="YSl-cA-tSl" firstAttribute="leading" secondItem="KQm-7X-7Fj" secondAttribute="trailing" constant="20" id="H71-d5-iU8"/>
+                    <constraint firstItem="of0-cC-7hw" firstAttribute="leading" secondItem="gr7-4j-Ybh" secondAttribute="leading" id="RCw-Mg-XLf"/>
+                    <constraint firstItem="gr7-4j-Ybh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="X3b-U7-P0v"/>
+                    <constraint firstItem="KQm-7X-7Fj" firstAttribute="leading" secondItem="of0-cC-7hw" secondAttribute="trailing" constant="20" id="fDm-ge-6pN"/>
+                    <constraint firstItem="KQm-7X-7Fj" firstAttribute="top" secondItem="of0-cC-7hw" secondAttribute="top" id="rx2-dX-bcW"/>
+                    <constraint firstItem="YSl-cA-tSl" firstAttribute="top" secondItem="of0-cC-7hw" secondAttribute="top" id="s9B-sU-VYd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buttonOne" destination="of0-cC-7hw" id="Oul-FO-meG"/>
+                <outlet property="buttonThree" destination="YSl-cA-tSl" id="d9b-cQ-ERb"/>
+                <outlet property="buttonTwo" destination="KQm-7X-7Fj" id="ptO-ze-2XX"/>
+            </connections>
+            <point key="canvasLocation" x="439" y="440.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="128recommendOne" width="64" height="64"/>
+        <image name="book_128px" width="64" height="64"/>
+        <image name="bookshelf_128px" width="64" height="64"/>
+    </resources>
+</document>

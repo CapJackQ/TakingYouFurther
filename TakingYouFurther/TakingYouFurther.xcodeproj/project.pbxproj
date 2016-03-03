@@ -32,6 +32,16 @@
 		C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */; };
 		C2A6578E1C868C7000A35999 /* WLLLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */; };
 		C2A6578F1C868C7000A35999 /* WLLLogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */; };
+		C2C56C041C880E32004F84AA /* WLLMyDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C021C880E32004F84AA /* WLLMyDownloadViewController.m */; };
+		C2C56C051C880E32004F84AA /* WLLMyDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C56C031C880E32004F84AA /* WLLMyDownloadViewController.xib */; };
+		C2C56C091C882B5A004F84AA /* SettingInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C071C882B5A004F84AA /* SettingInTableViewController.m */; };
+		C2C56C0A1C882B5A004F84AA /* SettingInTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C56C081C882B5A004F84AA /* SettingInTableViewController.xib */; };
+		C2C56C0E1C885C9A004F84AA /* SettingInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C0C1C885C9A004F84AA /* SettingInTableViewCell.m */; };
+		C2C56C0F1C885C9A004F84AA /* SettingInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C56C0D1C885C9A004F84AA /* SettingInTableViewCell.xib */; };
+		C2C56C121C8864ED004F84AA /* TheMoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C111C8864ED004F84AA /* TheMoreModel.m */; };
+		C2C56C151C8865BB004F84AA /* RecommendedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C141C8865BB004F84AA /* RecommendedModel.m */; };
+		C2C56C191C887BED004F84AA /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C171C887BED004F84AA /* NotificationViewController.m */; };
+		C2C56C1A1C887BED004F84AA /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C56C181C887BED004F84AA /* NotificationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +79,22 @@
 		C2A6578B1C868C7000A35999 /* WLLLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLLogInViewController.h; sourceTree = "<group>"; };
 		C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLLogInViewController.m; sourceTree = "<group>"; };
 		C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLLogInViewController.xib; sourceTree = "<group>"; };
+		C2C56C011C880E32004F84AA /* WLLMyDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMyDownloadViewController.h; sourceTree = "<group>"; };
+		C2C56C021C880E32004F84AA /* WLLMyDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMyDownloadViewController.m; sourceTree = "<group>"; };
+		C2C56C031C880E32004F84AA /* WLLMyDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLMyDownloadViewController.xib; sourceTree = "<group>"; };
+		C2C56C061C882B5A004F84AA /* SettingInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingInTableViewController.h; sourceTree = "<group>"; };
+		C2C56C071C882B5A004F84AA /* SettingInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingInTableViewController.m; sourceTree = "<group>"; };
+		C2C56C081C882B5A004F84AA /* SettingInTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingInTableViewController.xib; sourceTree = "<group>"; };
+		C2C56C0B1C885C9A004F84AA /* SettingInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingInTableViewCell.h; sourceTree = "<group>"; };
+		C2C56C0C1C885C9A004F84AA /* SettingInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingInTableViewCell.m; sourceTree = "<group>"; };
+		C2C56C0D1C885C9A004F84AA /* SettingInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingInTableViewCell.xib; sourceTree = "<group>"; };
+		C2C56C101C8864ED004F84AA /* TheMoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMoreModel.h; sourceTree = "<group>"; };
+		C2C56C111C8864ED004F84AA /* TheMoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheMoreModel.m; sourceTree = "<group>"; };
+		C2C56C131C8865BB004F84AA /* RecommendedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendedModel.h; sourceTree = "<group>"; };
+		C2C56C141C8865BB004F84AA /* RecommendedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendedModel.m; sourceTree = "<group>"; };
+		C2C56C161C887BED004F84AA /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		C2C56C171C887BED004F84AA /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		C2C56C181C887BED004F84AA /* NotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +192,10 @@
 				C2431F1C1C8468BE0061FAB1 /* file3 */,
 				C22509D11C85C71F0069B350 /* UserModel.h */,
 				C22509D21C85C71F0069B350 /* UserModel.m */,
+				C2C56C101C8864ED004F84AA /* TheMoreModel.h */,
+				C2C56C111C8864ED004F84AA /* TheMoreModel.m */,
+				C2C56C131C8865BB004F84AA /* RecommendedModel.h */,
+				C2C56C141C8865BB004F84AA /* RecommendedModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,6 +248,15 @@
 				C2A6578B1C868C7000A35999 /* WLLLogInViewController.h */,
 				C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */,
 				C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */,
+				C2C56C011C880E32004F84AA /* WLLMyDownloadViewController.h */,
+				C2C56C021C880E32004F84AA /* WLLMyDownloadViewController.m */,
+				C2C56C031C880E32004F84AA /* WLLMyDownloadViewController.xib */,
+				C2C56C061C882B5A004F84AA /* SettingInTableViewController.h */,
+				C2C56C071C882B5A004F84AA /* SettingInTableViewController.m */,
+				C2C56C081C882B5A004F84AA /* SettingInTableViewController.xib */,
+				C2C56C161C887BED004F84AA /* NotificationViewController.h */,
+				C2C56C171C887BED004F84AA /* NotificationViewController.m */,
+				C2C56C181C887BED004F84AA /* NotificationViewController.xib */,
 			);
 			path = NormalViewControllers;
 			sourceTree = "<group>";
@@ -238,6 +277,9 @@
 				C22509C71C85C1E20069B350 /* UserTableViewCell.h */,
 				C22509C81C85C1E20069B350 /* UserTableViewCell.m */,
 				C22509C91C85C1E20069B350 /* UserTableViewCell.xib */,
+				C2C56C0B1C885C9A004F84AA /* SettingInTableViewCell.h */,
+				C2C56C0C1C885C9A004F84AA /* SettingInTableViewCell.m */,
+				C2C56C0D1C885C9A004F84AA /* SettingInTableViewCell.xib */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -308,9 +350,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2431F191C8468A90061FAB1 /* file1 in Resources */,
+				C2C56C051C880E32004F84AA /* WLLMyDownloadViewController.xib in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2A6578F1C868C7000A35999 /* WLLLogInViewController.xib in Resources */,
 				C2431F1F1C8468C60061FAB1 /* file4 in Resources */,
+				C2C56C1A1C887BED004F84AA /* NotificationViewController.xib in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* file3 in Resources */,
 				C22509CB1C85C1E20069B350 /* UserTableViewCell.xib in Resources */,
 				C2431F251C8468DD0061FAB1 /* file6 in Resources */,
@@ -320,7 +364,9 @@
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
 				C2431F291C8468EE0061FAB1 /* file8 in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
+				C2C56C0A1C882B5A004F84AA /* SettingInTableViewController.xib in Resources */,
 				C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */,
+				C2C56C0F1C885C9A004F84AA /* SettingInTableViewCell.xib in Resources */,
 				C2431F1B1C8468B40061FAB1 /* file2 in Resources */,
 				C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */,
 			);
@@ -336,12 +382,18 @@
 				C22509CA1C85C1E20069B350 /* UserTableViewCell.m in Sources */,
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
+				C2C56C121C8864ED004F84AA /* TheMoreModel.m in Sources */,
+				C2C56C091C882B5A004F84AA /* SettingInTableViewController.m in Sources */,
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
+				C2C56C041C880E32004F84AA /* WLLMyDownloadViewController.m in Sources */,
 				C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */,
+				C2C56C191C887BED004F84AA /* NotificationViewController.m in Sources */,
 				C2431F171C84687E0061FAB1 /* AppDelegate.m in Sources */,
+				C2C56C151C8865BB004F84AA /* RecommendedModel.m in Sources */,
 				C2A6578E1C868C7000A35999 /* WLLLogInViewController.m in Sources */,
 				C22509D31C85C71F0069B350 /* UserModel.m in Sources */,
 				C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */,
+				C2C56C0E1C885C9A004F84AA /* SettingInTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

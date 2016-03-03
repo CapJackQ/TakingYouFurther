@@ -23,13 +23,18 @@
 @property (weak, nonatomic) IBOutlet UITextField *passWordTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segement;
 @property (weak, nonatomic) IBOutlet UIView *phoneVerify;
+@property (weak, nonatomic) IBOutlet UIView *phoneNumber;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberIdentifyTextField;
 
+@property (weak, nonatomic) IBOutlet UIButton *phoneLogInButton;
 @end
 @implementation WLLLogInViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"无限视觉";
     
     
     CGFloat screenWidth = self.view.frame.size.width;
@@ -52,6 +57,9 @@
     self.logInButton.layer.borderWidth = 2.0;
     self.logInButton.layer.borderColor = [UIColor greenColor].CGColor;
     
+    self.phoneLogInButton.layer.borderWidth = 2.0;
+    self.phoneLogInButton.layer.borderColor = [UIColor greenColor].CGColor;
+    
    
     self.accountTextField.layer.borderWidth = 1.0;
     self.accountTextField.layer.borderColor = [UIColor grayColor].CGColor;
@@ -64,25 +72,23 @@
     self.segement.selectedSegmentIndex = 0;
     [self.segement addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
     self.phoneVerify.hidden = YES;
+    
+    self.phoneNumberTextField.layer.borderWidth = 1.0;
+    self.phoneNumberTextField.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.phoneNumberIdentifyTextField.layer.borderWidth = 1.0;
+    self.phoneNumberIdentifyTextField.layer.borderColor = [UIColor grayColor].CGColor;
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)switchAction:(UISegmentedControl *)sender {
     switch (sender.selectedSegmentIndex) {
         case 0: {
-            if (self.phoneVerify.hidden == YES) {
-                return;
-            } else {
-                self.phoneVerify.hidden = YES;
-            }
+            self.phoneVerify.hidden = YES;
             break;
         }
         case 1: {
-            if (self.phoneVerify.hidden == NO) {
-                return;
-            } else {
-                self.phoneVerify.hidden = NO;
-            }
+            self.phoneVerify.hidden = NO;
             break;
         }
         default:

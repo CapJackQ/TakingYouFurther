@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLLMyDownloadViewController">
+            <connections>
+                <outlet property="strategyTableView" destination="8sp-OR-bmR" id="syP-49-Bwj"/>
+                <outlet property="switchSegment" destination="5JX-fE-Lbm" id="ddB-gY-z1P"/>
+                <outlet property="travelNoteTableView" destination="vyW-Fp-vgj" id="Bn2-5K-d9f"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5JX-fE-Lbm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="x5J-86-vPS"/>
+                    </constraints>
+                    <segments>
+                        <segment title="攻略"/>
+                        <segment title="游记"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vyW-Fp-vgj" userLabel="TravelNoteTable View">
+                    <rect key="frame" x="0.0" y="51" width="414" height="621"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8sp-OR-bmR" userLabel="StrategyTable View">
+                    <rect key="frame" x="0.0" y="51" width="414" height="621"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5JX-fE-Lbm" secondAttribute="trailing" id="15f-Yp-yQT"/>
+                <constraint firstAttribute="trailing" secondItem="8sp-OR-bmR" secondAttribute="trailing" id="1AV-ar-6ds"/>
+                <constraint firstItem="vyW-Fp-vgj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F2L-F6-sJu"/>
+                <constraint firstItem="vyW-Fp-vgj" firstAttribute="top" secondItem="5JX-fE-Lbm" secondAttribute="bottom" constant="1" id="Lnf-xB-1em"/>
+                <constraint firstItem="5JX-fE-Lbm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MKV-yL-Wiy"/>
+                <constraint firstAttribute="bottom" secondItem="vyW-Fp-vgj" secondAttribute="bottom" id="MsY-9w-67R"/>
+                <constraint firstAttribute="bottom" secondItem="8sp-OR-bmR" secondAttribute="bottom" constant="348" id="O6L-Xo-l4e"/>
+                <constraint firstAttribute="bottom" secondItem="8sp-OR-bmR" secondAttribute="bottom" id="c6I-ij-irV"/>
+                <constraint firstItem="8sp-OR-bmR" firstAttribute="top" secondItem="5JX-fE-Lbm" secondAttribute="bottom" constant="1" id="fwi-YJ-esd"/>
+                <constraint firstItem="8sp-OR-bmR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hsu-rZ-kMm"/>
+                <constraint firstAttribute="trailing" secondItem="vyW-Fp-vgj" secondAttribute="trailing" id="i34-3h-c8x"/>
+                <constraint firstItem="5JX-fE-Lbm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kQd-oG-fA9"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="O6L-Xo-l4e"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
