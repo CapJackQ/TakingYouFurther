@@ -40,7 +40,6 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <animations/>
-            <color key="backgroundColor" red="0.88457073500000005" green="0.82565792599999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="tZ2-Fo-Qps" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="5Lq-mn-QzF"/>
                 <constraint firstItem="v4b-bH-Ylc" firstAttribute="centerX" secondItem="tZ2-Fo-Qps" secondAttribute="centerX" id="9hH-4L-7PL"/>

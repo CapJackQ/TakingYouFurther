@@ -7,6 +7,8 @@
 //
 
 #import "WLLRecommendDestinationCollectionViewCell.h"
+#import "WLLRecommendModel.h"
+#import "UIImageView+WebCache.h"
 
 @interface WLLRecommendDestinationCollectionViewCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *recommendImage;
@@ -19,6 +21,14 @@
 
 - (void)awakeFromNib {
     // Initialization code
+}
+
+-(void)setModel:(WLLRecommendModel *)model {
+    _model = model;
+    
+    [self.recommendImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.img_url]]];
+    self.monthLabel.text = model.title;
+    self.descriptionLabel.text = model.sub_title;
 }
 
 @end

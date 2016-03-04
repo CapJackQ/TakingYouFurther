@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WLLSearchedCollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *searchedImage;
-@property (strong, nonatomic) IBOutlet UILabel *searchedLabel;
 
 @end

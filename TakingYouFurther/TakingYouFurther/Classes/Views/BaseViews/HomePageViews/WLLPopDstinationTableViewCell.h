@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WLLDestinationModel;
 
 @interface WLLPopDstinationTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UICollectionView *popDestinationCollectionView;
+
+@property (nonatomic, strong) WLLDestinationModel *model;
 
 @end

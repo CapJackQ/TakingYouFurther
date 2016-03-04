@@ -8,6 +8,12 @@
 
 #import "WLLSearchedCollectionViewCell.h"
 
+@interface WLLSearchedCollectionViewCell ()
+@property (strong, nonatomic) IBOutlet UIImageView *searchedImage;
+@property (strong, nonatomic) IBOutlet UILabel *searchedLabel;
+
+@end
+
 @implementation WLLSearchedCollectionViewCell
 
 - (void)awakeFromNib {

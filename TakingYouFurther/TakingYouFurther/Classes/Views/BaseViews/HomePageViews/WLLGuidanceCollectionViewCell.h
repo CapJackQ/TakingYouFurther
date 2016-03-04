@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WLLGuidanceModel;
 
 @interface WLLGuidanceCollectionViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *guidanceImage;
-@property (strong, nonatomic) IBOutlet UILabel *guidanceLabel;
 
+@property (nonatomic, strong) WLLGuidanceModel *model;
 
 @end

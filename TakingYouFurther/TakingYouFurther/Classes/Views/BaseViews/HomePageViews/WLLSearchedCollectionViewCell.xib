@@ -43,8 +43,8 @@
             </constraints>
             <size key="customSize" width="268" height="72"/>
             <connections>
-                <outlet property="searchedImage" destination="d8U-J9-U3q" id="IC1-qG-q3c"/>
-                <outlet property="searchedLabel" destination="kwx-GC-iPd" id="RKY-sY-j9Q"/>
+                <outlet property="searchedImage" destination="d8U-J9-U3q" id="fOS-pe-Uep"/>
+                <outlet property="searchedLabel" destination="kwx-GC-iPd" id="YQX-hq-yi4"/>
             </connections>
             <point key="canvasLocation" x="419" y="347"/>
         </collectionViewCell>

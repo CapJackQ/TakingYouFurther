@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WLLTodayNotesModel;
 
 @interface WLLTodayNotesTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *todayNotesImage;
-@property (strong, nonatomic) IBOutlet UIImageView *headImage;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *destinationLabel;
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (nonatomic, strong) WLLTodayNotesModel *model;
 
 @end

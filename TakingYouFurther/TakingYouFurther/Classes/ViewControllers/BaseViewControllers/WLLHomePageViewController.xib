@@ -15,8 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-YC-Yq6">
-                    <rect key="frame" x="0.0" y="-20" width="414" height="736"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-YC-Yq6">
+                    <rect key="frame" x="0.0" y="-20" width="414" height="708"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
@@ -24,7 +24,7 @@
             <animations/>
             <constraints>
                 <constraint firstItem="TFQ-YC-Yq6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6ds-N2-H38"/>
-                <constraint firstAttribute="bottom" secondItem="TFQ-YC-Yq6" secondAttribute="bottom" constant="20" id="8uc-xo-vJx"/>
+                <constraint firstAttribute="bottom" secondItem="TFQ-YC-Yq6" secondAttribute="bottom" constant="48" id="8uc-xo-vJx"/>
                 <constraint firstAttribute="trailing" secondItem="TFQ-YC-Yq6" secondAttribute="trailing" id="EtK-kw-Dty"/>
                 <constraint firstItem="TFQ-YC-Yq6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-20" id="gHG-tX-t5Y"/>
             </constraints>

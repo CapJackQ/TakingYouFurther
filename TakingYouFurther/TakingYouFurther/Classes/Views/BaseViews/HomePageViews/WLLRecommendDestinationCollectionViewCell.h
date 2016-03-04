@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WLLRecommendModel;
 
 @interface WLLRecommendDestinationCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) WLLRecommendModel *model;
 
 @end

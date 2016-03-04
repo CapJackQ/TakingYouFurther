@@ -1,14 +1,19 @@
 //
-//  WLLFistTableViewCell.m
+//  WLLRecommendDestinationTableViewCell.m
 //  TakingYouFurther
 //
-//  Created by lanou3g on 16/3/3.
+//  Created by lanou3g on 16/3/4.
 //  Copyright © 2016年 lanou3g. All rights reserved.
 //
 
-#import "WLLFistTableViewCell.h"
+#import "WLLRecommendDestinationTableViewCell.h"
 
-@implementation WLLFistTableViewCell
+@interface WLLRecommendDestinationTableViewCell ()
+@property (strong, nonatomic) IBOutlet UILabel *recommendLabel;
+
+@end
+
+@implementation WLLRecommendDestinationTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -18,7 +23,6 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-
 }
 
 @end

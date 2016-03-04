@@ -7,12 +7,28 @@
 //
 
 #import "WLLPopDstinationTableViewCell.h"
+#import "WLLDestinationModel.h"
+
+@interface WLLPopDstinationTableViewCell ()
+@property (strong, nonatomic) IBOutlet UILabel *popLabel;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIButton *titleButton;
+
+@end
 
 @implementation WLLPopDstinationTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
 }
+
+-(void)setModel:(WLLDestinationModel *)model {
+    
+    _model = model;
+    self.titleLabel.text = model.data[@"title"];
+    [self.titleButton setTitle:model.data[@"sub_title_text"] forState:UIControlStateNormal];
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

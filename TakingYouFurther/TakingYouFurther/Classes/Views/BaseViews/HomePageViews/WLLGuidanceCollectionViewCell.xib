@@ -16,7 +16,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tFX-f8-zrs">
                         <rect key="frame" x="0.0" y="5" width="192" height="192"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.50520833330000003" green="0.46814966190000001" blue="0.1823215326" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tFX-f8-zrs" secondAttribute="height" multiplier="1:1" id="n3u-uR-8rs"/>
                         </constraints>
@@ -33,7 +32,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <animations/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0Dj-27-Ajc" firstAttribute="centerX" secondItem="tFX-f8-zrs" secondAttribute="centerX" id="NsE-41-dLs"/>
                 <constraint firstAttribute="trailing" secondItem="tFX-f8-zrs" secondAttribute="trailing" id="WnP-e2-KMg"/>
@@ -43,8 +42,8 @@
             </constraints>
             <size key="customSize" width="192" height="229"/>
             <connections>
-                <outlet property="guidanceImage" destination="tFX-f8-zrs" id="PUb-hQ-vGT"/>
-                <outlet property="guidanceLabel" destination="0Dj-27-Ajc" id="pDs-VB-oZt"/>
+                <outlet property="guidanceImage" destination="tFX-f8-zrs" id="YOm-Fh-Ugx"/>
+                <outlet property="guidanceLabel" destination="0Dj-27-Ajc" id="7O3-Og-2H0"/>
             </connections>
             <point key="canvasLocation" x="300" y="318.5"/>
         </collectionViewCell>

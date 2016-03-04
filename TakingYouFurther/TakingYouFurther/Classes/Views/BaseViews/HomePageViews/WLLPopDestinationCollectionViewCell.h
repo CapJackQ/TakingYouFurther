@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WLLDestinationModel;
 
 @interface WLLPopDestinationCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) WLLDestinationModel *model;
 
 @end

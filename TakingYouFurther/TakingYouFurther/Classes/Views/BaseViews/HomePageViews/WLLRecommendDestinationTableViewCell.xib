@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="recommend_cell" rowHeight="888" id="KGk-i7-Jjw" customClass="WLLRecommendDestinationTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="725" height="888"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="725" height="887"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhP-QF-T98">
+                        <rect key="frame" x="20" y="20" width="5" height="21"/>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.44048021040000002" blue="0.072703392059999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xhP-QF-T98" secondAttribute="height" multiplier="1:4" id="r8c-fO-jau"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xce-a0-NQx">
+                        <rect key="frame" x="35" y="20" width="42" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U00-Iz-Eqy">
+                        <rect key="frame" x="339" y="839" width="46" height="30"/>
+                        <animations/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1Kc-uf-F6S">
+                        <rect key="frame" x="0.0" y="41" width="725" height="798"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="1Kc-uf-F6S" secondAttribute="height" multiplier="15:16.5" id="fOs-We-S5x"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cht-2I-Jfg">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="Xce-a0-NQx" firstAttribute="leading" secondItem="xhP-QF-T98" secondAttribute="trailing" constant="10" id="JR2-rb-Xg2"/>
+                    <constraint firstItem="xhP-QF-T98" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="QV7-p4-iDg"/>
+                    <constraint firstItem="1Kc-uf-F6S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Vzj-gu-2ih"/>
+                    <constraint firstItem="U00-Iz-Eqy" firstAttribute="top" secondItem="1Kc-uf-F6S" secondAttribute="bottom" id="YgP-PG-hgC"/>
+                    <constraint firstItem="xhP-QF-T98" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ZrD-Xv-dOB"/>
+                    <constraint firstItem="U00-Iz-Eqy" firstAttribute="centerX" secondItem="1Kc-uf-F6S" secondAttribute="centerX" id="n31-ix-q1C"/>
+                    <constraint firstItem="1Kc-uf-F6S" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="tL5-wZ-S7B"/>
+                    <constraint firstItem="1Kc-uf-F6S" firstAttribute="top" secondItem="Xce-a0-NQx" secondAttribute="bottom" id="tla-un-i0P"/>
+                    <constraint firstItem="Xce-a0-NQx" firstAttribute="centerY" secondItem="xhP-QF-T98" secondAttribute="centerY" id="wQR-TS-PYR"/>
+                    <constraint firstItem="xhP-QF-T98" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.01" constant="-2" id="zNI-0Y-3NX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="recommendDestinationCollectionView" destination="1Kc-uf-F6S" id="dBa-Pp-Z6K"/>
+                <outlet property="recommendLabel" destination="Xce-a0-NQx" id="fMF-pB-crS"/>
+            </connections>
+            <point key="canvasLocation" x="468.5" y="536"/>
+        </tableViewCell>
+    </objects>
+</document>
