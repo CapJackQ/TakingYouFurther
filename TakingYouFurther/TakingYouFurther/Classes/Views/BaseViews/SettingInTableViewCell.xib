@@ -37,20 +37,17 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-7X-7Fj">
                         <rect key="frame" x="97" y="44" width="64" height="64"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="KQm-7X-7Fj" secondAttribute="height" multiplier="1:1" id="gj2-ch-gVA"/>
-                        </constraints>
                         <state key="normal" image="book_128px"/>
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="KQm-7X-7Fj" firstAttribute="leading" secondItem="of0-cC-7hw" secondAttribute="trailing" constant="20" id="6ST-P1-2Ga"/>
                     <constraint firstItem="gr7-4j-Ybh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="98u-3F-kD9"/>
                     <constraint firstItem="of0-cC-7hw" firstAttribute="top" secondItem="gr7-4j-Ybh" secondAttribute="bottom" constant="10" id="EJ5-Dl-cTn"/>
-                    <constraint firstItem="YSl-cA-tSl" firstAttribute="leading" secondItem="KQm-7X-7Fj" secondAttribute="trailing" constant="20" id="H71-d5-iU8"/>
+                    <constraint firstItem="KQm-7X-7Fj" firstAttribute="top" secondItem="of0-cC-7hw" secondAttribute="top" id="IHg-fs-f1H"/>
                     <constraint firstItem="of0-cC-7hw" firstAttribute="leading" secondItem="gr7-4j-Ybh" secondAttribute="leading" id="RCw-Mg-XLf"/>
                     <constraint firstItem="gr7-4j-Ybh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="X3b-U7-P0v"/>
-                    <constraint firstItem="KQm-7X-7Fj" firstAttribute="leading" secondItem="of0-cC-7hw" secondAttribute="trailing" constant="20" id="fDm-ge-6pN"/>
-                    <constraint firstItem="KQm-7X-7Fj" firstAttribute="top" secondItem="of0-cC-7hw" secondAttribute="top" id="rx2-dX-bcW"/>
+                    <constraint firstItem="YSl-cA-tSl" firstAttribute="leading" secondItem="KQm-7X-7Fj" secondAttribute="trailing" constant="20" id="kmH-FZ-fA8"/>
                     <constraint firstItem="YSl-cA-tSl" firstAttribute="top" secondItem="of0-cC-7hw" secondAttribute="top" id="s9B-sU-VYd"/>
                 </constraints>
             </tableViewCellContentView>

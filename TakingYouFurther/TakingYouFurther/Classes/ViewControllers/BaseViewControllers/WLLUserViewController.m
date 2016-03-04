@@ -12,6 +12,7 @@
 #import "WLLLogInViewController.h"
 #import "WLLMyDownloadViewController.h"
 #import "SettingInTableViewController.h"
+#import "NotificationViewController.h"
 
 #define kReuseIdentifier @"CWCell"
 
@@ -30,7 +31,6 @@
     
     
     [self update];
-    
     
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
@@ -61,12 +61,14 @@
 #pragma mark - 设置和消息按钮
 
 - (void)leftAction {
-    SettingInTableViewController *stVC = [[SettingInTableViewController alloc] initWithNibName:@"SettingInTableViewController" bundle:nil];
+    SettingInTableViewController *stVC = [[SettingInTableViewController alloc]
+                                          initWithNibName:@"SettingInTableViewController" bundle:nil];
     [self.navigationController pushViewController:stVC animated:YES];
 }
 
 - (void)rightAction {
-    
+    NotificationViewController *nVC = [[NotificationViewController alloc] initWithNibName:@"NotificationViewController" bundle:nil];
+    [self.navigationController pushViewController:nVC animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

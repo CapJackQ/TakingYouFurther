@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F4392DFC54211A4C6A6C54D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F72FA55B1A9167E3A182948E /* libPods.a */; };
 		C22509CA1C85C1E20069B350 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22509C81C85C1E20069B350 /* UserTableViewCell.m */; };
 		C22509CB1C85C1E20069B350 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22509C91C85C1E20069B350 /* UserTableViewCell.xib */; };
 		C22509D31C85C71F0069B350 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C22509D21C85C71F0069B350 /* UserModel.m */; };
+		C227095F1C89334F00867B4D /* WLLUserViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C227095E1C89334F00867B4D /* WLLUserViewManager.m */; };
 		C2431EF01C84672A0061FAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EEF1C84672A0061FAB1 /* main.m */; };
 		C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2431EF71C84672A0061FAB1 /* Main.storyboard */; };
 		C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2431EFA1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld */; };
@@ -30,6 +32,16 @@
 		C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */; };
 		C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */; };
 		C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */; };
+		C28C1F561C897D9F009597C2 /* NOfiticationRadioFirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F551C897D9F009597C2 /* NOfiticationRadioFirstModel.m */; };
+		C28C1F591C898183009597C2 /* TheDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F581C898183009597C2 /* TheDataModel.m */; };
+		C28C1F5C1C898294009597C2 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F5B1C898294009597C2 /* ListModel.m */; };
+		C28C1F5F1C898355009597C2 /* TheMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F5E1C898355009597C2 /* TheMessageModel.m */; };
+		C28C1F621C898365009597C2 /* TheSenderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F611C898365009597C2 /* TheSenderModel.m */; };
+		C28C1F651C8984AF009597C2 /* TheContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F641C8984AF009597C2 /* TheContentModel.m */; };
+		C28C1F681C8984FA009597C2 /* TheExtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F671C8984FA009597C2 /* TheExtModel.m */; };
+		C28C1F6B1C8985B5009597C2 /* TheImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F6A1C8985B5009597C2 /* TheImageModel.m */; };
+		C28C1F6F1C898D90009597C2 /* NotificationRadioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F6D1C898D90009597C2 /* NotificationRadioTableViewCell.m */; };
+		C28C1F701C898D90009597C2 /* NotificationRadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28C1F6E1C898D90009597C2 /* NotificationRadioTableViewCell.xib */; };
 		C2A6578E1C868C7000A35999 /* WLLLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */; };
 		C2A6578F1C868C7000A35999 /* WLLLogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */; };
 		C2C56C041C880E32004F84AA /* WLLMyDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C021C880E32004F84AA /* WLLMyDownloadViewController.m */; };
@@ -45,11 +57,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B75252F52C4AAA28E41E917 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C22509C71C85C1E20069B350 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		C22509C81C85C1E20069B350 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		C22509C91C85C1E20069B350 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		C22509D11C85C71F0069B350 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		C22509D21C85C71F0069B350 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		C227095D1C89334F00867B4D /* WLLUserViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewManager.h; sourceTree = "<group>"; };
+		C227095E1C89334F00867B4D /* WLLUserViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewManager.m; sourceTree = "<group>"; };
 		C2431EEB1C84672A0061FAB1 /* TakingYouFurther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakingYouFurther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2431EEF1C84672A0061FAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2431EF81C84672A0061FAB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +91,26 @@
 		C2431F391C846BD60061FAB1 /* WLLUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewController.h; sourceTree = "<group>"; };
 		C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewController.m; sourceTree = "<group>"; };
 		C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLUserViewController.xib; sourceTree = "<group>"; };
+		C28C1F541C897D9F009597C2 /* NOfiticationRadioFirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOfiticationRadioFirstModel.h; sourceTree = "<group>"; };
+		C28C1F551C897D9F009597C2 /* NOfiticationRadioFirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOfiticationRadioFirstModel.m; sourceTree = "<group>"; };
+		C28C1F571C898183009597C2 /* TheDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheDataModel.h; sourceTree = "<group>"; };
+		C28C1F581C898183009597C2 /* TheDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheDataModel.m; sourceTree = "<group>"; };
+		C28C1F5A1C898294009597C2 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
+		C28C1F5B1C898294009597C2 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
+		C28C1F5D1C898355009597C2 /* TheMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMessageModel.h; sourceTree = "<group>"; };
+		C28C1F5E1C898355009597C2 /* TheMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheMessageModel.m; sourceTree = "<group>"; };
+		C28C1F601C898365009597C2 /* TheSenderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheSenderModel.h; sourceTree = "<group>"; };
+		C28C1F611C898365009597C2 /* TheSenderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheSenderModel.m; sourceTree = "<group>"; };
+		C28C1F631C8984AF009597C2 /* TheContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheContentModel.h; sourceTree = "<group>"; };
+		C28C1F641C8984AF009597C2 /* TheContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheContentModel.m; sourceTree = "<group>"; };
+		C28C1F661C8984FA009597C2 /* TheExtModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheExtModel.h; sourceTree = "<group>"; };
+		C28C1F671C8984FA009597C2 /* TheExtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheExtModel.m; sourceTree = "<group>"; };
+		C28C1F691C8985B5009597C2 /* TheImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheImageModel.h; sourceTree = "<group>"; };
+		C28C1F6A1C8985B5009597C2 /* TheImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheImageModel.m; sourceTree = "<group>"; };
+		C28C1F6C1C898D90009597C2 /* NotificationRadioTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationRadioTableViewCell.h; sourceTree = "<group>"; };
+		C28C1F6D1C898D90009597C2 /* NotificationRadioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationRadioTableViewCell.m; sourceTree = "<group>"; };
+		C28C1F6E1C898D90009597C2 /* NotificationRadioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationRadioTableViewCell.xib; sourceTree = "<group>"; };
+		C28C1F711C89A127009597C2 /* UserPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserPrefixHeader.pch; sourceTree = "<group>"; };
 		C2A6578B1C868C7000A35999 /* WLLLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLLogInViewController.h; sourceTree = "<group>"; };
 		C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLLogInViewController.m; sourceTree = "<group>"; };
 		C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLLogInViewController.xib; sourceTree = "<group>"; };
@@ -95,6 +130,8 @@
 		C2C56C161C887BED004F84AA /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
 		C2C56C171C887BED004F84AA /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		C2C56C181C887BED004F84AA /* NotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		F72FA55B1A9167E3A182948E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEBD28042374DBC921FDACE7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,17 +139,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4392DFC54211A4C6A6C54D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ADCC3C105CF61F8C6ECAC36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEBD28042374DBC921FDACE7 /* Pods.debug.xcconfig */,
+				4B75252F52C4AAA28E41E917 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C2431EE21C84672A0061FAB1 = {
 			isa = PBXGroup;
 			children = (
 				C2431EED1C84672A0061FAB1 /* TakingYouFurther */,
 				C2431EEC1C84672A0061FAB1 /* Products */,
+				0ADCC3C105CF61F8C6ECAC36 /* Pods */,
+				F34BFDCBEF020DC1B7AEBDD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				C2431F181C8468A90061FAB1 /* file1 */,
+				C28C1F711C89A127009597C2 /* UserPrefixHeader.pch */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -182,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				C2431F1A1C8468B40061FAB1 /* file2 */,
+				C227095D1C89334F00867B4D /* WLLUserViewManager.h */,
+				C227095E1C89334F00867B4D /* WLLUserViewManager.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -196,6 +248,22 @@
 				C2C56C111C8864ED004F84AA /* TheMoreModel.m */,
 				C2C56C131C8865BB004F84AA /* RecommendedModel.h */,
 				C2C56C141C8865BB004F84AA /* RecommendedModel.m */,
+				C28C1F541C897D9F009597C2 /* NOfiticationRadioFirstModel.h */,
+				C28C1F551C897D9F009597C2 /* NOfiticationRadioFirstModel.m */,
+				C28C1F571C898183009597C2 /* TheDataModel.h */,
+				C28C1F581C898183009597C2 /* TheDataModel.m */,
+				C28C1F5A1C898294009597C2 /* ListModel.h */,
+				C28C1F5B1C898294009597C2 /* ListModel.m */,
+				C28C1F5D1C898355009597C2 /* TheMessageModel.h */,
+				C28C1F5E1C898355009597C2 /* TheMessageModel.m */,
+				C28C1F631C8984AF009597C2 /* TheContentModel.h */,
+				C28C1F641C8984AF009597C2 /* TheContentModel.m */,
+				C28C1F691C8985B5009597C2 /* TheImageModel.h */,
+				C28C1F6A1C8985B5009597C2 /* TheImageModel.m */,
+				C28C1F661C8984FA009597C2 /* TheExtModel.h */,
+				C28C1F671C8984FA009597C2 /* TheExtModel.m */,
+				C28C1F601C898365009597C2 /* TheSenderModel.h */,
+				C28C1F611C898365009597C2 /* TheSenderModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +348,9 @@
 				C2C56C0B1C885C9A004F84AA /* SettingInTableViewCell.h */,
 				C2C56C0C1C885C9A004F84AA /* SettingInTableViewCell.m */,
 				C2C56C0D1C885C9A004F84AA /* SettingInTableViewCell.xib */,
+				C28C1F6C1C898D90009597C2 /* NotificationRadioTableViewCell.h */,
+				C28C1F6D1C898D90009597C2 /* NotificationRadioTableViewCell.m */,
+				C28C1F6E1C898D90009597C2 /* NotificationRadioTableViewCell.xib */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -292,6 +363,14 @@
 			path = NormalViews;
 			sourceTree = "<group>";
 		};
+		F34BFDCBEF020DC1B7AEBDD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F72FA55B1A9167E3A182948E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,9 +378,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2431F051C84672B0061FAB1 /* Build configuration list for PBXNativeTarget "TakingYouFurther" */;
 			buildPhases = (
+				C27A6E97EB20CD163B8DEB68 /* Check Pods Manifest.lock */,
 				C2431EE71C84672A0061FAB1 /* Sources */,
 				C2431EE81C84672A0061FAB1 /* Frameworks */,
 				C2431EE91C84672A0061FAB1 /* Resources */,
+				4AAAC4A00E96C0499BB9B21A /* Embed Pods Frameworks */,
+				002068C98E2F48452BE74E9A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -351,6 +433,7 @@
 			files = (
 				C2431F191C8468A90061FAB1 /* file1 in Resources */,
 				C2C56C051C880E32004F84AA /* WLLMyDownloadViewController.xib in Resources */,
+				C28C1F701C898D90009597C2 /* NotificationRadioTableViewCell.xib in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2A6578F1C868C7000A35999 /* WLLLogInViewController.xib in Resources */,
 				C2431F1F1C8468C60061FAB1 /* file4 in Resources */,
@@ -374,6 +457,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		002068C98E2F48452BE74E9A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AAAC4A00E96C0499BB9B21A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C27A6E97EB20CD163B8DEB68 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C2431EE71C84672A0061FAB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -382,18 +513,28 @@
 				C22509CA1C85C1E20069B350 /* UserTableViewCell.m in Sources */,
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
+				C28C1F681C8984FA009597C2 /* TheExtModel.m in Sources */,
+				C28C1F5F1C898355009597C2 /* TheMessageModel.m in Sources */,
+				C227095F1C89334F00867B4D /* WLLUserViewManager.m in Sources */,
+				C28C1F6F1C898D90009597C2 /* NotificationRadioTableViewCell.m in Sources */,
 				C2C56C121C8864ED004F84AA /* TheMoreModel.m in Sources */,
 				C2C56C091C882B5A004F84AA /* SettingInTableViewController.m in Sources */,
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
 				C2C56C041C880E32004F84AA /* WLLMyDownloadViewController.m in Sources */,
 				C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */,
 				C2C56C191C887BED004F84AA /* NotificationViewController.m in Sources */,
+				C28C1F621C898365009597C2 /* TheSenderModel.m in Sources */,
 				C2431F171C84687E0061FAB1 /* AppDelegate.m in Sources */,
 				C2C56C151C8865BB004F84AA /* RecommendedModel.m in Sources */,
 				C2A6578E1C868C7000A35999 /* WLLLogInViewController.m in Sources */,
+				C28C1F651C8984AF009597C2 /* TheContentModel.m in Sources */,
+				C28C1F5C1C898294009597C2 /* ListModel.m in Sources */,
+				C28C1F591C898183009597C2 /* TheDataModel.m in Sources */,
 				C22509D31C85C71F0069B350 /* UserModel.m in Sources */,
 				C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */,
+				C28C1F561C897D9F009597C2 /* NOfiticationRadioFirstModel.m in Sources */,
 				C2C56C0E1C885C9A004F84AA /* SettingInTableViewCell.m in Sources */,
+				C28C1F6B1C8985B5009597C2 /* TheImageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,8 +642,10 @@
 		};
 		C2431F061C84672B0061FAB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEBD28042374DBC921FDACE7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TakingYouFurther/UserPrefixHeader.pch";
 				INFOPLIST_FILE = TakingYouFurther/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.TakingYouFurther;
@@ -512,8 +655,10 @@
 		};
 		C2431F071C84672B0061FAB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B75252F52C4AAA28E41E917 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TakingYouFurther/UserPrefixHeader.pch";
 				INFOPLIST_FILE = TakingYouFurther/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.TakingYouFurther;
