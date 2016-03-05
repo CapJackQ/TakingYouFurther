@@ -21,13 +21,24 @@
 		C2431F1D1C8468BE0061FAB1 /* File3 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F1C1C8468BE0061FAB1 /* File3 */; settings = {ASSET_TAGS = (); }; };
 		C2431F1F1C8468C60061FAB1 /* File4 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F1E1C8468C60061FAB1 /* File4 */; settings = {ASSET_TAGS = (); }; };
 		C2431F251C8468DD0061FAB1 /* File6 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F241C8468DD0061FAB1 /* File6 */; settings = {ASSET_TAGS = (); }; };
-		C2431F291C8468EE0061FAB1 /* File8 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F281C8468EE0061FAB1 /* File8 */; settings = {ASSET_TAGS = (); }; };
+		C2431F291C8468EE0061FAB1 /* dsfg in Resources */ = {isa = PBXBuildFile; fileRef = C2431F281C8468EE0061FAB1 /* dsfg */; settings = {ASSET_TAGS = (); }; };
 		C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F351C846BBE0061FAB1 /* WLLDestinationViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C2471F0D1C8AA835001042A8 /* WLLMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2471F0B1C8AA835001042A8 /* WLLMainTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2471F0E1C8AA835001042A8 /* WLLMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2471F0C1C8AA835001042A8 /* WLLMainTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2471F121C8AD3C7001042A8 /* WLLSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2471F101C8AD3C7001042A8 /* WLLSearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2471F131C8AD3C7001042A8 /* WLLSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2471F111C8AD3C7001042A8 /* WLLSearchViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C2471F191C8AF55D001042A8 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C2471F181C8AF55D001042A8 /* 1.png */; settings = {ASSET_TAGS = (); }; };
+		C2471F2E1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2471F2C1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		C2471F2F1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2471F2D1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C2471F331C8B0621001042A8 /* WLLRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2471F311C8B0621001042A8 /* WLLRecommendViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2471F341C8B0621001042A8 /* WLLRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2471F321C8B0621001042A8 /* WLLRecommendViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C2471F381C8B106E001042A8 /* WLLMoreOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2471F361C8B106E001042A8 /* WLLMoreOverViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2471F391C8B106E001042A8 /* WLLMoreOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2471F371C8B106E001042A8 /* WLLMoreOverViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C26E9BA31C87D086001EACFB /* WLLTodayNotesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BA11C87D086001EACFB /* WLLTodayNotesTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		C26E9BA41C87D086001EACFB /* WLLTodayNotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BA21C87D086001EACFB /* WLLTodayNotesTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C26E9BA81C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BA61C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -93,7 +104,7 @@
 		C2431F1C1C8468BE0061FAB1 /* File3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File3; sourceTree = "<group>"; };
 		C2431F1E1C8468C60061FAB1 /* File4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File4; sourceTree = "<group>"; };
 		C2431F241C8468DD0061FAB1 /* File6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File6; sourceTree = "<group>"; };
-		C2431F281C8468EE0061FAB1 /* File8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File8; sourceTree = "<group>"; };
+		C2431F281C8468EE0061FAB1 /* dsfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsfg; sourceTree = "<group>"; };
 		C2431F2F1C846B870061FAB1 /* WLLHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLHomePageViewController.h; sourceTree = "<group>"; };
 		C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLHomePageViewController.m; sourceTree = "<group>"; };
 		C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLHomePageViewController.xib; sourceTree = "<group>"; };
@@ -103,6 +114,22 @@
 		C2431F391C846BD60061FAB1 /* WLLUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewController.h; sourceTree = "<group>"; };
 		C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewController.m; sourceTree = "<group>"; };
 		C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLUserViewController.xib; sourceTree = "<group>"; };
+		C2471F0A1C8AA835001042A8 /* WLLMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMainTableViewCell.h; sourceTree = "<group>"; };
+		C2471F0B1C8AA835001042A8 /* WLLMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMainTableViewCell.m; sourceTree = "<group>"; };
+		C2471F0C1C8AA835001042A8 /* WLLMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLMainTableViewCell.xib; sourceTree = "<group>"; };
+		C2471F0F1C8AD3C7001042A8 /* WLLSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLSearchViewController.h; sourceTree = "<group>"; };
+		C2471F101C8AD3C7001042A8 /* WLLSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLSearchViewController.m; sourceTree = "<group>"; };
+		C2471F111C8AD3C7001042A8 /* WLLSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLSearchViewController.xib; sourceTree = "<group>"; };
+		C2471F181C8AF55D001042A8 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		C2471F2B1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLRecommendCollectionViewCell.h; sourceTree = "<group>"; };
+		C2471F2C1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLRecommendCollectionViewCell.m; sourceTree = "<group>"; };
+		C2471F2D1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLRecommendCollectionViewCell.xib; sourceTree = "<group>"; };
+		C2471F301C8B0621001042A8 /* WLLRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLRecommendViewController.h; sourceTree = "<group>"; };
+		C2471F311C8B0621001042A8 /* WLLRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLRecommendViewController.m; sourceTree = "<group>"; };
+		C2471F321C8B0621001042A8 /* WLLRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLRecommendViewController.xib; sourceTree = "<group>"; };
+		C2471F351C8B106E001042A8 /* WLLMoreOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMoreOverViewController.h; sourceTree = "<group>"; };
+		C2471F361C8B106E001042A8 /* WLLMoreOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMoreOverViewController.m; sourceTree = "<group>"; };
+		C2471F371C8B106E001042A8 /* WLLMoreOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLMoreOverViewController.xib; sourceTree = "<group>"; };
 		C26E9BA01C87D086001EACFB /* WLLTodayNotesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLTodayNotesTableViewCell.h; sourceTree = "<group>"; };
 		C26E9BA11C87D086001EACFB /* WLLTodayNotesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLTodayNotesTableViewCell.m; sourceTree = "<group>"; };
 		C26E9BA21C87D086001EACFB /* WLLTodayNotesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLTodayNotesTableViewCell.xib; sourceTree = "<group>"; };
@@ -229,6 +256,7 @@
 				C2907F411C892C7E0029A367 /* WLLReviewTableViewCell.h */,
 				C2907F421C892C7E0029A367 /* WLLReviewTableViewCell.m */,
 				C2907F431C892C7E0029A367 /* WLLReviewTableViewCell.xib */,
+				C2471F041C8AA7F5001042A8 /* PopPageView */,
 			);
 			path = HomePageViews;
 			sourceTree = "<group>";
@@ -253,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				C2431F081C84687E0061FAB1 /* Classes */,
-				C2431EF71C84672A0061FAB1 /* Main.storyboard */,
 				C2431EFD1C84672A0061FAB1 /* Assets.xcassets */,
 				C2431EFF1C84672B0061FAB1 /* LaunchScreen.storyboard */,
 				C2431F021C84672B0061FAB1 /* Info.plist */,
@@ -362,6 +389,7 @@
 				C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */,
 				C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */,
 				C26E9BF41C886F92001EACFB /* 6.jpeg */,
+				C2471F181C8AF55D001042A8 /* 1.png */,
 				C2431F341C846BBE0061FAB1 /* WLLDestinationViewController.h */,
 				C2431F351C846BBE0061FAB1 /* WLLDestinationViewController.m */,
 				C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */,
@@ -379,6 +407,15 @@
 				C2907F921C89B22E0029A367 /* WLLPopViewController.h */,
 				C2907F931C89B22E0029A367 /* WLLPopViewController.m */,
 				C2907F941C89B22E0029A367 /* WLLPopViewController.xib */,
+				C2471F0F1C8AD3C7001042A8 /* WLLSearchViewController.h */,
+				C2471F101C8AD3C7001042A8 /* WLLSearchViewController.m */,
+				C2471F111C8AD3C7001042A8 /* WLLSearchViewController.xib */,
+				C2471F301C8B0621001042A8 /* WLLRecommendViewController.h */,
+				C2471F311C8B0621001042A8 /* WLLRecommendViewController.m */,
+				C2471F321C8B0621001042A8 /* WLLRecommendViewController.xib */,
+				C2471F351C8B106E001042A8 /* WLLMoreOverViewController.h */,
+				C2471F361C8B106E001042A8 /* WLLMoreOverViewController.m */,
+				C2471F371C8B106E001042A8 /* WLLMoreOverViewController.xib */,
 			);
 			path = NormalViewControllers;
 			sourceTree = "<group>";
@@ -386,6 +423,7 @@
 		C2431F141C84687E0061FAB1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2431EF71C84672A0061FAB1 /* Main.storyboard */,
 				C2431F151C84687E0061FAB1 /* BaseViews */,
 				C2431F161C84687E0061FAB1 /* NormalViews */,
 			);
@@ -403,9 +441,22 @@
 		C2431F161C84687E0061FAB1 /* NormalViews */ = {
 			isa = PBXGroup;
 			children = (
-				C2431F281C8468EE0061FAB1 /* File8 */,
+				C2431F281C8468EE0061FAB1 /* dsfg */,
 			);
 			path = NormalViews;
+			sourceTree = "<group>";
+		};
+		C2471F041C8AA7F5001042A8 /* PopPageView */ = {
+			isa = PBXGroup;
+			children = (
+				C2471F0A1C8AA835001042A8 /* WLLMainTableViewCell.h */,
+				C2471F0B1C8AA835001042A8 /* WLLMainTableViewCell.m */,
+				C2471F0C1C8AA835001042A8 /* WLLMainTableViewCell.xib */,
+				C2471F2B1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.h */,
+				C2471F2C1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.m */,
+				C2471F2D1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.xib */,
+			);
+			path = PopPageView;
 			sourceTree = "<group>";
 		};
 		C2907F491C8935410029A367 /* HomePageHelper */ = {
@@ -524,12 +575,18 @@
 				C2431F1D1C8468BE0061FAB1 /* File3 in Resources */,
 				C26E9BFA1C887317001EACFB /* WLLSearchedTableViewCell.xib in Resources */,
 				C214DBC01C872021000C269E /* WLLSearchedCollectionViewCell.xib in Resources */,
+				C2471F131C8AD3C7001042A8 /* WLLSearchViewController.xib in Resources */,
 				C26E9BA91C87E821001EACFB /* WLLPopDestinationCollectionViewCell.xib in Resources */,
 				C2431F251C8468DD0061FAB1 /* File6 in Resources */,
+				C2471F341C8B0621001042A8 /* WLLRecommendViewController.xib in Resources */,
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
 				C26E9BF31C886CF3001EACFB /* WLLFistTableViewCell.xib in Resources */,
-				C2431F291C8468EE0061FAB1 /* File8 in Resources */,
+				C2431F291C8468EE0061FAB1 /* dsfg in Resources */,
+				C2471F0E1C8AA835001042A8 /* WLLMainTableViewCell.xib in Resources */,
+				C2471F191C8AF55D001042A8 /* 1.png in Resources */,
+				C2471F2F1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.xib in Resources */,
+				C2471F391C8B106E001042A8 /* WLLMoreOverViewController.xib in Resources */,
 				C2907F401C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib in Resources */,
 				C26E9BA41C87D086001EACFB /* WLLTodayNotesTableViewCell.xib in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
@@ -552,9 +609,11 @@
 				C214DBC41C872A2C000C269E /* WLLGuidanceCollectionViewCell.m in Sources */,
 				C2907F801C89534D0029A367 /* SDWebImageManager.m in Sources */,
 				C2907F7C1C89534D0029A367 /* SDWebImageCompat.m in Sources */,
+				C2471F121C8AD3C7001042A8 /* WLLSearchViewController.m in Sources */,
 				C2907F811C89534D0029A367 /* SDWebImagePrefetcher.m in Sources */,
 				C2907F4F1C89357A0029A367 /* WLLHomePageDataManager.m in Sources */,
 				C2907F7B1C89534D0029A367 /* SDImageCache.m in Sources */,
+				C2471F2E1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.m in Sources */,
 				C26E9C031C8889DE001EACFB /* WLLPopDstinationTableViewCell.m in Sources */,
 				C2907F821C89534D0029A367 /* UIButton+WebCache.m in Sources */,
 				C26E9BAD1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.m in Sources */,
@@ -565,6 +624,7 @@
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
 				C2907F8B1C8956B10029A367 /* WLLTodayNotesModel.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
+				C2471F331C8B0621001042A8 /* WLLRecommendViewController.m in Sources */,
 				C2907F831C89534D0029A367 /* UIImage+GIF.m in Sources */,
 				C2907F881C89534D0029A367 /* UIView+WebCacheOperation.m in Sources */,
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
@@ -572,8 +632,10 @@
 				C2907F841C89534D0029A367 /* UIImage+MultiFormat.m in Sources */,
 				C2907F7D1C89534D0029A367 /* SDWebImageDecoder.m in Sources */,
 				C2907F7A1C89534D0029A367 /* NSData+ImageContentType.m in Sources */,
+				C2471F381C8B106E001042A8 /* WLLMoreOverViewController.m in Sources */,
 				C26E9BFE1C887A57001EACFB /* WLLGuidanceTableViewCell.m in Sources */,
 				C2907F7F1C89534D0029A367 /* SDWebImageDownloaderOperation.m in Sources */,
+				C2471F0D1C8AA835001042A8 /* WLLMainTableViewCell.m in Sources */,
 				C2907F791C89534D0029A367 /* MKAnnotationView+WebCache.m in Sources */,
 				C214DBBF1C872021000C269E /* WLLSearchedCollectionViewCell.m in Sources */,
 				C26E9BA81C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m in Sources */,
@@ -600,6 +662,7 @@
 				C2431EF81C84672A0061FAB1 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C2431EFF1C84672B0061FAB1 /* LaunchScreen.storyboard */ = {

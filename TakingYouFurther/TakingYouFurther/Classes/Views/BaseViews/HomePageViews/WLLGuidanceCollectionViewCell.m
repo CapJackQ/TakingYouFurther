@@ -29,6 +29,7 @@
     self.guidanceLabel.text = model.title;
     
     [self.guidanceImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.icon]]];
+
     
 }
 

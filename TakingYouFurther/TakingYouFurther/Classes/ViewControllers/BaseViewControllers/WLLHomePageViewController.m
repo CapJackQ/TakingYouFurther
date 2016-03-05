@@ -26,17 +26,23 @@
 #import "WLLRecommendModel.h"
 #import "UIImageView+WebCache.h"
 #import "WLLPopViewController.h"
+#import "WLLSearchViewController.h"
+#import "WLLRecommendViewController.h"
+#import "WLLMoreOverViewController.h"
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
+#define kHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 
-
-@interface WLLHomePageViewController ()<UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface WLLHomePageViewController ()<UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, viewSkipDelegate>
 {
     UIImageView *headerImage;
     UIView *view_bar;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *homePageTableView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *view_barConstraint;
+@property (strong, nonatomic) IBOutlet UITextField *searchBar;
+@property (nonatomic, strong) WLLPopDstinationTableViewCell *popDTableViewCell;
 
 @end
 
@@ -48,10 +54,10 @@
     
 
     [self assignDelegateAndRegister];
-    [self setNavigationBar];
     [self setHeaderView];
     
     [self requestGuidanceData];
+    
 
 }
 
@@ -94,50 +100,33 @@
     
     [self setNaviBarHidden:YES];
     [self setHeaderView];
+    self.view_barConstraint.constant = kHeight/4;
+    
+    // searchBar 添加左视图
+    [self setTextFiledLeftImage:self.searchBar image:@"1"];
+    
+    WLLPopDstinationTableViewCell *cell = [[WLLPopDstinationTableViewCell alloc] init];
+    cell.delegate = self;
 }
 
-#pragma mark - 自定义NavigationBar
--(UIView *)setNavigationBar {
-    
-    view_bar = [[UIView alloc] init];
-    view_bar.frame=CGRectMake(0, 180, self.view.frame.size.width, 80);
-    view_bar.backgroundColor=[UIColor whiteColor];
-    [self.view addSubview:view_bar];
-    [self setImageViewForNaviBar];
-    [self setSearchBarForNaviBar];
-    return view_bar;
+// searchBar 添加左视图
+-(void)setTextFiledLeftImage:(UITextField*)textFiled image:(NSString*)image{
+    textFiled.leftViewMode = UITextFieldViewModeAlways;
+    textFiled.leftView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:image]];
 }
 
-#pragma mark NavigationBar 左边图片
--(UIImageView *)setImageViewForNaviBar {
-    
-    UIImageView *naviImage = [[UIImageView alloc] init];
-    naviImage.frame = CGRectMake(5, 5, 120, 70);
-    UIImage *img = [UIImage imageNamed:@"6.jpeg"];
-    naviImage.image = img;
-    
-    [view_bar addSubview:naviImage];
-    return naviImage;
-}
 
-#pragma mark NavigationBar 右边搜索栏
--(UISearchBar *)setSearchBarForNaviBar {
-    
-    UISearchBar *seacrhBar = [[UISearchBar alloc] init];
-    seacrhBar.frame = CGRectMake(150, 20, 414 - 150, 40);
-    
-    seacrhBar.placeholder = @"搜索目的地 攻略 景点 酒店等";
-    seacrhBar.layer.borderColor = [UIColor orangeColor].CGColor;
-    seacrhBar.backgroundColor = [UIColor whiteColor];
-    
-    [view_bar addSubview:seacrhBar];
-    return seacrhBar;
+#pragma mark - 搜索栏跳转
+
+- (IBAction)searchAction:(UIButton *)sender {
+    WLLSearchViewController *searchVC = [[WLLSearchViewController alloc] init];
+    [self presentViewController:searchVC animated:YES completion:nil];
 }
 
 #pragma mark - 设置头图片
 -(void)setHeaderView {
     
-    headerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 180)];
+    headerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight/4)];
 //    UIImage *img = [UIImage imageNamed:@"6.jpeg"];
 //    CGRect rect = CGRectMake(0, 0, 2000, 400);
     
@@ -291,9 +280,6 @@
 //
         return 6;
     }
-//
-//
-//    
     return 0;
 }
 
@@ -380,13 +366,20 @@
     return UIEdgeInsetsMake(20, 20, 20, 20);
 }
 
-#pragma mark
+#pragma mark did Select Item At IndexPath
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     if (collectionView.tag == 103) {
         
         WLLPopViewController *popVC = [[WLLPopViewController alloc] initWithNibName:@"WLLPopViewController" bundle:nil];
         [self.navigationController pushViewController:popVC animated:YES];
+    }
+    
+    if (collectionView.tag == 104) {
+        
+        WLLRecommendViewController *recommendVC = [[WLLRecommendViewController alloc] initWithNibName:@"WLLRecommendViewController" bundle:nil];
+        
+        [self.navigationController pushViewController:recommendVC animated:YES];
     }
 }
 
@@ -395,17 +388,25 @@
     
     if (scrollView.contentOffset.y > -64 && scrollView.contentOffset.y < 160) {
         
-        view_bar.frame = CGRectMake(0, 160 - scrollView.contentOffset.y, kWidth, 80);
+        self.view_barConstraint.constant = 160 - scrollView.contentOffset.y;
     }
     if (scrollView.contentOffset.y < -64) {
         
-        view_bar.frame = CGRectMake(0, 160 + fabs(scrollView.contentOffset.y), kWidth, 80);
+        self.view_barConstraint.constant = 160 + fabs(scrollView.contentOffset.y);
     }
     if (scrollView.contentOffset.y > 160) {
         
-        view_bar.frame = CGRectMake(0, 0, self.view.frame.size.width, 80);
+        self.view_barConstraint.constant = 0;
     }
 
+}
+
+-(void)pushViewController {
+    
+    WLLMoreOverViewController *moreVC = [[WLLMoreOverViewController alloc] initWithNibName:@"WLLMoreOverViewController" bundle:nil];
+    
+    NSLog(@"11");
+    [self.navigationController pushViewController:moreVC animated:YES];
 }
 
 

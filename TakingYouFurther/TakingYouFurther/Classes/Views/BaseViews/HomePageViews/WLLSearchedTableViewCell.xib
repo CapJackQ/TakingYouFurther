@@ -16,7 +16,7 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mVK-8g-KDs">
                         <rect key="frame" x="0.0" y="0.0" width="404" height="128"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P5X-Oe-aQ2">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,6 +34,8 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="searchedCollectionView" destination="mVK-8g-KDs" id="9Bv-ac-gei"/>
             </connections>

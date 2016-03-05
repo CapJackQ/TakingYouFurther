@@ -28,6 +28,15 @@
     self.titleLabel.text = model.data[@"title"];
     [self.titleButton setTitle:model.data[@"sub_title_text"] forState:UIControlStateNormal];
 }
+- (IBAction)moreCheckAction:(UIButton *)sender {
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(pushViewController)]) {
+        [self.delegate pushViewController];
+        NSLog(@"00");
+    }
+    NSLog(@"00-11");
+}
+
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -9,9 +9,17 @@
 #import <UIKit/UIKit.h>
 @class WLLDestinationModel;
 
+@protocol viewSkipDelegate <NSObject>
+
+-(void)pushViewController;
+
+@end
+
 @interface WLLPopDstinationTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UICollectionView *popDestinationCollectionView;
 
 @property (nonatomic, strong) WLLDestinationModel *model;
+
+@property (nonatomic, assign) id<viewSkipDelegate>delegate;
 
 @end
