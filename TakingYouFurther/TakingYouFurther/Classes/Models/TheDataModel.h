@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MJExtension.h"
 
-
-@class ListModel;
+#import "ListModel.h"
 
 @interface TheDataModel : NSObject
 

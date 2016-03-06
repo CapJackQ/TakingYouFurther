@@ -10,6 +10,9 @@
 #import "WLLUserViewManager.h"
 #import "WLLLogInViewController.h"
 #import "NotificationRadioTableViewCell.h"
+#import "WLLUserViewManager.h"
+#import "RadioModel.h"
+#import "UIImageView+WebCache.h"
 
 #define kScreenWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 
@@ -22,6 +25,10 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *theScrollView;
 
 @property (weak, nonatomic) IBOutlet UITableView *notificationRadioTableView;
+
+@property (nonatomic, strong) NSMutableArray *data;
+
+@property (nonatomic, strong) NSMutableDictionary *dic;
 
 @end
 
@@ -51,7 +58,27 @@
     self.notificationRadioTableView.dataSource = self;
     
     //登记segement广播栏的cell
-    [self.notificationRadioTableView registerNib:[UINib nibWithNibName:@"NotificationRadioTableViewCell" bundle:nil] forCellReuseIdentifier:@"CWCell"];
+    [self.notificationRadioTableView registerNib:[UINib nibWithNibName:@"NotificationRadioTableViewCell" bundle:nil]
+                          forCellReuseIdentifier:@"CWCell"];
+    
+    //解析数据
+    [[WLLUserViewManager shareInstance] parseDataWithUrl:kNotificationRadioUrl finishInvokeBlock:^{
+        NSArray *array1 = [WLLUserViewManager shareInstance].firstModel.data.list;
+        
+        //初始化数组，准备添加解析出来的数据
+        self.data = [NSMutableArray array];
+        
+        for (int i = 0; i < array1.count; i++) {
+            RadioModel *rModel = [[RadioModel alloc] init];
+            ListModel *lModel = array1[i];
+            rModel.titleString = lModel.message.title;
+            rModel.contentString = lModel.message.content.text;
+            rModel.radioImageUrlString = lModel.message.content.image.url;
+            [self.data addObject:rModel];
+        }
+        
+        [self.notificationRadioTableView reloadData];
+    }];
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -105,7 +132,43 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NotificationRadioTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CWCell" forIndexPath:indexPath];
+    
+    RadioModel *rModel = self.data[indexPath.row];
+    cell.titleLabel.text = rModel.titleString;
+    cell.contentLabel.text = rModel.contentString;
+    [cell.radioImageView sd_setImageWithURL:[NSURL URLWithString:rModel.radioImageUrlString]];
+    
+    //用直接拉的约束属性，控制contentlabel的宽度
+    cell.contentLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    CGFloat screenWidth = CGRectGetWidth([UIScreen mainScreen].bounds);
+    cell.theContentLabelWidth.constant = screenWidth - 70;
+    cell.theContentLabelWidth.active = YES;
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NotificationRadioTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CWCell"];
+    
+    RadioModel *rModel = self.data[indexPath.row];
+    cell.titleLabel.text = rModel.titleString;
+    cell.contentLabel.text = rModel.contentString;
+    [cell.radioImageView sd_setImageWithURL:[NSURL URLWithString:rModel.radioImageUrlString]];
+    
+    
+    
+    [cell setNeedsUpdateConstraints];
+    [cell updateConstraintsIfNeeded];
+
+    
+    
+    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    
+    
+    NSLog(@"%f", height);
+    return height;
+
 }
 
 

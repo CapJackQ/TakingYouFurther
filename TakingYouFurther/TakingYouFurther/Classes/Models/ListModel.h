@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-
-@class TheMessageModel;
-@class TheSenderModel;
+#import "TheMessageModel.h"
+#import "TheSenderModel.h"
 
 @interface ListModel : NSObject
 

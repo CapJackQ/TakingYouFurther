@@ -22,6 +22,12 @@
 
 @property (nonatomic, strong) NOfiticationRadioFirstModel *firstModel;
 
+#pragma mark - 单例
+
 + (instancetype)shareInstance;
+
+#pragma mark - 网络请求
+
+- (void)parseDataWithUrl:(NSString *)url finishInvokeBlock:(void (^)())block;
 
 @end

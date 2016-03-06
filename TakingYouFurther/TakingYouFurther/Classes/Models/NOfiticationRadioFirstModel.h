@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
-@class TheDataModel;
+#import "TheDataModel.h"
 
 @interface NOfiticationRadioFirstModel : NSObject
 

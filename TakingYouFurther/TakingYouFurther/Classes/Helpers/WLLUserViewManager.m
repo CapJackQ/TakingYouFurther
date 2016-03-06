@@ -8,7 +8,8 @@
 
 #import "WLLUserViewManager.h"
 #import "MJExtension.h"
-
+#import "AFNetworking.h"
+#import "WC_NetTools.h"
 
 static WLLUserViewManager *manager = nil;
 
@@ -30,8 +31,32 @@ static WLLUserViewManager *manager = nil;
     return self;
 }
 
-- (void)parseDataWithUrl:(NSString *)url {
+- (void)parseDataWithUrl:(NSString *)url finishInvokeBlock:(void (^)())block {
+//    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+//    NSDictionary *dic = @{ @"format" : @"json" };
+//    
+//    [session GET:url parameters:dic progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        self.firstModel = [NOfiticationRadioFirstModel mj_objectWithKeyValues:responseObject];
+//        NSLog(@"kkkkkk%@", responseObject);
+//        block();
+//        NSLog(@"DDDDDD%ld", self.firstModel.is_array);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"%@", error);
+//    }];
+    [WC_NetTools solveDataWithUrl:url HttpMethod:@"GET" HttpBody:nil revokeBlock:^(NSData *data) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"%@", dic);
+        self.firstModel = [NOfiticationRadioFirstModel mj_objectWithKeyValues:dic];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block();
+        });
+    }];
+    
     
 }
+    
+
 
 @end

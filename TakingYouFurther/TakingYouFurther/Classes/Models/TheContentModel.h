@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
-@class TheImageModel;
+#import "TheImageModel.h"
 
 @interface TheContentModel : NSObject
 

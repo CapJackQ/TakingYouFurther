@@ -10,4 +10,14 @@
 
 @interface NotificationRadioTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *radioImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *enterLabel;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *theContentLabelWidth;
+
 @end

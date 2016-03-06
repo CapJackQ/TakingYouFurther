@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-
-@class TheContentModel;
-@class TheExtModel;
+#import "TheContentModel.h"
+#import "TheExtModel.h"
 
 @interface TheMessageModel : NSObject
 
