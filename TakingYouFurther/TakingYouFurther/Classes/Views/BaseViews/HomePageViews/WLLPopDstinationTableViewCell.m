@@ -8,11 +8,9 @@
 
 #import "WLLPopDstinationTableViewCell.h"
 #import "WLLDestinationModel.h"
+#import "WLLHomePageDataManager.h"
 
 @interface WLLPopDstinationTableViewCell ()
-@property (strong, nonatomic) IBOutlet UILabel *popLabel;
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UIButton *titleButton;
 
 @end
 
@@ -20,24 +18,21 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
 }
 
--(void)setModel:(WLLDestinationModel *)model {
+-(void)action {
     
-    _model = model;
-    self.titleLabel.text = model.data[@"title"];
-    [self.titleButton setTitle:model.data[@"sub_title_text"] forState:UIControlStateNormal];
 }
+
+
+// 点击事件
 - (IBAction)moreCheckAction:(UIButton *)sender {
     
-    if (_delegate && [_delegate respondsToSelector:@selector(pushViewController)]) {
-        [self.delegate pushViewController];
-        NSLog(@"00");
-    }
-    NSLog(@"00-11");
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(action) name:@"push" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"push" object:nil];
 }
-
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

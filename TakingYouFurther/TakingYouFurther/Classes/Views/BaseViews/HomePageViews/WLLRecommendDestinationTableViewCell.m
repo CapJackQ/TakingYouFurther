@@ -24,5 +24,11 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)pushView:(UIButton *)sender {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(action) name:@"pushView" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pushView" object:nil];
+}
 
 @end

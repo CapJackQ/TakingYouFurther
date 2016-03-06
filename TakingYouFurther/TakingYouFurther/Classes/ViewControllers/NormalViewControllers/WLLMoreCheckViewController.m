@@ -1,31 +1,28 @@
 //
-//  WLLMoreOverViewController.m
+//  WLLMoreCheckViewController.m
 //  TakingYouFurther
 //
-//  Created by lanou3g on 16/3/5.
+//  Created by lanou3g on 16/3/6.
 //  Copyright © 2016年 lanou3g. All rights reserved.
 //
 
-#import "WLLMoreOverViewController.h"
-#import "WLLPopDestinationCollectionViewCell.h"
+#import "WLLMoreCheckViewController.h"
+#import "WLLRecommendDestinationCollectionViewCell.h"
 
-#define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
-
-@interface WLLMoreOverViewController ()<UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
-@property (strong, nonatomic) IBOutlet UICollectionView *moreOverCollectionVeiw;
+@interface WLLMoreCheckViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@property (strong, nonatomic) IBOutlet UICollectionView *moreCheckCollectionView;
 
 @end
 
-@implementation WLLMoreOverViewController
-
-
+@implementation WLLMoreCheckViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.moreOverCollectionVeiw.dataSource = self;
-    self.moreOverCollectionVeiw.delegate = self;
     
-    [self.moreOverCollectionVeiw registerNib:[UINib nibWithNibName:@"WLLPopDestinationCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"popdestination_item"];
+    self.moreCheckCollectionView.dataSource = self;
+    self.moreCheckCollectionView.delegate = self;
+    
+    [self.moreCheckCollectionView registerNib:[UINib nibWithNibName:@"WLLRecommendDestinationCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"recommend_item"];
 }
 
 #pragma mark - 显示系统 NavigationBar
@@ -37,36 +34,31 @@
     [self setNaviBarHidden:NO];
 }
 
-
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
-    return 12;
+    
+    return 10;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
-        WLLPopDestinationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"popdestination_item" forIndexPath:indexPath];
-        return cell;
+    
+    WLLRecommendDestinationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recommend_item" forIndexPath:indexPath];
+    return cell;
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return CGSizeMake(kWidth/3.5, kWidth/1.656);
+    return CGSizeMake(110, 200);
 }
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(10, 10, 10, 10);
+    return UIEdgeInsetsMake(20, 20, 20, 20);
 }
 
-
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
- 
- - (void)didReceiveMemoryWarning {
- [super didReceiveMemoryWarning];
- // Dispose of any resources that can be recreated.
- }
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

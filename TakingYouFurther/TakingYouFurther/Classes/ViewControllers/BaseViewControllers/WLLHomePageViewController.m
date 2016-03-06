@@ -29,14 +29,16 @@
 #import "WLLSearchViewController.h"
 #import "WLLRecommendViewController.h"
 #import "WLLMoreOverViewController.h"
+#import "WLLMoreCheckViewController.h"
+#import "WLLSeekViewController.h"
+
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 #define kHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 
-@interface WLLHomePageViewController ()<UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, viewSkipDelegate>
+@interface WLLHomePageViewController ()<UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 {
     UIImageView *headerImage;
-    UIView *view_bar;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *homePageTableView;
@@ -52,15 +54,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    // 不同代理指定及注册
     [self assignDelegateAndRegister];
+    // 设定顶部图片
     [self setHeaderView];
-    
+    // 请求数据
     [self requestGuidanceData];
     
+    // 注册消息接受者
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(push) name:@"push" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushView) name:@"pushView" object:nil];
+    
+    // 设定导航栏的到顶部的约束距离
+    self.view_barConstraint.constant = kHeight/4;
 
 }
 
+#pragma mark - 请求数据
 -(void)requestGuidanceData {
     
     [[WLLHomePageDataManager shareInstance] requestHomePageDataWithUrl:kHomePageUrl didFinished:^{
@@ -70,7 +81,8 @@
     
 }
 
--(void)assignDelegateAndRegister{
+#pragma mark - 指定代理
+-(void)assignDelegateAndRegister {
     
     self.homePageTableView.dataSource = self;
     self.homePageTableView.delegate = self;
@@ -100,19 +112,28 @@
     
     [self setNaviBarHidden:YES];
     [self setHeaderView];
-    self.view_barConstraint.constant = kHeight/4;
     
     // searchBar 添加左视图
     [self setTextFiledLeftImage:self.searchBar image:@"1"];
-    
-    WLLPopDstinationTableViewCell *cell = [[WLLPopDstinationTableViewCell alloc] init];
-    cell.delegate = self;
 }
 
 // searchBar 添加左视图
 -(void)setTextFiledLeftImage:(UITextField*)textFiled image:(NSString*)image{
     textFiled.leftViewMode = UITextFieldViewModeAlways;
     textFiled.leftView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:image]];
+}
+
+#pragma mark - 两个页面的查看更多
+// 热门目的地
+-(void)push {
+    
+    WLLMoreOverViewController *moreVC = [[WLLMoreOverViewController alloc] initWithNibName:@"WLLMoreOverViewController" bundle:nil];
+    [self.navigationController pushViewController:moreVC animated:YES];
+}
+// 目的地推荐
+-(void)pushView {
+    WLLMoreCheckViewController *moreVC = [[WLLMoreCheckViewController alloc] initWithNibName:@"WLLMoreCheckViewController" bundle:nil];
+    [self.navigationController pushViewController:moreVC animated:YES];
 }
 
 
@@ -177,7 +198,6 @@
     if (indexPath.section == 0 && indexPath.row == 1) {
     
         WLLSearchedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searched_cell" forIndexPath:indexPath];
-    cell.searchedCollectionView.tag = 101;
     cell.searchedCollectionView.dataSource = self;
     cell.searchedCollectionView.delegate = self;
     
@@ -188,7 +208,6 @@
     if (indexPath.section == 0 && indexPath.row == 2) {
     
         WLLGuidanceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"guidance_cell" forIndexPath:indexPath];
-        cell.guidanceCollectionView.tag = 102;
         cell.guidanceCollectionView.dataSource = self;
         cell.guidanceCollectionView.delegate = self;
         [cell.guidanceCollectionView registerNib:[UINib nibWithNibName:@"WLLGuidanceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"guidance_item"];
@@ -196,7 +215,6 @@
         return cell;
     }
     if (indexPath.section == 1 && indexPath.row == 0) {
-    
         WLLTodayNotesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"todaynotes_cell" forIndexPath:indexPath];
 //        WLLTodayNotesModel *model = [[WLLHomePageDataManager shareInstance] todayNotesModelWithIndex:indexPath.row];
 //        cell.model = model;
@@ -206,8 +224,6 @@
     if (indexPath.section == 2 &&indexPath.row == 0) {
     
         WLLPopDstinationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"popdestination_cell" forIndexPath:indexPath];
-        
-        cell.popDestinationCollectionView.tag = 103;
         cell.popDestinationCollectionView.delegate = self;
         cell.popDestinationCollectionView.dataSource = self;
 //        [cell.popDestinationCollectionView reloadData];
@@ -218,7 +234,6 @@
     if (indexPath.section == 3 &&indexPath.row == 0) {
     
         WLLRecommendDestinationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recommend_cell" forIndexPath:indexPath];
-        cell.recommendDestinationCollectionView.tag = 104;
         cell.recommendDestinationCollectionView.delegate = self;
         cell.recommendDestinationCollectionView.dataSource = self;
 //        [cell.recommendDestinationCollectionView reloadData];
@@ -248,7 +263,7 @@
         return 380;
     }
     if (indexPath.section == 2 && indexPath.row == 0) {
-        return kWidth * 1.6;
+        return kWidth * 1.5;
     }
     if (indexPath.section == 3 &&indexPath.row == 0) {
         
@@ -335,7 +350,7 @@
     // collectionView 为 popDestinationCollectionView 时
     if (collectionView.tag == 103) {
 
-        return CGSizeMake(kWidth/3.5, 250);
+        return CGSizeMake(kWidth/3.4, 250);
     }
 
     // collectionView 为 recommendDestinationCollectionView
@@ -369,6 +384,13 @@
 #pragma mark did Select Item At IndexPath
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (collectionView.tag == 102) {
+        
+        WLLSeekViewController *seekVC = [[WLLSeekViewController alloc] initWithNibName:@"WLLSeekViewController" bundle:nil];
+        seekVC.index = indexPath.row;
+        [self.navigationController pushViewController:seekVC animated:YES];
+    }
+    
     if (collectionView.tag == 103) {
         
         WLLPopViewController *popVC = [[WLLPopViewController alloc] initWithNibName:@"WLLPopViewController" bundle:nil];
@@ -381,6 +403,7 @@
         
         [self.navigationController pushViewController:recommendVC animated:YES];
     }
+    
 }
 
 #pragma makr - UIScrollViewDelegate 滚动代理
@@ -401,13 +424,6 @@
 
 }
 
--(void)pushViewController {
-    
-    WLLMoreOverViewController *moreVC = [[WLLMoreOverViewController alloc] initWithNibName:@"WLLMoreOverViewController" bundle:nil];
-    
-    NSLog(@"11");
-    [self.navigationController pushViewController:moreVC animated:YES];
-}
 
 
 

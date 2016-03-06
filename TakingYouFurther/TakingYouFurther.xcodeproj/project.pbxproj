@@ -20,7 +20,6 @@
 		C2431F191C8468A90061FAB1 /* File1 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F181C8468A90061FAB1 /* File1 */; settings = {ASSET_TAGS = (); }; };
 		C2431F1D1C8468BE0061FAB1 /* File3 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F1C1C8468BE0061FAB1 /* File3 */; settings = {ASSET_TAGS = (); }; };
 		C2431F1F1C8468C60061FAB1 /* File4 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F1E1C8468C60061FAB1 /* File4 */; settings = {ASSET_TAGS = (); }; };
-		C2431F251C8468DD0061FAB1 /* File6 in Resources */ = {isa = PBXBuildFile; fileRef = C2431F241C8468DD0061FAB1 /* File6 */; settings = {ASSET_TAGS = (); }; };
 		C2431F291C8468EE0061FAB1 /* dsfg in Resources */ = {isa = PBXBuildFile; fileRef = C2431F281C8468EE0061FAB1 /* dsfg */; settings = {ASSET_TAGS = (); }; };
 		C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -47,7 +46,6 @@
 		C26E9BAE1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BAC1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C26E9BF21C886CF3001EACFB /* WLLFistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BF01C886CF3001EACFB /* WLLFistTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		C26E9BF31C886CF3001EACFB /* WLLFistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BF11C886CF3001EACFB /* WLLFistTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		C26E9BF51C886F92001EACFB /* 6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BF41C886F92001EACFB /* 6.jpeg */; settings = {ASSET_TAGS = (); }; };
 		C26E9BF91C887317001EACFB /* WLLSearchedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BF71C887317001EACFB /* WLLSearchedTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		C26E9BFA1C887317001EACFB /* WLLSearchedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BF81C887317001EACFB /* WLLSearchedTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C26E9BFE1C887A57001EACFB /* WLLGuidanceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9BFC1C887A57001EACFB /* WLLGuidanceTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -82,6 +80,10 @@
 		C2907F911C8989770029A367 /* WLLRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2907F901C8989770029A367 /* WLLRecommendModel.m */; settings = {ASSET_TAGS = (); }; };
 		C2907F951C89B22E0029A367 /* WLLPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2907F931C89B22E0029A367 /* WLLPopViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2907F961C89B22E0029A367 /* WLLPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2907F941C89B22E0029A367 /* WLLPopViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C2C85A041C8C155C0092C6EB /* WLLMoreCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C85A021C8C155C0092C6EB /* WLLMoreCheckViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2C85A051C8C155C0092C6EB /* WLLMoreCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C85A031C8C155C0092C6EB /* WLLMoreCheckViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C2C85A2E1C8C35DE0092C6EB /* WLLSeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C85A2C1C8C35DE0092C6EB /* WLLSeekViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2C85A2F1C8C35DE0092C6EB /* WLLSeekViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C85A2D1C8C35DE0092C6EB /* WLLSeekViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +105,6 @@
 		C2431F181C8468A90061FAB1 /* File1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File1; sourceTree = "<group>"; };
 		C2431F1C1C8468BE0061FAB1 /* File3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File3; sourceTree = "<group>"; };
 		C2431F1E1C8468C60061FAB1 /* File4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File4; sourceTree = "<group>"; };
-		C2431F241C8468DD0061FAB1 /* File6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File6; sourceTree = "<group>"; };
 		C2431F281C8468EE0061FAB1 /* dsfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsfg; sourceTree = "<group>"; };
 		C2431F2F1C846B870061FAB1 /* WLLHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLHomePageViewController.h; sourceTree = "<group>"; };
 		C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLHomePageViewController.m; sourceTree = "<group>"; };
@@ -112,7 +113,7 @@
 		C2431F351C846BBE0061FAB1 /* WLLDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLDestinationViewController.m; sourceTree = "<group>"; };
 		C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLDestinationViewController.xib; sourceTree = "<group>"; };
 		C2431F391C846BD60061FAB1 /* WLLUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewController.h; sourceTree = "<group>"; };
-		C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewController.m; sourceTree = "<group>"; };
+		C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WLLUserViewController.m; path = ../ViewControllers/BaseViewControllers/WLLUserViewController.m; sourceTree = "<group>"; };
 		C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLUserViewController.xib; sourceTree = "<group>"; };
 		C2471F0A1C8AA835001042A8 /* WLLMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMainTableViewCell.h; sourceTree = "<group>"; };
 		C2471F0B1C8AA835001042A8 /* WLLMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMainTableViewCell.m; sourceTree = "<group>"; };
@@ -142,7 +143,6 @@
 		C26E9BEF1C886CF3001EACFB /* WLLFistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLFistTableViewCell.h; sourceTree = "<group>"; };
 		C26E9BF01C886CF3001EACFB /* WLLFistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLFistTableViewCell.m; sourceTree = "<group>"; };
 		C26E9BF11C886CF3001EACFB /* WLLFistTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLFistTableViewCell.xib; sourceTree = "<group>"; };
-		C26E9BF41C886F92001EACFB /* 6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpeg; sourceTree = "<group>"; };
 		C26E9BF61C887317001EACFB /* WLLSearchedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLSearchedTableViewCell.h; sourceTree = "<group>"; };
 		C26E9BF71C887317001EACFB /* WLLSearchedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLSearchedTableViewCell.m; sourceTree = "<group>"; };
 		C26E9BF81C887317001EACFB /* WLLSearchedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLSearchedTableViewCell.xib; sourceTree = "<group>"; };
@@ -207,6 +207,12 @@
 		C2907F921C89B22E0029A367 /* WLLPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPopViewController.h; sourceTree = "<group>"; };
 		C2907F931C89B22E0029A367 /* WLLPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPopViewController.m; sourceTree = "<group>"; };
 		C2907F941C89B22E0029A367 /* WLLPopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPopViewController.xib; sourceTree = "<group>"; };
+		C2C85A011C8C155C0092C6EB /* WLLMoreCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMoreCheckViewController.h; sourceTree = "<group>"; };
+		C2C85A021C8C155C0092C6EB /* WLLMoreCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMoreCheckViewController.m; sourceTree = "<group>"; };
+		C2C85A031C8C155C0092C6EB /* WLLMoreCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLMoreCheckViewController.xib; sourceTree = "<group>"; };
+		C2C85A2B1C8C35DE0092C6EB /* WLLSeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLSeekViewController.h; sourceTree = "<group>"; };
+		C2C85A2C1C8C35DE0092C6EB /* WLLSeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLSeekViewController.m; sourceTree = "<group>"; };
+		C2C85A2D1C8C35DE0092C6EB /* WLLSeekViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLSeekViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				C2907F511C8940030029A367 /* BC_NetTools.h */,
+				C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */,
 				C2907F521C8940030029A367 /* BC_NetTools.m */,
 				C2907F571C89534D0029A367 /* SDWebImage */,
 			);
@@ -388,13 +395,11 @@
 				C2431F2F1C846B870061FAB1 /* WLLHomePageViewController.h */,
 				C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */,
 				C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */,
-				C26E9BF41C886F92001EACFB /* 6.jpeg */,
 				C2471F181C8AF55D001042A8 /* 1.png */,
 				C2431F341C846BBE0061FAB1 /* WLLDestinationViewController.h */,
 				C2431F351C846BBE0061FAB1 /* WLLDestinationViewController.m */,
 				C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */,
 				C2431F391C846BD60061FAB1 /* WLLUserViewController.h */,
-				C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */,
 				C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */,
 			);
 			path = BaseViewControllers;
@@ -403,7 +408,7 @@
 		C2431F131C84687E0061FAB1 /* NormalViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C2431F241C8468DD0061FAB1 /* File6 */,
+				C2C85A2A1C8C35DE0092C6EB /* GuidancePageViewController */,
 				C2907F921C89B22E0029A367 /* WLLPopViewController.h */,
 				C2907F931C89B22E0029A367 /* WLLPopViewController.m */,
 				C2907F941C89B22E0029A367 /* WLLPopViewController.xib */,
@@ -416,6 +421,9 @@
 				C2471F351C8B106E001042A8 /* WLLMoreOverViewController.h */,
 				C2471F361C8B106E001042A8 /* WLLMoreOverViewController.m */,
 				C2471F371C8B106E001042A8 /* WLLMoreOverViewController.xib */,
+				C2C85A011C8C155C0092C6EB /* WLLMoreCheckViewController.h */,
+				C2C85A021C8C155C0092C6EB /* WLLMoreCheckViewController.m */,
+				C2C85A031C8C155C0092C6EB /* WLLMoreCheckViewController.xib */,
 			);
 			path = NormalViewControllers;
 			sourceTree = "<group>";
@@ -508,6 +516,16 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		C2C85A2A1C8C35DE0092C6EB /* GuidancePageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C2C85A2B1C8C35DE0092C6EB /* WLLSeekViewController.h */,
+				C2C85A2C1C8C35DE0092C6EB /* WLLSeekViewController.m */,
+				C2C85A2D1C8C35DE0092C6EB /* WLLSeekViewController.xib */,
+			);
+			path = GuidancePageViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -565,7 +583,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C26E9BF51C886F92001EACFB /* 6.jpeg in Resources */,
 				C2431F191C8468A90061FAB1 /* File1 in Resources */,
 				C214DBC51C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
@@ -573,11 +590,11 @@
 				C2431F1F1C8468C60061FAB1 /* File4 in Resources */,
 				C2907F961C89B22E0029A367 /* WLLPopViewController.xib in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* File3 in Resources */,
+				C2C85A051C8C155C0092C6EB /* WLLMoreCheckViewController.xib in Resources */,
 				C26E9BFA1C887317001EACFB /* WLLSearchedTableViewCell.xib in Resources */,
 				C214DBC01C872021000C269E /* WLLSearchedCollectionViewCell.xib in Resources */,
 				C2471F131C8AD3C7001042A8 /* WLLSearchViewController.xib in Resources */,
 				C26E9BA91C87E821001EACFB /* WLLPopDestinationCollectionViewCell.xib in Resources */,
-				C2431F251C8468DD0061FAB1 /* File6 in Resources */,
 				C2471F341C8B0621001042A8 /* WLLRecommendViewController.xib in Resources */,
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
@@ -588,6 +605,7 @@
 				C2471F2F1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.xib in Resources */,
 				C2471F391C8B106E001042A8 /* WLLMoreOverViewController.xib in Resources */,
 				C2907F401C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib in Resources */,
+				C2C85A2F1C8C35DE0092C6EB /* WLLSeekViewController.xib in Resources */,
 				C26E9BA41C87D086001EACFB /* WLLTodayNotesTableViewCell.xib in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
 				C26E9BFF1C887A57001EACFB /* WLLGuidanceTableViewCell.xib in Resources */,
@@ -605,6 +623,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2C85A2E1C8C35DE0092C6EB /* WLLSeekViewController.m in Sources */,
 				C2907F861C89534D0029A367 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C214DBC41C872A2C000C269E /* WLLGuidanceCollectionViewCell.m in Sources */,
 				C2907F801C89534D0029A367 /* SDWebImageManager.m in Sources */,
@@ -643,6 +662,7 @@
 				C2431F171C84687E0061FAB1 /* AppDelegate.m in Sources */,
 				C2907F7E1C89534D0029A367 /* SDWebImageDownloader.m in Sources */,
 				C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */,
+				C2C85A041C8C155C0092C6EB /* WLLMoreCheckViewController.m in Sources */,
 				C26E9BF91C887317001EACFB /* WLLSearchedTableViewCell.m in Sources */,
 				C2907F561C8941290029A367 /* WLLGuidanceModel.m in Sources */,
 				C2907F8E1C897A600029A367 /* WLLDestinationModel.m in Sources */,

@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1K-HI-Z8S">
-                        <rect key="frame" x="255" y="904" width="136" height="33"/>
+                        <rect key="frame" x="255" y="909" width="136" height="33"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal" title="查看更多超值热卖">
@@ -49,10 +49,10 @@
                             <action selector="moreCheckAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xqd-u6-6tz"/>
                         </connections>
                     </button>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tDc-u3-awi">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="103" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tDc-u3-awi">
                         <rect key="frame" x="0.0" y="43" width="646" height="861"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.77984894179999997" green="0.76833638329999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tDc-u3-awi" secondAttribute="height" multiplier="15:20" id="ao4-jd-fRN"/>
                         </constraints>
@@ -73,7 +73,7 @@
                     <constraint firstItem="tDc-u3-awi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bds-9K-G9k"/>
                     <constraint firstItem="tDc-u3-awi" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="gyh-pm-UFY"/>
                     <constraint firstItem="A1K-HI-Z8S" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="izD-Oj-j5M"/>
-                    <constraint firstItem="A1K-HI-Z8S" firstAttribute="top" secondItem="tDc-u3-awi" secondAttribute="bottom" id="lUx-pk-nli"/>
+                    <constraint firstItem="A1K-HI-Z8S" firstAttribute="top" secondItem="tDc-u3-awi" secondAttribute="bottom" constant="5" id="lUx-pk-nli"/>
                     <constraint firstItem="C5l-PY-67s" firstAttribute="leading" secondItem="sMQ-BZ-Qdl" secondAttribute="trailing" constant="10" id="mTb-od-N4T"/>
                     <constraint firstItem="C5l-PY-67s" firstAttribute="centerY" secondItem="sMQ-BZ-Qdl" secondAttribute="centerY" id="vO0-RG-HZH"/>
                 </constraints>
@@ -82,9 +82,6 @@
             <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="popDestinationCollectionView" destination="tDc-u3-awi" id="b0T-CE-z0q"/>
-                <outlet property="popLabel" destination="C5l-PY-67s" id="9vn-N0-eIm"/>
-                <outlet property="titleButton" destination="A1K-HI-Z8S" id="OsU-YD-249"/>
-                <outlet property="titleLabel" destination="C5l-PY-67s" id="z8S-7R-i5k"/>
             </connections>
             <point key="canvasLocation" x="180" y="184.5"/>
         </tableViewCell>
