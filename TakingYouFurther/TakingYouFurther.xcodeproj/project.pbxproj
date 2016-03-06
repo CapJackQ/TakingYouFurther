@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8F4392DFC54211A4C6A6C54D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F72FA55B1A9167E3A182948E /* libPods.a */; };
-		C22509CA1C85C1E20069B350 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C22509C81C85C1E20069B350 /* UserTableViewCell.m */; };
-		C22509CB1C85C1E20069B350 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22509C91C85C1E20069B350 /* UserTableViewCell.xib */; };
-		C22509D31C85C71F0069B350 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C22509D21C85C71F0069B350 /* UserModel.m */; };
-		C227095F1C89334F00867B4D /* WLLUserViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C227095E1C89334F00867B4D /* WLLUserViewManager.m */; };
-		C2336FEC1C8A841500C2A6E8 /* WC_NetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C2336FEB1C8A841500C2A6E8 /* WC_NetTools.m */; };
 		C2431EF01C84672A0061FAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EEF1C84672A0061FAB1 /* main.m */; };
 		C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2431EF71C84672A0061FAB1 /* Main.storyboard */; };
 		C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2431EFA1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld */; };
@@ -33,42 +28,38 @@
 		C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */; };
 		C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */; };
 		C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */; };
-		C28C1F561C897D9F009597C2 /* NOfiticationRadioFirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F551C897D9F009597C2 /* NOfiticationRadioFirstModel.m */; };
-		C28C1F591C898183009597C2 /* TheDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F581C898183009597C2 /* TheDataModel.m */; };
-		C28C1F5C1C898294009597C2 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F5B1C898294009597C2 /* ListModel.m */; };
-		C28C1F5F1C898355009597C2 /* TheMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F5E1C898355009597C2 /* TheMessageModel.m */; };
-		C28C1F621C898365009597C2 /* TheSenderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F611C898365009597C2 /* TheSenderModel.m */; };
-		C28C1F651C8984AF009597C2 /* TheContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F641C8984AF009597C2 /* TheContentModel.m */; };
-		C28C1F681C8984FA009597C2 /* TheExtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F671C8984FA009597C2 /* TheExtModel.m */; };
-		C28C1F6B1C8985B5009597C2 /* TheImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F6A1C8985B5009597C2 /* TheImageModel.m */; };
-		C28C1F6F1C898D90009597C2 /* NotificationRadioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C28C1F6D1C898D90009597C2 /* NotificationRadioTableViewCell.m */; };
-		C28C1F701C898D90009597C2 /* NotificationRadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28C1F6E1C898D90009597C2 /* NotificationRadioTableViewCell.xib */; };
-		C2A6578E1C868C7000A35999 /* WLLLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */; };
-		C2A6578F1C868C7000A35999 /* WLLLogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */; };
-		C2C56C041C880E32004F84AA /* WLLMyDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C021C880E32004F84AA /* WLLMyDownloadViewController.m */; };
-		C2C56C051C880E32004F84AA /* WLLMyDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C56C031C880E32004F84AA /* WLLMyDownloadViewController.xib */; };
-		C2C56C091C882B5A004F84AA /* SettingInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C071C882B5A004F84AA /* SettingInTableViewController.m */; };
-		C2C56C0A1C882B5A004F84AA /* SettingInTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C56C081C882B5A004F84AA /* SettingInTableViewController.xib */; };
-		C2C56C0E1C885C9A004F84AA /* SettingInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C0C1C885C9A004F84AA /* SettingInTableViewCell.m */; };
-		C2C56C0F1C885C9A004F84AA /* SettingInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C56C0D1C885C9A004F84AA /* SettingInTableViewCell.xib */; };
-		C2C56C121C8864ED004F84AA /* TheMoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C111C8864ED004F84AA /* TheMoreModel.m */; };
-		C2C56C151C8865BB004F84AA /* RecommendedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C141C8865BB004F84AA /* RecommendedModel.m */; };
-		C2C56C191C887BED004F84AA /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C56C171C887BED004F84AA /* NotificationViewController.m */; };
-		C2C56C1A1C887BED004F84AA /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C56C181C887BED004F84AA /* NotificationViewController.xib */; };
-		C2F25EF21C89B2A8002DC9A9 /* RadioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F25EF11C89B2A8002DC9A9 /* RadioModel.m */; };
+		C266EC8B1C8C14D000586C17 /* RecommendedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC731C8C14D000586C17 /* RecommendedModel.m */; };
+		C266EC8C1C8C14D000586C17 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC761C8C14D000586C17 /* ListModel.m */; };
+		C266EC8D1C8C14D000586C17 /* NOfiticationRadioFirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC781C8C14D000586C17 /* NOfiticationRadioFirstModel.m */; };
+		C266EC8E1C8C14D000586C17 /* RadioModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC7A1C8C14D000586C17 /* RadioModel.m */; };
+		C266EC8F1C8C14D000586C17 /* TheContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC7C1C8C14D000586C17 /* TheContentModel.m */; };
+		C266EC901C8C14D000586C17 /* TheDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC7E1C8C14D000586C17 /* TheDataModel.m */; };
+		C266EC911C8C14D000586C17 /* TheExtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC801C8C14D000586C17 /* TheExtModel.m */; };
+		C266EC921C8C14D000586C17 /* TheImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC821C8C14D000586C17 /* TheImageModel.m */; };
+		C266EC931C8C14D000586C17 /* TheMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC841C8C14D000586C17 /* TheMessageModel.m */; };
+		C266EC941C8C14D000586C17 /* TheMoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC861C8C14D000586C17 /* TheMoreModel.m */; };
+		C266EC951C8C14D000586C17 /* TheSenderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC881C8C14D000586C17 /* TheSenderModel.m */; };
+		C266EC961C8C14D000586C17 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC8A1C8C14D000586C17 /* UserModel.m */; };
+		C266EC9E1C8C15E000586C17 /* WC_NetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC9B1C8C15DF00586C17 /* WC_NetTools.m */; };
+		C266EC9F1C8C15E000586C17 /* WLLUserViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C266EC9D1C8C15DF00586C17 /* WLLUserViewManager.m */; };
+		C266ECAD1C8C168A00586C17 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C266ECA21C8C168A00586C17 /* NotificationViewController.m */; };
+		C266ECAE1C8C168A00586C17 /* NotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECA31C8C168A00586C17 /* NotificationViewController.xib */; };
+		C266ECAF1C8C168A00586C17 /* SettingInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C266ECA51C8C168A00586C17 /* SettingInTableViewController.m */; };
+		C266ECB01C8C168A00586C17 /* SettingInTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECA61C8C168A00586C17 /* SettingInTableViewController.xib */; };
+		C266ECB11C8C168A00586C17 /* WLLLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C266ECA81C8C168A00586C17 /* WLLLogInViewController.m */; };
+		C266ECB21C8C168A00586C17 /* WLLLogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECA91C8C168A00586C17 /* WLLLogInViewController.xib */; };
+		C266ECB31C8C168A00586C17 /* WLLMyDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C266ECAB1C8C168A00586C17 /* WLLMyDownloadViewController.m */; };
+		C266ECB41C8C168A00586C17 /* WLLMyDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECAC1C8C168A00586C17 /* WLLMyDownloadViewController.xib */; };
+		C266ECBF1C8C16FF00586C17 /* NotificationRadioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C266ECB71C8C16FF00586C17 /* NotificationRadioTableViewCell.m */; };
+		C266ECC01C8C16FF00586C17 /* NotificationRadioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECB81C8C16FF00586C17 /* NotificationRadioTableViewCell.xib */; };
+		C266ECC11C8C16FF00586C17 /* SettingInTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C266ECBA1C8C16FF00586C17 /* SettingInTableViewCell.m */; };
+		C266ECC21C8C16FF00586C17 /* SettingInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECBB1C8C16FF00586C17 /* SettingInTableViewCell.xib */; };
+		C266ECC31C8C16FF00586C17 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C266ECBD1C8C16FF00586C17 /* UserTableViewCell.m */; };
+		C266ECC41C8C16FF00586C17 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECBE1C8C16FF00586C17 /* UserTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B75252F52C4AAA28E41E917 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		C22509C71C85C1E20069B350 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
-		C22509C81C85C1E20069B350 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
-		C22509C91C85C1E20069B350 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
-		C22509D11C85C71F0069B350 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		C22509D21C85C71F0069B350 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
-		C227095D1C89334F00867B4D /* WLLUserViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewManager.h; sourceTree = "<group>"; };
-		C227095E1C89334F00867B4D /* WLLUserViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewManager.m; sourceTree = "<group>"; };
-		C2336FEA1C8A840E00C2A6E8 /* WC_NetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WC_NetTools.h; sourceTree = "<group>"; };
-		C2336FEB1C8A841500C2A6E8 /* WC_NetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WC_NetTools.m; sourceTree = "<group>"; };
 		C2431EEB1C84672A0061FAB1 /* TakingYouFurther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakingYouFurther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2431EEF1C84672A0061FAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2431EF81C84672A0061FAB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,47 +86,56 @@
 		C2431F391C846BD60061FAB1 /* WLLUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewController.h; sourceTree = "<group>"; };
 		C2431F3A1C846BD60061FAB1 /* WLLUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewController.m; sourceTree = "<group>"; };
 		C2431F3B1C846BD60061FAB1 /* WLLUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLUserViewController.xib; sourceTree = "<group>"; };
-		C28C1F541C897D9F009597C2 /* NOfiticationRadioFirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOfiticationRadioFirstModel.h; sourceTree = "<group>"; };
-		C28C1F551C897D9F009597C2 /* NOfiticationRadioFirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOfiticationRadioFirstModel.m; sourceTree = "<group>"; };
-		C28C1F571C898183009597C2 /* TheDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheDataModel.h; sourceTree = "<group>"; };
-		C28C1F581C898183009597C2 /* TheDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheDataModel.m; sourceTree = "<group>"; };
-		C28C1F5A1C898294009597C2 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
-		C28C1F5B1C898294009597C2 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
-		C28C1F5D1C898355009597C2 /* TheMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMessageModel.h; sourceTree = "<group>"; };
-		C28C1F5E1C898355009597C2 /* TheMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheMessageModel.m; sourceTree = "<group>"; };
-		C28C1F601C898365009597C2 /* TheSenderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheSenderModel.h; sourceTree = "<group>"; };
-		C28C1F611C898365009597C2 /* TheSenderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheSenderModel.m; sourceTree = "<group>"; };
-		C28C1F631C8984AF009597C2 /* TheContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheContentModel.h; sourceTree = "<group>"; };
-		C28C1F641C8984AF009597C2 /* TheContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheContentModel.m; sourceTree = "<group>"; };
-		C28C1F661C8984FA009597C2 /* TheExtModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheExtModel.h; sourceTree = "<group>"; };
-		C28C1F671C8984FA009597C2 /* TheExtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheExtModel.m; sourceTree = "<group>"; };
-		C28C1F691C8985B5009597C2 /* TheImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheImageModel.h; sourceTree = "<group>"; };
-		C28C1F6A1C8985B5009597C2 /* TheImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheImageModel.m; sourceTree = "<group>"; };
-		C28C1F6C1C898D90009597C2 /* NotificationRadioTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationRadioTableViewCell.h; sourceTree = "<group>"; };
-		C28C1F6D1C898D90009597C2 /* NotificationRadioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationRadioTableViewCell.m; sourceTree = "<group>"; };
-		C28C1F6E1C898D90009597C2 /* NotificationRadioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationRadioTableViewCell.xib; sourceTree = "<group>"; };
-		C28C1F711C89A127009597C2 /* UserPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserPrefixHeader.pch; sourceTree = "<group>"; };
-		C2A6578B1C868C7000A35999 /* WLLLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLLogInViewController.h; sourceTree = "<group>"; };
-		C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLLogInViewController.m; sourceTree = "<group>"; };
-		C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLLogInViewController.xib; sourceTree = "<group>"; };
-		C2C56C011C880E32004F84AA /* WLLMyDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMyDownloadViewController.h; sourceTree = "<group>"; };
-		C2C56C021C880E32004F84AA /* WLLMyDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMyDownloadViewController.m; sourceTree = "<group>"; };
-		C2C56C031C880E32004F84AA /* WLLMyDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLMyDownloadViewController.xib; sourceTree = "<group>"; };
-		C2C56C061C882B5A004F84AA /* SettingInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingInTableViewController.h; sourceTree = "<group>"; };
-		C2C56C071C882B5A004F84AA /* SettingInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingInTableViewController.m; sourceTree = "<group>"; };
-		C2C56C081C882B5A004F84AA /* SettingInTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingInTableViewController.xib; sourceTree = "<group>"; };
-		C2C56C0B1C885C9A004F84AA /* SettingInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingInTableViewCell.h; sourceTree = "<group>"; };
-		C2C56C0C1C885C9A004F84AA /* SettingInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingInTableViewCell.m; sourceTree = "<group>"; };
-		C2C56C0D1C885C9A004F84AA /* SettingInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingInTableViewCell.xib; sourceTree = "<group>"; };
-		C2C56C101C8864ED004F84AA /* TheMoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMoreModel.h; sourceTree = "<group>"; };
-		C2C56C111C8864ED004F84AA /* TheMoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheMoreModel.m; sourceTree = "<group>"; };
-		C2C56C131C8865BB004F84AA /* RecommendedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendedModel.h; sourceTree = "<group>"; };
-		C2C56C141C8865BB004F84AA /* RecommendedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendedModel.m; sourceTree = "<group>"; };
-		C2C56C161C887BED004F84AA /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
-		C2C56C171C887BED004F84AA /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
-		C2C56C181C887BED004F84AA /* NotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
-		C2F25EF01C89B2A8002DC9A9 /* RadioModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioModel.h; sourceTree = "<group>"; };
-		C2F25EF11C89B2A8002DC9A9 /* RadioModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioModel.m; sourceTree = "<group>"; };
+		C266EC721C8C14D000586C17 /* RecommendedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendedModel.h; sourceTree = "<group>"; };
+		C266EC731C8C14D000586C17 /* RecommendedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendedModel.m; sourceTree = "<group>"; };
+		C266EC751C8C14D000586C17 /* ListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
+		C266EC761C8C14D000586C17 /* ListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
+		C266EC771C8C14D000586C17 /* NOfiticationRadioFirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOfiticationRadioFirstModel.h; sourceTree = "<group>"; };
+		C266EC781C8C14D000586C17 /* NOfiticationRadioFirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOfiticationRadioFirstModel.m; sourceTree = "<group>"; };
+		C266EC791C8C14D000586C17 /* RadioModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioModel.h; sourceTree = "<group>"; };
+		C266EC7A1C8C14D000586C17 /* RadioModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioModel.m; sourceTree = "<group>"; };
+		C266EC7B1C8C14D000586C17 /* TheContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheContentModel.h; sourceTree = "<group>"; };
+		C266EC7C1C8C14D000586C17 /* TheContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheContentModel.m; sourceTree = "<group>"; };
+		C266EC7D1C8C14D000586C17 /* TheDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheDataModel.h; sourceTree = "<group>"; };
+		C266EC7E1C8C14D000586C17 /* TheDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheDataModel.m; sourceTree = "<group>"; };
+		C266EC7F1C8C14D000586C17 /* TheExtModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheExtModel.h; sourceTree = "<group>"; };
+		C266EC801C8C14D000586C17 /* TheExtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheExtModel.m; sourceTree = "<group>"; };
+		C266EC811C8C14D000586C17 /* TheImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheImageModel.h; sourceTree = "<group>"; };
+		C266EC821C8C14D000586C17 /* TheImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheImageModel.m; sourceTree = "<group>"; };
+		C266EC831C8C14D000586C17 /* TheMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMessageModel.h; sourceTree = "<group>"; };
+		C266EC841C8C14D000586C17 /* TheMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheMessageModel.m; sourceTree = "<group>"; };
+		C266EC851C8C14D000586C17 /* TheMoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMoreModel.h; sourceTree = "<group>"; };
+		C266EC861C8C14D000586C17 /* TheMoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheMoreModel.m; sourceTree = "<group>"; };
+		C266EC871C8C14D000586C17 /* TheSenderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheSenderModel.h; sourceTree = "<group>"; };
+		C266EC881C8C14D000586C17 /* TheSenderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheSenderModel.m; sourceTree = "<group>"; };
+		C266EC891C8C14D000586C17 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		C266EC8A1C8C14D000586C17 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		C266EC981C8C154900586C17 /* UserPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPrefixHeader.pch; sourceTree = "<group>"; };
+		C266EC9A1C8C15DF00586C17 /* WC_NetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WC_NetTools.h; sourceTree = "<group>"; };
+		C266EC9B1C8C15DF00586C17 /* WC_NetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WC_NetTools.m; sourceTree = "<group>"; };
+		C266EC9C1C8C15DF00586C17 /* WLLUserViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLUserViewManager.h; sourceTree = "<group>"; };
+		C266EC9D1C8C15DF00586C17 /* WLLUserViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLUserViewManager.m; sourceTree = "<group>"; };
+		C266ECA11C8C168A00586C17 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		C266ECA21C8C168A00586C17 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		C266ECA31C8C168A00586C17 /* NotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationViewController.xib; sourceTree = "<group>"; };
+		C266ECA41C8C168A00586C17 /* SettingInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingInTableViewController.h; sourceTree = "<group>"; };
+		C266ECA51C8C168A00586C17 /* SettingInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingInTableViewController.m; sourceTree = "<group>"; };
+		C266ECA61C8C168A00586C17 /* SettingInTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingInTableViewController.xib; sourceTree = "<group>"; };
+		C266ECA71C8C168A00586C17 /* WLLLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLLogInViewController.h; sourceTree = "<group>"; };
+		C266ECA81C8C168A00586C17 /* WLLLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLLogInViewController.m; sourceTree = "<group>"; };
+		C266ECA91C8C168A00586C17 /* WLLLogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLLogInViewController.xib; sourceTree = "<group>"; };
+		C266ECAA1C8C168A00586C17 /* WLLMyDownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMyDownloadViewController.h; sourceTree = "<group>"; };
+		C266ECAB1C8C168A00586C17 /* WLLMyDownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMyDownloadViewController.m; sourceTree = "<group>"; };
+		C266ECAC1C8C168A00586C17 /* WLLMyDownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLMyDownloadViewController.xib; sourceTree = "<group>"; };
+		C266ECB61C8C16FF00586C17 /* NotificationRadioTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationRadioTableViewCell.h; sourceTree = "<group>"; };
+		C266ECB71C8C16FF00586C17 /* NotificationRadioTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationRadioTableViewCell.m; sourceTree = "<group>"; };
+		C266ECB81C8C16FF00586C17 /* NotificationRadioTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationRadioTableViewCell.xib; sourceTree = "<group>"; };
+		C266ECB91C8C16FF00586C17 /* SettingInTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingInTableViewCell.h; sourceTree = "<group>"; };
+		C266ECBA1C8C16FF00586C17 /* SettingInTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingInTableViewCell.m; sourceTree = "<group>"; };
+		C266ECBB1C8C16FF00586C17 /* SettingInTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingInTableViewCell.xib; sourceTree = "<group>"; };
+		C266ECBC1C8C16FF00586C17 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
+		C266ECBD1C8C16FF00586C17 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
+		C266ECBE1C8C16FF00586C17 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		F72FA55B1A9167E3A182948E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBD28042374DBC921FDACE7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,8 +228,8 @@
 		C2431F0C1C84687E0061FAB1 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				C266EC971C8C154900586C17 /* CWHeaderPCH */,
 				C2431F181C8468A90061FAB1 /* file1 */,
-				C28C1F711C89A127009597C2 /* UserPrefixHeader.pch */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -237,11 +237,8 @@
 		C2431F0D1C84687E0061FAB1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C2336FEA1C8A840E00C2A6E8 /* WC_NetTools.h */,
-				C2336FEB1C8A841500C2A6E8 /* WC_NetTools.m */,
+				C266EC991C8C15DF00586C17 /* WCHelpers */,
 				C2431F1A1C8468B40061FAB1 /* file2 */,
-				C227095D1C89334F00867B4D /* WLLUserViewManager.h */,
-				C227095E1C89334F00867B4D /* WLLUserViewManager.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -249,31 +246,9 @@
 		C2431F0E1C84687E0061FAB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C266EC711C8C14D000586C17 /* CWMFWRecommendedMOdels */,
+				C266EC741C8C14D000586C17 /* CWNOtificationModels */,
 				C2431F1C1C8468BE0061FAB1 /* file3 */,
-				C22509D11C85C71F0069B350 /* UserModel.h */,
-				C22509D21C85C71F0069B350 /* UserModel.m */,
-				C2C56C101C8864ED004F84AA /* TheMoreModel.h */,
-				C2C56C111C8864ED004F84AA /* TheMoreModel.m */,
-				C2C56C131C8865BB004F84AA /* RecommendedModel.h */,
-				C2C56C141C8865BB004F84AA /* RecommendedModel.m */,
-				C2F25EF01C89B2A8002DC9A9 /* RadioModel.h */,
-				C2F25EF11C89B2A8002DC9A9 /* RadioModel.m */,
-				C28C1F541C897D9F009597C2 /* NOfiticationRadioFirstModel.h */,
-				C28C1F551C897D9F009597C2 /* NOfiticationRadioFirstModel.m */,
-				C28C1F571C898183009597C2 /* TheDataModel.h */,
-				C28C1F581C898183009597C2 /* TheDataModel.m */,
-				C28C1F5A1C898294009597C2 /* ListModel.h */,
-				C28C1F5B1C898294009597C2 /* ListModel.m */,
-				C28C1F5D1C898355009597C2 /* TheMessageModel.h */,
-				C28C1F5E1C898355009597C2 /* TheMessageModel.m */,
-				C28C1F631C8984AF009597C2 /* TheContentModel.h */,
-				C28C1F641C8984AF009597C2 /* TheContentModel.m */,
-				C28C1F691C8985B5009597C2 /* TheImageModel.h */,
-				C28C1F6A1C8985B5009597C2 /* TheImageModel.m */,
-				C28C1F661C8984FA009597C2 /* TheExtModel.h */,
-				C28C1F671C8984FA009597C2 /* TheExtModel.m */,
-				C28C1F601C898365009597C2 /* TheSenderModel.h */,
-				C28C1F611C898365009597C2 /* TheSenderModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,19 +297,8 @@
 		C2431F131C84687E0061FAB1 /* NormalViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C266ECA01C8C168A00586C17 /* CWNormalViewControllers */,
 				C2431F241C8468DD0061FAB1 /* file6 */,
-				C2A6578B1C868C7000A35999 /* WLLLogInViewController.h */,
-				C2A6578C1C868C7000A35999 /* WLLLogInViewController.m */,
-				C2A6578D1C868C7000A35999 /* WLLLogInViewController.xib */,
-				C2C56C011C880E32004F84AA /* WLLMyDownloadViewController.h */,
-				C2C56C021C880E32004F84AA /* WLLMyDownloadViewController.m */,
-				C2C56C031C880E32004F84AA /* WLLMyDownloadViewController.xib */,
-				C2C56C061C882B5A004F84AA /* SettingInTableViewController.h */,
-				C2C56C071C882B5A004F84AA /* SettingInTableViewController.m */,
-				C2C56C081C882B5A004F84AA /* SettingInTableViewController.xib */,
-				C2C56C161C887BED004F84AA /* NotificationViewController.h */,
-				C2C56C171C887BED004F84AA /* NotificationViewController.m */,
-				C2C56C181C887BED004F84AA /* NotificationViewController.xib */,
 			);
 			path = NormalViewControllers;
 			sourceTree = "<group>";
@@ -351,16 +315,8 @@
 		C2431F151C84687E0061FAB1 /* BaseViews */ = {
 			isa = PBXGroup;
 			children = (
+				C266ECB51C8C16FF00586C17 /* CWBaseViews */,
 				C2431F261C8468E60061FAB1 /* file7 */,
-				C22509C71C85C1E20069B350 /* UserTableViewCell.h */,
-				C22509C81C85C1E20069B350 /* UserTableViewCell.m */,
-				C22509C91C85C1E20069B350 /* UserTableViewCell.xib */,
-				C2C56C0B1C885C9A004F84AA /* SettingInTableViewCell.h */,
-				C2C56C0C1C885C9A004F84AA /* SettingInTableViewCell.m */,
-				C2C56C0D1C885C9A004F84AA /* SettingInTableViewCell.xib */,
-				C28C1F6C1C898D90009597C2 /* NotificationRadioTableViewCell.h */,
-				C28C1F6D1C898D90009597C2 /* NotificationRadioTableViewCell.m */,
-				C28C1F6E1C898D90009597C2 /* NotificationRadioTableViewCell.xib */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -371,6 +327,98 @@
 				C2431F281C8468EE0061FAB1 /* file8 */,
 			);
 			path = NormalViews;
+			sourceTree = "<group>";
+		};
+		C266EC711C8C14D000586C17 /* CWMFWRecommendedMOdels */ = {
+			isa = PBXGroup;
+			children = (
+				C266EC721C8C14D000586C17 /* RecommendedModel.h */,
+				C266EC731C8C14D000586C17 /* RecommendedModel.m */,
+			);
+			path = CWMFWRecommendedMOdels;
+			sourceTree = "<group>";
+		};
+		C266EC741C8C14D000586C17 /* CWNOtificationModels */ = {
+			isa = PBXGroup;
+			children = (
+				C266EC751C8C14D000586C17 /* ListModel.h */,
+				C266EC761C8C14D000586C17 /* ListModel.m */,
+				C266EC771C8C14D000586C17 /* NOfiticationRadioFirstModel.h */,
+				C266EC781C8C14D000586C17 /* NOfiticationRadioFirstModel.m */,
+				C266EC791C8C14D000586C17 /* RadioModel.h */,
+				C266EC7A1C8C14D000586C17 /* RadioModel.m */,
+				C266EC7B1C8C14D000586C17 /* TheContentModel.h */,
+				C266EC7C1C8C14D000586C17 /* TheContentModel.m */,
+				C266EC7D1C8C14D000586C17 /* TheDataModel.h */,
+				C266EC7E1C8C14D000586C17 /* TheDataModel.m */,
+				C266EC7F1C8C14D000586C17 /* TheExtModel.h */,
+				C266EC801C8C14D000586C17 /* TheExtModel.m */,
+				C266EC811C8C14D000586C17 /* TheImageModel.h */,
+				C266EC821C8C14D000586C17 /* TheImageModel.m */,
+				C266EC831C8C14D000586C17 /* TheMessageModel.h */,
+				C266EC841C8C14D000586C17 /* TheMessageModel.m */,
+				C266EC851C8C14D000586C17 /* TheMoreModel.h */,
+				C266EC861C8C14D000586C17 /* TheMoreModel.m */,
+				C266EC871C8C14D000586C17 /* TheSenderModel.h */,
+				C266EC881C8C14D000586C17 /* TheSenderModel.m */,
+				C266EC891C8C14D000586C17 /* UserModel.h */,
+				C266EC8A1C8C14D000586C17 /* UserModel.m */,
+			);
+			path = CWNOtificationModels;
+			sourceTree = "<group>";
+		};
+		C266EC971C8C154900586C17 /* CWHeaderPCH */ = {
+			isa = PBXGroup;
+			children = (
+				C266EC981C8C154900586C17 /* UserPrefixHeader.pch */,
+			);
+			path = CWHeaderPCH;
+			sourceTree = "<group>";
+		};
+		C266EC991C8C15DF00586C17 /* WCHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				C266EC9A1C8C15DF00586C17 /* WC_NetTools.h */,
+				C266EC9B1C8C15DF00586C17 /* WC_NetTools.m */,
+				C266EC9C1C8C15DF00586C17 /* WLLUserViewManager.h */,
+				C266EC9D1C8C15DF00586C17 /* WLLUserViewManager.m */,
+			);
+			path = WCHelpers;
+			sourceTree = "<group>";
+		};
+		C266ECA01C8C168A00586C17 /* CWNormalViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C266ECA11C8C168A00586C17 /* NotificationViewController.h */,
+				C266ECA21C8C168A00586C17 /* NotificationViewController.m */,
+				C266ECA31C8C168A00586C17 /* NotificationViewController.xib */,
+				C266ECA41C8C168A00586C17 /* SettingInTableViewController.h */,
+				C266ECA51C8C168A00586C17 /* SettingInTableViewController.m */,
+				C266ECA61C8C168A00586C17 /* SettingInTableViewController.xib */,
+				C266ECA71C8C168A00586C17 /* WLLLogInViewController.h */,
+				C266ECA81C8C168A00586C17 /* WLLLogInViewController.m */,
+				C266ECA91C8C168A00586C17 /* WLLLogInViewController.xib */,
+				C266ECAA1C8C168A00586C17 /* WLLMyDownloadViewController.h */,
+				C266ECAB1C8C168A00586C17 /* WLLMyDownloadViewController.m */,
+				C266ECAC1C8C168A00586C17 /* WLLMyDownloadViewController.xib */,
+			);
+			path = CWNormalViewControllers;
+			sourceTree = "<group>";
+		};
+		C266ECB51C8C16FF00586C17 /* CWBaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				C266ECB61C8C16FF00586C17 /* NotificationRadioTableViewCell.h */,
+				C266ECB71C8C16FF00586C17 /* NotificationRadioTableViewCell.m */,
+				C266ECB81C8C16FF00586C17 /* NotificationRadioTableViewCell.xib */,
+				C266ECB91C8C16FF00586C17 /* SettingInTableViewCell.h */,
+				C266ECBA1C8C16FF00586C17 /* SettingInTableViewCell.m */,
+				C266ECBB1C8C16FF00586C17 /* SettingInTableViewCell.xib */,
+				C266ECBC1C8C16FF00586C17 /* UserTableViewCell.h */,
+				C266ECBD1C8C16FF00586C17 /* UserTableViewCell.m */,
+				C266ECBE1C8C16FF00586C17 /* UserTableViewCell.xib */,
+			);
+			path = CWBaseViews;
 			sourceTree = "<group>";
 		};
 		F34BFDCBEF020DC1B7AEBDD9 /* Frameworks */ = {
@@ -441,25 +489,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C266ECB01C8C168A00586C17 /* SettingInTableViewController.xib in Resources */,
+				C266ECB41C8C168A00586C17 /* WLLMyDownloadViewController.xib in Resources */,
 				C2431F191C8468A90061FAB1 /* file1 in Resources */,
-				C2C56C051C880E32004F84AA /* WLLMyDownloadViewController.xib in Resources */,
-				C28C1F701C898D90009597C2 /* NotificationRadioTableViewCell.xib in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
-				C2A6578F1C868C7000A35999 /* WLLLogInViewController.xib in Resources */,
 				C2431F1F1C8468C60061FAB1 /* file4 in Resources */,
-				C2C56C1A1C887BED004F84AA /* NotificationViewController.xib in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* file3 in Resources */,
-				C22509CB1C85C1E20069B350 /* UserTableViewCell.xib in Resources */,
 				C2431F251C8468DD0061FAB1 /* file6 in Resources */,
 				C2431F211C8468CE0061FAB1 /* file5 in Resources */,
+				C266ECC01C8C16FF00586C17 /* NotificationRadioTableViewCell.xib in Resources */,
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
+				C266ECC41C8C16FF00586C17 /* UserTableViewCell.xib in Resources */,
 				C2431F271C8468E60061FAB1 /* file7 in Resources */,
+				C266ECC21C8C16FF00586C17 /* SettingInTableViewCell.xib in Resources */,
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
 				C2431F291C8468EE0061FAB1 /* file8 in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
-				C2C56C0A1C882B5A004F84AA /* SettingInTableViewController.xib in Resources */,
+				C266ECB21C8C168A00586C17 /* WLLLogInViewController.xib in Resources */,
 				C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */,
-				C2C56C0F1C885C9A004F84AA /* SettingInTableViewCell.xib in Resources */,
+				C266ECAE1C8C168A00586C17 /* NotificationViewController.xib in Resources */,
 				C2431F1B1C8468B40061FAB1 /* file2 in Resources */,
 				C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */,
 			);
@@ -520,33 +568,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C22509CA1C85C1E20069B350 /* UserTableViewCell.m in Sources */,
+				C266EC911C8C14D000586C17 /* TheExtModel.m in Sources */,
+				C266EC8F1C8C14D000586C17 /* TheContentModel.m in Sources */,
+				C266ECC31C8C16FF00586C17 /* UserTableViewCell.m in Sources */,
+				C266EC931C8C14D000586C17 /* TheMessageModel.m in Sources */,
+				C266EC951C8C14D000586C17 /* TheSenderModel.m in Sources */,
+				C266ECAD1C8C168A00586C17 /* NotificationViewController.m in Sources */,
+				C266EC8B1C8C14D000586C17 /* RecommendedModel.m in Sources */,
+				C266ECBF1C8C16FF00586C17 /* NotificationRadioTableViewCell.m in Sources */,
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
+				C266EC901C8C14D000586C17 /* TheDataModel.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
-				C28C1F681C8984FA009597C2 /* TheExtModel.m in Sources */,
-				C28C1F5F1C898355009597C2 /* TheMessageModel.m in Sources */,
-				C227095F1C89334F00867B4D /* WLLUserViewManager.m in Sources */,
-				C2336FEC1C8A841500C2A6E8 /* WC_NetTools.m in Sources */,
-				C28C1F6F1C898D90009597C2 /* NotificationRadioTableViewCell.m in Sources */,
-				C2C56C121C8864ED004F84AA /* TheMoreModel.m in Sources */,
-				C2C56C091C882B5A004F84AA /* SettingInTableViewController.m in Sources */,
+				C266ECB11C8C168A00586C17 /* WLLLogInViewController.m in Sources */,
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
-				C2C56C041C880E32004F84AA /* WLLMyDownloadViewController.m in Sources */,
+				C266EC8D1C8C14D000586C17 /* NOfiticationRadioFirstModel.m in Sources */,
+				C266ECC11C8C16FF00586C17 /* SettingInTableViewCell.m in Sources */,
+				C266EC8E1C8C14D000586C17 /* RadioModel.m in Sources */,
+				C266EC941C8C14D000586C17 /* TheMoreModel.m in Sources */,
+				C266EC961C8C14D000586C17 /* UserModel.m in Sources */,
+				C266EC9E1C8C15E000586C17 /* WC_NetTools.m in Sources */,
 				C2431F321C846B870061FAB1 /* WLLHomePageViewController.m in Sources */,
-				C2C56C191C887BED004F84AA /* NotificationViewController.m in Sources */,
-				C28C1F621C898365009597C2 /* TheSenderModel.m in Sources */,
 				C2431F171C84687E0061FAB1 /* AppDelegate.m in Sources */,
-				C2C56C151C8865BB004F84AA /* RecommendedModel.m in Sources */,
-				C2A6578E1C868C7000A35999 /* WLLLogInViewController.m in Sources */,
-				C28C1F651C8984AF009597C2 /* TheContentModel.m in Sources */,
-				C28C1F5C1C898294009597C2 /* ListModel.m in Sources */,
-				C2F25EF21C89B2A8002DC9A9 /* RadioModel.m in Sources */,
-				C28C1F591C898183009597C2 /* TheDataModel.m in Sources */,
-				C22509D31C85C71F0069B350 /* UserModel.m in Sources */,
+				C266ECAF1C8C168A00586C17 /* SettingInTableViewController.m in Sources */,
+				C266ECB31C8C168A00586C17 /* WLLMyDownloadViewController.m in Sources */,
+				C266EC921C8C14D000586C17 /* TheImageModel.m in Sources */,
 				C2431F3C1C846BD60061FAB1 /* WLLUserViewController.m in Sources */,
-				C28C1F561C897D9F009597C2 /* NOfiticationRadioFirstModel.m in Sources */,
-				C2C56C0E1C885C9A004F84AA /* SettingInTableViewCell.m in Sources */,
-				C28C1F6B1C8985B5009597C2 /* TheImageModel.m in Sources */,
+				C266EC8C1C8C14D000586C17 /* ListModel.m in Sources */,
+				C266EC9F1C8C15E000586C17 /* WLLUserViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,7 +705,7 @@
 			baseConfigurationReference = FEBD28042374DBC921FDACE7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lanou3g/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/UserPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lanou3g/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/CWHeaderPCH/UserPrefixHeader.pch;
 				INFOPLIST_FILE = TakingYouFurther/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.TakingYouFurther;
@@ -670,7 +718,7 @@
 			baseConfigurationReference = 4B75252F52C4AAA28E41E917 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/lanou3g/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/UserPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lanou3g/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/CWHeaderPCH/UserPrefixHeader.pch;
 				INFOPLIST_FILE = TakingYouFurther/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.TakingYouFurther;
