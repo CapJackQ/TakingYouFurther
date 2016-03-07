@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WLLSearchedTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UICollectionView *searchedCollectionView;
+
 
 @end

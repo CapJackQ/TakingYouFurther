@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -19,7 +20,7 @@
                         <animations/>
                         <color key="backgroundColor" red="0.5973372535" green="0.40132407980000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="LoE-TX-tF6" secondAttribute="height" multiplier="15:8" constant="-99.375" id="KQL-EE-JxA"/>
+                            <constraint firstAttribute="width" secondItem="LoE-TX-tF6" secondAttribute="height" multiplier="180:149" id="9ZG-BK-DUn"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RX5-Ij-JqM">
@@ -76,24 +77,28 @@
                 </subviews>
                 <animations/>
                 <constraints>
+                    <constraint firstItem="hfV-27-uj7" firstAttribute="bottom" secondItem="LoE-TX-tF6" secondAttribute="bottom" id="324-nL-ZJU"/>
+                    <constraint firstItem="ddW-Kn-Ryp" firstAttribute="top" secondItem="LoE-TX-tF6" secondAttribute="top" id="D8N-uh-whv"/>
+                    <constraint firstItem="ddW-Kn-Ryp" firstAttribute="leading" secondItem="LoE-TX-tF6" secondAttribute="trailing" constant="15" id="GYy-AH-VzK"/>
+                    <constraint firstItem="IoW-ZY-OK0" firstAttribute="leading" secondItem="RX5-Ij-JqM" secondAttribute="trailing" id="IDP-Ny-MIK"/>
+                    <constraint firstItem="hQb-kJ-MiE" firstAttribute="bottom" secondItem="LoE-TX-tF6" secondAttribute="bottom" constant="-5" id="Iqp-bT-cCI"/>
+                    <constraint firstItem="LoE-TX-tF6" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="IuL-8f-Opx"/>
                     <constraint firstItem="IoW-ZY-OK0" firstAttribute="leading" secondItem="RX5-Ij-JqM" secondAttribute="trailing" id="KeT-h9-3JX"/>
-                    <constraint firstItem="LoE-TX-tF6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Mxm-vc-TtW"/>
-                    <constraint firstItem="ddW-Kn-Ryp" firstAttribute="top" secondItem="LoE-TX-tF6" secondAttribute="top" id="N6e-1V-ILY"/>
-                    <constraint firstItem="IoW-ZY-OK0" firstAttribute="top" secondItem="LoE-TX-tF6" secondAttribute="top" id="QY4-WO-Sls"/>
+                    <constraint firstItem="LoE-TX-tF6" firstAttribute="top" secondItem="RX5-Ij-JqM" secondAttribute="top" id="PbM-0c-H5F"/>
                     <constraint firstItem="EDZ-61-NcE" firstAttribute="centerY" secondItem="hfV-27-uj7" secondAttribute="centerY" id="SJB-PJ-jdm"/>
-                    <constraint firstItem="hfV-27-uj7" firstAttribute="bottom" secondItem="LoE-TX-tF6" secondAttribute="bottom" id="TC8-IN-nIb"/>
                     <constraint firstItem="aDQ-CZ-n96" firstAttribute="bottom" secondItem="hfV-27-uj7" secondAttribute="bottom" id="UZm-Ws-Uo6"/>
                     <constraint firstItem="hfV-27-uj7" firstAttribute="leading" secondItem="hQb-kJ-MiE" secondAttribute="trailing" constant="5" id="XiT-K3-Rvc"/>
-                    <constraint firstItem="LoE-TX-tF6" firstAttribute="top" secondItem="RX5-Ij-JqM" secondAttribute="top" id="aWa-45-4Iv"/>
                     <constraint firstAttribute="trailing" secondItem="ddW-Kn-Ryp" secondAttribute="trailing" constant="20" id="ajD-9v-NcL"/>
+                    <constraint firstItem="LoE-TX-tF6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cUu-VP-5Qd"/>
                     <constraint firstItem="hQb-kJ-MiE" firstAttribute="leading" secondItem="ddW-Kn-Ryp" secondAttribute="leading" id="fyC-dY-JN6"/>
+                    <constraint firstItem="hQb-kJ-MiE" firstAttribute="leading" secondItem="ddW-Kn-Ryp" secondAttribute="leading" id="i67-wn-TIJ"/>
                     <constraint firstItem="aDQ-CZ-n96" firstAttribute="leading" secondItem="hfV-27-uj7" secondAttribute="trailing" constant="5" id="kKu-cI-uaL"/>
-                    <constraint firstItem="LoE-TX-tF6" firstAttribute="leading" secondItem="RX5-Ij-JqM" secondAttribute="leading" id="oE2-n3-3z1"/>
+                    <constraint firstItem="hfV-27-uj7" firstAttribute="leading" secondItem="hQb-kJ-MiE" secondAttribute="trailing" constant="5" id="lj9-nt-LO9"/>
+                    <constraint firstItem="LoE-TX-tF6" firstAttribute="leading" secondItem="RX5-Ij-JqM" secondAttribute="leading" id="mEF-GG-pt9"/>
                     <constraint firstItem="EDZ-61-NcE" firstAttribute="leading" secondItem="aDQ-CZ-n96" secondAttribute="trailing" constant="5" id="r71-HM-uen"/>
-                    <constraint firstItem="LoE-TX-tF6" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" constant="-40" id="rpu-Nx-ng3"/>
-                    <constraint firstItem="ddW-Kn-Ryp" firstAttribute="leading" secondItem="LoE-TX-tF6" secondAttribute="trailing" constant="15" id="skt-0j-du2"/>
-                    <constraint firstItem="hQb-kJ-MiE" firstAttribute="bottom" secondItem="LoE-TX-tF6" secondAttribute="bottom" constant="-5" id="u9C-dS-Ujc"/>
-                    <constraint firstItem="LoE-TX-tF6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uDb-IC-Opz"/>
+                    <constraint firstAttribute="trailing" secondItem="ddW-Kn-Ryp" secondAttribute="trailing" constant="20" id="rFO-ck-H3S"/>
+                    <constraint firstItem="IoW-ZY-OK0" firstAttribute="top" secondItem="LoE-TX-tF6" secondAttribute="top" id="rUx-eV-l1u"/>
+                    <constraint firstItem="LoE-TX-tF6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uBa-W6-Ibg"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

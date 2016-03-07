@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WLLPopDstinationTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UICollectionView *popDestinationCollectionView;
+
 
 
 @end

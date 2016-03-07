@@ -10,6 +10,8 @@
 #import "WLLTodayNotesModel.h"
 #import "UIImageView+WebCache.h"
 
+#define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
+
 @interface WLLTodayNotesTableViewCell ()
 @property (strong, nonatomic) IBOutlet UILabel *todayLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yestodayLabel;
@@ -27,17 +29,30 @@
     
     _model = model;
     
-    self.todayLabel.text = model.data[@"title"];
-    self.yestodayLabel.text = model.data[@"sub_title_text"];
-    self.nameLabel.text = model.user[@"name"];
+    self.todayLabel.text = model.title;
+    self.yestodayLabel.text = model.sub_title_text;
+    self.nameLabel.text = model.user_name;
     self.destinationLabel.text = model.name;
-    self.titleLabel.text = model.note[@"title"];
+    self.titleLabel.text = model.note_title;
     
-    [self.todayImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.note[@"thumbnail"]]]];
-    [self.headImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.note[@"logo"]]]];
+    [self.todayImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.thumbnail]]];
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.logo]]];
     
-    
+    self.headImage.layer.masksToBounds = YES;
+    self.headImage.layer.cornerRadius = self.headImage.frame.size.height / 2;
 }
+
+-(CGSize)sizeThatFits:(CGSize)size {
+    
+    size = CGSizeMake(kWidth, self.titleLabel.frame.size.height + 100);
+    return size;
+}
+
+-(void)setFrame:(CGRect)frame {
+    frame.size = CGSizeMake(kWidth,CGRectGetMaxY(self.titleLabel.frame) + 100);
+}
+
+
 
 - (void)awakeFromNib {
     // Initialization code

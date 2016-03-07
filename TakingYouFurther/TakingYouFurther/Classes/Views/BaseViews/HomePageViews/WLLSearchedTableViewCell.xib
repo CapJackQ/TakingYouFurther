@@ -37,7 +37,7 @@
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
-                <outlet property="searchedCollectionView" destination="mVK-8g-KDs" id="9Bv-ac-gei"/>
+                <outlet property="searchedCollectionView" destination="mVK-8g-KDs" id="YLI-aA-T5S"/>
             </connections>
             <point key="canvasLocation" x="296" y="212.5"/>
         </tableViewCell>

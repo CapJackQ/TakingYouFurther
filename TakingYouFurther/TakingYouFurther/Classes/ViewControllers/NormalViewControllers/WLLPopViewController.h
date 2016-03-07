@@ -10,4 +10,6 @@
 
 @interface WLLPopViewController : UIViewController
 
+@property (nonatomic, assign) NSInteger index;
+
 @end

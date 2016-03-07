@@ -12,6 +12,7 @@
 #import "WLLTodayNotesModel.h"
 #import "WLLDestinationModel.h"
 #import "WLLRecommendModel.h"
+#import "Model.h"
 
 @interface WLLHomePageDataManager ()
 
@@ -19,6 +20,8 @@
 @property (nonatomic, strong) NSMutableArray *todayNotesArray;
 @property (nonatomic, strong) NSMutableArray *destinationArray;
 @property (nonatomic, strong) NSMutableArray *recommendArray;
+
+@property (nonatomic, strong) NSMutableArray *modelArray;
 
 @end
 
@@ -68,6 +71,13 @@ static WLLHomePageDataManager *manager = nil;
     return _recommendArray;
 }
 
+-(NSMutableArray *)modelArray {
+    if (_modelArray == nil) {
+        _modelArray = [NSMutableArray array];
+    }
+    return _modelArray;
+}
+
 #pragma mark - 解析 HomePage 数据
 -(void)requestHomePageDataWithUrl:(NSString *)url didFinished:(void (^)())finished {
     
@@ -82,6 +92,13 @@ static WLLHomePageDataManager *manager = nil;
         
         NSArray *listArray = dataDict[@"list"];
         
+        for (NSDictionary *dict in listArray) {
+            
+            Model *m = [[Model alloc] init];
+            [m setValuesForKeysWithDictionary:dict];
+            [self.modelArray addObject:m];
+        }
+        
         NSDictionary *mainDict = listArray[0];
         
         NSArray *dataArray1 = mainDict[@"data"];
@@ -93,21 +110,36 @@ static WLLHomePageDataManager *manager = nil;
             [self.guidanceArray addObject:model];
         }
         
+//        for (NSDictionary *dict in listArray) {
+//            
+//            WLLTodayNotesModel *model = [[WLLTodayNotesModel alloc] init];
+//            [model setValuesForKeysWithDictionary:dict];
+//            [self.todayNotesArray addObject:model];
+//        }
         NSDictionary *eliteDict = listArray[1];
+        WLLTodayNotesModel *model = [[WLLTodayNotesModel alloc] init];
         
         NSDictionary *Dict = eliteDict[@"data"];
+        model.title = Dict[@"title"];
+        model.sub_title_text = Dict[@"sub_title_text"];
         
         NSDictionary *noteDict = Dict[@"note"];
+        model.note_title = noteDict[@"title"];
+        model.thumbnail = noteDict[@"thumbnail"];
+        model.jump_url = noteDict[@"jump_url"];
+        
+        NSDictionary *userDict = noteDict[@"user"];
+        model.user_name = userDict[@"name"];
+        model.logo = userDict[@"logo"];
         
         NSArray *mddsArray = noteDict[@"mdds"];
         
         for (NSDictionary *dict in mddsArray) {
-            
-            WLLTodayNotesModel *model = [[WLLTodayNotesModel alloc] init];
+
             [model setValuesForKeysWithDictionary:dict];
-            [self.todayNotesArray addObject:model];
-            
         }
+        [self.todayNotesArray addObject:model];
+        
         
         NSDictionary *salesDict = listArray[2];
         
@@ -162,7 +194,6 @@ static WLLHomePageDataManager *manager = nil;
 }
 
 -(NSInteger)countOfDestinationArray {
-    
     return self.destinationArray.count;
 }
 
@@ -180,7 +211,10 @@ static WLLHomePageDataManager *manager = nil;
     return model;
 }
 
-
+-(NSInteger)countOfModelArray {
+    
+    return self.modelArray.count;
+}
 
 
 @end

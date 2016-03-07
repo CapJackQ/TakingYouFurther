@@ -12,7 +12,6 @@
 
 @interface WLLGuidanceCollectionViewCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *guidanceImage;
-@property (strong, nonatomic) IBOutlet UILabel *guidanceLabel;
 
 @end
 

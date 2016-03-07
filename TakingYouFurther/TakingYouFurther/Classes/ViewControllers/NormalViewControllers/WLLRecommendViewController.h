@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WLLRecommendViewController : UIViewController
+@property (nonatomic, assign) NSInteger index;
 
 @end

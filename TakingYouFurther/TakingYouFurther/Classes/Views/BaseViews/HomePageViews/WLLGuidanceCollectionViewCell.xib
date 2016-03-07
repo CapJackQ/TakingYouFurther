@@ -32,7 +32,6 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <animations/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0Dj-27-Ajc" firstAttribute="centerX" secondItem="tFX-f8-zrs" secondAttribute="centerX" id="NsE-41-dLs"/>
                 <constraint firstAttribute="trailing" secondItem="tFX-f8-zrs" secondAttribute="trailing" id="WnP-e2-KMg"/>
@@ -43,7 +42,7 @@
             <size key="customSize" width="192" height="229"/>
             <connections>
                 <outlet property="guidanceImage" destination="tFX-f8-zrs" id="YOm-Fh-Ugx"/>
-                <outlet property="guidanceLabel" destination="0Dj-27-Ajc" id="7O3-Og-2H0"/>
+                <outlet property="guidanceLabel" destination="0Dj-27-Ajc" id="zV4-PH-OMd"/>
             </connections>
             <point key="canvasLocation" x="300" y="318.5"/>
         </collectionViewCell>

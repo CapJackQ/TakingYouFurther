@@ -12,6 +12,14 @@
 
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key {
     
+    if ([key isEqualToString:@"title"]) {
+        
+        self.note_title = value;
+    }
+    
+    if ([key isEqualToString:@"name"]) {
+        self.user_name = value;
+    }
     
 }
 

@@ -10,6 +10,7 @@
 @class WLLGuidanceModel;
 
 @interface WLLGuidanceCollectionViewCell : UICollectionViewCell
+@property (strong, nonatomic) IBOutlet UILabel *guidanceLabel;
 
 @property (nonatomic, strong) WLLGuidanceModel *model;
 

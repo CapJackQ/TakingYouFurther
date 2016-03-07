@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WLLRecommendDestinationTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UICollectionView *recommendDestinationCollectionView;
+
 
 
 @end

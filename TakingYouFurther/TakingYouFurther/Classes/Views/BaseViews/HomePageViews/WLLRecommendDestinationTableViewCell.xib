@@ -44,7 +44,7 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="104" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1Kc-uf-F6S">
                         <rect key="frame" x="0.0" y="41" width="725" height="773"/>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.44048021040000002" blue="0.072703392059999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="1Kc-uf-F6S" secondAttribute="height" multiplier="15:16" id="fOs-We-S5x"/>
                         </constraints>
@@ -54,6 +54,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="lq4-5h-4Yc"/>
+                            <outlet property="delegate" destination="-1" id="xO6-K2-1d3"/>
+                        </connections>
                     </collectionView>
                 </subviews>
                 <animations/>
@@ -72,7 +76,7 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="recommendDestinationCollectionView" destination="1Kc-uf-F6S" id="dBa-Pp-Z6K"/>
+                <outlet property="recommendDestinationCollectionView" destination="1Kc-uf-F6S" id="q8X-ig-va9"/>
                 <outlet property="recommendLabel" destination="Xce-a0-NQx" id="fMF-pB-crS"/>
             </connections>
             <point key="canvasLocation" x="468.5" y="536"/>

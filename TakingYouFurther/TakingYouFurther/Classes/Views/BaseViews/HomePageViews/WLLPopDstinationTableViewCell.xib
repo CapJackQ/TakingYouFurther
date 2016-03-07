@@ -52,7 +52,7 @@
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="103" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tDc-u3-awi">
                         <rect key="frame" x="0.0" y="43" width="646" height="861"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.77984894179999997" green="0.76833638329999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tDc-u3-awi" secondAttribute="height" multiplier="15:20" id="ao4-jd-fRN"/>
                         </constraints>
@@ -81,7 +81,7 @@
             <animations/>
             <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
-                <outlet property="popDestinationCollectionView" destination="tDc-u3-awi" id="b0T-CE-z0q"/>
+                <outlet property="popDestinationCollectionView" destination="tDc-u3-awi" id="QXs-OP-mM8"/>
             </connections>
             <point key="canvasLocation" x="180" y="184.5"/>
         </tableViewCell>

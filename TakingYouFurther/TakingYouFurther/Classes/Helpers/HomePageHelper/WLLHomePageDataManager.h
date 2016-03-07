@@ -57,4 +57,6 @@
 
 -(WLLRecommendModel *)recommendModelWithIndex:(NSInteger)index;
 
+-(NSInteger)countOfModelArray;
+
 @end

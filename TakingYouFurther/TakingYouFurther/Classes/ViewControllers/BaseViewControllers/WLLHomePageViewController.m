@@ -10,20 +10,13 @@
 #import "WLLHomePageUrlHeader.h"
 #import "WLLFistTableViewCell.h"
 #import "WLLSearchedTableViewCell.h"
-#import "WLLSearchedCollectionViewCell.h"
 #import "WLLGuidanceTableViewCell.h"
-#import "WLLGuidanceCollectionViewCell.h"
 #import "WLLTodayNotesTableViewCell.h"
 #import "WLLPopDstinationTableViewCell.h"
-#import "WLLPopDestinationCollectionViewCell.h"
 #import "WLLRecommendDestinationTableViewCell.h"
-#import "WLLRecommendDestinationCollectionViewCell.h"
 #import "WLLReviewTableViewCell.h"
 #import "WLLHomePageDataManager.h"
-#import "WLLGuidanceModel.h"
 #import "WLLTodayNotesModel.h"
-#import "WLLDestinationModel.h"
-#import "WLLRecommendModel.h"
 #import "UIImageView+WebCache.h"
 #import "WLLPopViewController.h"
 #import "WLLSearchViewController.h"
@@ -31,12 +24,15 @@
 #import "WLLMoreOverViewController.h"
 #import "WLLMoreCheckViewController.h"
 #import "WLLSeekViewController.h"
+#import "WLLTodayViewController.h"
 
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 #define kHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 
-@interface WLLHomePageViewController ()<UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+#define MIN_OFFSET -64
+
+@interface WLLHomePageViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     UIImageView *headerImage;
 }
@@ -54,52 +50,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 不同代理指定及注册
+    // homePageTableView注册不同cell
     [self assignDelegateAndRegister];
     // 设定顶部图片
     [self setHeaderView];
-    // 请求数据
-    [self requestGuidanceData];
-    
-    // 注册消息接受者
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(push) name:@"push" object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushView) name:@"pushView" object:nil];
     
     // 设定导航栏的到顶部的约束距离
     self.view_barConstraint.constant = kHeight/4;
-
-}
-
-#pragma mark - 请求数据
--(void)requestGuidanceData {
+    
+    [self registerNotifications];
     
     [[WLLHomePageDataManager shareInstance] requestHomePageDataWithUrl:kHomePageUrl didFinished:^{
-       
         [self.homePageTableView reloadData];
     }];
-    
+
 }
 
-#pragma mark - 指定代理
+#pragma mark - homePageTableView注册不同cell
 -(void)assignDelegateAndRegister {
     
-    self.homePageTableView.dataSource = self;
-    self.homePageTableView.delegate = self;
-    
-    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLFistTableViewCell" bundle:nil] forCellReuseIdentifier:@"first_cell"];
-    
-    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLSearchedTableViewCell" bundle:nil] forCellReuseIdentifier:@"searched_cell"];
-    
-    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLGuidanceTableViewCell" bundle:nil] forCellReuseIdentifier:@"guidance_cell"];
-    
-    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLTodayNotesTableViewCell" bundle:nil] forCellReuseIdentifier:@"todaynotes_cell"];
-    
-    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLPopDstinationTableViewCell" bundle:nil] forCellReuseIdentifier:@"popdestination_cell"];
-    
-    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLRecommendDestinationTableViewCell" bundle:nil] forCellReuseIdentifier:@"recommend_cell"];
-    
-    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLReviewTableViewCell" bundle:nil] forCellReuseIdentifier:@"review_cell"];
+    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLFistTableViewCell" bundle:nil]
+                 forCellReuseIdentifier:@"first_cell"];
+    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLSearchedTableViewCell" bundle:nil]
+                 forCellReuseIdentifier:@"searched_cell"];
+    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLGuidanceTableViewCell" bundle:nil]
+                 forCellReuseIdentifier:@"guidance_cell"];
+    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLTodayNotesTableViewCell" bundle:nil]
+                 forCellReuseIdentifier:@"todaynotes_cell"];
+    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLPopDstinationTableViewCell" bundle:nil]
+                 forCellReuseIdentifier:@"popdestination_cell"];
+    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLRecommendDestinationTableViewCell" bundle:nil]
+                 forCellReuseIdentifier:@"recommend_cell"];
+    [self.homePageTableView registerNib:[UINib nibWithNibName:@"WLLReviewTableViewCell" bundle:nil]
+                 forCellReuseIdentifier:@"review_cell"];
 }
 
 #pragma mark - 隐藏自带NavigationBar
@@ -112,7 +95,6 @@
     
     [self setNaviBarHidden:YES];
     [self setHeaderView];
-    
     // searchBar 添加左视图
     [self setTextFiledLeftImage:self.searchBar image:@"1"];
 }
@@ -123,22 +105,7 @@
     textFiled.leftView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:image]];
 }
 
-#pragma mark - 两个页面的查看更多
-// 热门目的地
--(void)push {
-    
-    WLLMoreOverViewController *moreVC = [[WLLMoreOverViewController alloc] initWithNibName:@"WLLMoreOverViewController" bundle:nil];
-    [self.navigationController pushViewController:moreVC animated:YES];
-}
-// 目的地推荐
--(void)pushView {
-    WLLMoreCheckViewController *moreVC = [[WLLMoreCheckViewController alloc] initWithNibName:@"WLLMoreCheckViewController" bundle:nil];
-    [self.navigationController pushViewController:moreVC animated:YES];
-}
-
-
 #pragma mark - 搜索栏跳转
-
 - (IBAction)searchAction:(UIButton *)sender {
     WLLSearchViewController *searchVC = [[WLLSearchViewController alloc] init];
     [self presentViewController:searchVC animated:YES completion:nil];
@@ -159,18 +126,17 @@
 //    [headerImage setImage:image];
     
     self.homePageTableView.tableHeaderView = headerImage;
-    
 }
 
 #pragma mark - UITableView 代理方法
 
-#pragma mark 
+// 返回分区个数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 4;
+    NSLog(@"%ld", [[WLLHomePageDataManager shareInstance] countOfModelArray]);
+    return [[WLLHomePageDataManager shareInstance] countOfModelArray]; // 返回model数据重新解析
 }
 
-#pragma mark number of rows
+// 返回cell个数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     if (section == 0) {
@@ -186,7 +152,7 @@
     return 2;
 }
 
-#pragma mark cell For Row At IndexPath
+// 返回cell
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0 && indexPath.row == 0) {
@@ -198,69 +164,51 @@
     if (indexPath.section == 0 && indexPath.row == 1) {
     
         WLLSearchedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searched_cell" forIndexPath:indexPath];
-    cell.searchedCollectionView.dataSource = self;
-    cell.searchedCollectionView.delegate = self;
-    
-    [cell.searchedCollectionView registerNib:[UINib nibWithNibName:@"WLLSearchedCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"searched_item"];
         return cell;
     }
     
     if (indexPath.section == 0 && indexPath.row == 2) {
     
         WLLGuidanceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"guidance_cell" forIndexPath:indexPath];
-        cell.guidanceCollectionView.dataSource = self;
-        cell.guidanceCollectionView.delegate = self;
-        [cell.guidanceCollectionView registerNib:[UINib nibWithNibName:@"WLLGuidanceCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"guidance_item"];
-        [cell.guidanceCollectionView reloadData];
         return cell;
     }
     if (indexPath.section == 1 && indexPath.row == 0) {
         WLLTodayNotesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"todaynotes_cell" forIndexPath:indexPath];
-//        WLLTodayNotesModel *model = [[WLLHomePageDataManager shareInstance] todayNotesModelWithIndex:indexPath.row];
-//        cell.model = model;
+        WLLTodayNotesModel *model = [[WLLHomePageDataManager shareInstance] todayNotesModelWithIndex:indexPath.row];
+        cell.model = model;
         return cell;
     }
     
-    if (indexPath.section == 2 &&indexPath.row == 0) {
+    if (indexPath.section == 2 && indexPath.row == 0) {
     
         WLLPopDstinationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"popdestination_cell" forIndexPath:indexPath];
-        cell.popDestinationCollectionView.delegate = self;
-        cell.popDestinationCollectionView.dataSource = self;
-//        [cell.popDestinationCollectionView reloadData];
-        
-        [cell.popDestinationCollectionView registerNib:[UINib nibWithNibName:@"WLLPopDestinationCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"popdestination_item"];
         return cell;
     }
-    if (indexPath.section == 3 &&indexPath.row == 0) {
     
-        WLLRecommendDestinationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recommend_cell" forIndexPath:indexPath];
-        cell.recommendDestinationCollectionView.delegate = self;
-        cell.recommendDestinationCollectionView.dataSource = self;
-//        [cell.recommendDestinationCollectionView reloadData];
+    if (indexPath.section == 3 && indexPath.row == 0) {
         
-        [cell.recommendDestinationCollectionView registerNib:[UINib nibWithNibName:@"WLLRecommendDestinationCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"recommend_item"];
+        WLLRecommendDestinationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recommend_cell" forIndexPath:indexPath];
         return cell;
     }
     
     WLLReviewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"review_cell" forIndexPath:indexPath];
     return cell;
-
 }
 
-#pragma mark height For Row At IndexPath
+// 返回cell高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0 && indexPath.row == 0) {
-        return 80;
+        return kHeight/10.5143;
     }
     if (indexPath.section == 0 && indexPath.row == 1) {
-        return 50;
+        return kWidth/8.28;
     }
     if (indexPath.section == 0 && indexPath.row == 2) {
-        return 290;
+        return kWidth/1.4276;
     }
     if (indexPath.section == 1 && indexPath.row == 0) {
-        return 380;
+        return kWidth/1.089;
     }
     if (indexPath.section == 2 && indexPath.row == 0) {
         return kWidth * 1.5;
@@ -273,161 +221,80 @@
     
 }
 
-#pragma mark - UICollectionView 代理方法
-
-#pragma mark number of items
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-//
-//    // collectionView 为 searchedCollectionView 时
-    if (collectionView.tag == 101) {
-//
-        return 3;
-    }
-
-    // collectionView 为 guidanceCollectionView 时
-    if (collectionView.tag == 102) {
-        
-        return [[WLLHomePageDataManager shareInstance] countOfguidanceArray];
-    }
+// 选中cell
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // collectionView 为 popDestinationCollectionView || recommendDestinationCollectionView 时
-    if (collectionView.tag == 103 || collectionView.tag == 104) {
-//
-        return 6;
+    if (indexPath.section == 1) {
+        
+        WLLTodayViewController *todayVC = [[WLLTodayViewController alloc] initWithNibName:@"WLLTodayViewController" bundle:nil];
+        
+        todayVC.index = indexPath.row;
+        
+        [self.navigationController pushViewController:todayVC animated:YES];
     }
-    return 0;
 }
 
-#pragma mark cell for item at indexPath
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    // collectionView 为 searchedCollectionView 时
-    if (collectionView.tag == 101) {
-        WLLSearchedCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"searched_item" forIndexPath:indexPath];
-        
-        cell.layer.masksToBounds = YES;
-        cell.layer.cornerRadius = cell.frame.size.height / 2;
-        
-        return cell;
-
-    }
-    // collectionView 为 guidanceCollectionView 时
-    if (collectionView.tag == 102) {
+#pragma mark - 注册通知
+-(void)registerNotifications {
     
-        WLLGuidanceCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"guidance_item" forIndexPath:indexPath];
-        WLLGuidanceModel *model = [[WLLHomePageDataManager shareInstance] guidanceModelWithIdex:indexPath.row];
-        cell.model = model;
-        return cell;
-    }
-
-    // collectionView 为 popDestinationCollectionView 时
-    if (collectionView.tag == 103) {
-
-        WLLPopDestinationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"popdestination_item" forIndexPath:indexPath];
-        WLLDestinationModel *model = [[WLLHomePageDataManager shareInstance] destinationModelWithIndex:indexPath.row];
-        cell.model = model;
-        return cell;
-    }
+    // 注册两个查看按钮消息接受者
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(push) name:@"push" object:nil];
     
-    // collectionView 为 recommendDestinationCollectionView
-    WLLRecommendDestinationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recommend_item" forIndexPath:indexPath];
-    WLLRecommendModel *model = [[WLLHomePageDataManager shareInstance] recommendModelWithIndex:indexPath.row];
-    cell.model = model;
-    return cell;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushView) name:@"pushView" object:nil];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushSeek) name:@"seek" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popDestination) name:@"seekpop" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushRecommend) name:@"recommend" object:nil];
 }
 
-#pragma mark collection view layout size for item at indexpath
--(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    // collectionView 为 searchedCollectionView 时
-    if (collectionView.tag == 101) {
-        
-        return CGSizeMake(110, 30);
-    }
-    // collectionView 为 guidanceCollectionView 时
-    if (collectionView.tag == 102) {
+#pragma mark - 推送页面
+// 更多热门目的地
+-(void)push {
     
-        return CGSizeMake(80, 120);
-    }
-    // collectionView 为 popDestinationCollectionView 时
-    if (collectionView.tag == 103) {
-
-        return CGSizeMake(kWidth/3.4, 250);
-    }
-
-    // collectionView 为 recommendDestinationCollectionView
-    return CGSizeMake(110, 200);
-
+    WLLMoreOverViewController *moreVC = [[WLLMoreOverViewController alloc] initWithNibName:@"WLLMoreOverViewController" bundle:nil];
+    [self.navigationController pushViewController:moreVC animated:YES];
+}
+// 更多目的地推荐
+-(void)pushView {
+    WLLMoreCheckViewController *moreVC = [[WLLMoreCheckViewController alloc] initWithNibName:@"WLLMoreCheckViewController" bundle:nil];
+    [self.navigationController pushViewController:moreVC animated:YES];
 }
 
-#pragma mark collection view layout inset for section
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    // collectionView 为 searchedCollectionView 时
-    if (collectionView.tag == 101) {
-
-        return UIEdgeInsetsMake(10, 20, 10, 20);
-    }
-    // collectionView 为 guidanceCollectionView 时
-    if (collectionView.tag == 102) {
-    
-        return UIEdgeInsetsMake(20, 20, 20, 20);
-    }
-    
-    // collectionView 为 popDestinationCollectionView 时
-    if (collectionView.tag == 103) {
-    
-        return UIEdgeInsetsMake(20, 10, 20, 10);
-    }
-//
-//    // collectionView 为 recommendDestinationCollectionView
-    return UIEdgeInsetsMake(20, 20, 20, 20);
+// 找攻略
+-(void)pushSeek {
+    WLLSeekViewController *seekVC = [[WLLSeekViewController alloc] initWithNibName:@"WLLSeekViewController" bundle:nil];
+    [self.navigationController pushViewController:seekVC animated:YES];
 }
 
-#pragma mark did Select Item At IndexPath
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (collectionView.tag == 102) {
-        
-        WLLSeekViewController *seekVC = [[WLLSeekViewController alloc] initWithNibName:@"WLLSeekViewController" bundle:nil];
-        seekVC.index = indexPath.row;
-        [self.navigationController pushViewController:seekVC animated:YES];
-    }
-    
-    if (collectionView.tag == 103) {
-        
-        WLLPopViewController *popVC = [[WLLPopViewController alloc] initWithNibName:@"WLLPopViewController" bundle:nil];
-        [self.navigationController pushViewController:popVC animated:YES];
-    }
-    
-    if (collectionView.tag == 104) {
-        
-        WLLRecommendViewController *recommendVC = [[WLLRecommendViewController alloc] initWithNibName:@"WLLRecommendViewController" bundle:nil];
-        
-        [self.navigationController pushViewController:recommendVC animated:YES];
-    }
-    
+// 推送目的地
+- (void)popDestination {
+    WLLPopViewController *popVC = [[WLLPopViewController alloc] initWithNibName:@"WLLPopViewController" bundle:nil];
+    [self.navigationController pushViewController:popVC animated:YES];
 }
 
-#pragma makr - UIScrollViewDelegate 滚动代理
+// 推送推荐
+-(void)pushRecommend {
+    WLLRecommendViewController *recommendVC = [[WLLRecommendViewController alloc] initWithNibName:@"WLLRecommendViewController" bundle:nil];
+    [self.navigationController pushViewController:recommendVC animated:YES];
+}
+
+#pragma makr - Nvibar 滚动
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-    if (scrollView.contentOffset.y > -64 && scrollView.contentOffset.y < 160) {
-        
-        self.view_barConstraint.constant = 160 - scrollView.contentOffset.y;
+    if (scrollView.contentOffset.y > MIN_OFFSET && scrollView.contentOffset.y < kHeight/4) {
+        self.view_barConstraint.constant = kHeight/4 - scrollView.contentOffset.y - 20;
     }
-    if (scrollView.contentOffset.y < -64) {
-        
-        self.view_barConstraint.constant = 160 + fabs(scrollView.contentOffset.y);
+    if (scrollView.contentOffset.y < MIN_OFFSET) {
+        self.view_barConstraint.constant = kHeight/4 + fabs(scrollView.contentOffset.y) - 20;
     }
-    if (scrollView.contentOffset.y > 160) {
-        
+    if (scrollView.contentOffset.y > kHeight/4) {
         self.view_barConstraint.constant = 0;
     }
 
 }
-
-
-
-
-
 
 
 

@@ -8,8 +8,9 @@
 
 #import "WLLPopViewController.h"
 #import "WLLMainTableViewCell.h"
-#define kHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 
+#define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
+#define kHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 
 @interface WLLPopViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -47,8 +48,6 @@
     self.mainTableView.delegate = self;
     
     [self.mainTableView registerNib:[UINib nibWithNibName:@"WLLMainTableViewCell" bundle:nil] forCellReuseIdentifier:@"main_cell"];
-    
-
 }
 
 #pragma mark - 显示系统 NavigationBar
@@ -59,6 +58,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [self setNaviBarHidden:NO];
     self.firstToLabel.constant = kHeight;
+
     self.secToLabel.constant = kHeight;
     self.thirdToLabel.constant = kHeight;
     self.typeButton.selected = NO;
@@ -120,7 +120,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([tableView isEqual:self.mainTableView]) {
-        return 200;
+        return kHeight/3.68;
     }
     return 50;
 }
@@ -134,16 +134,21 @@
     if (sender.selected == NO) {
         self.secToLabel.constant = kHeight;
         self.thirdToLabel.constant = kHeight;
+        
         self.firstToLabel.constant = 0;
+        
         self.departureButton.selected = NO;
         self.filteButton.selected = NO;
         self.mainTableView.hidden = YES;
         self.ensureButton.hidden = YES;
         sender.selected = YES;
+        
+    
     } else {
         self.firstToLabel.constant = kHeight;
         sender.selected = NO;
         self.mainTableView.hidden = NO;
+        
     }
 }
 

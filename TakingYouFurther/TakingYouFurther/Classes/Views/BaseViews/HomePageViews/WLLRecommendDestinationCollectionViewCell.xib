@@ -16,7 +16,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZ2-Fo-Qps">
                         <rect key="frame" x="0.0" y="0.0" width="229" height="229"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.50520833330000003" green="0.46814966190000001" blue="0.1823215326" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tZ2-Fo-Qps" secondAttribute="height" id="yJh-4M-yeZ"/>
                         </constraints>

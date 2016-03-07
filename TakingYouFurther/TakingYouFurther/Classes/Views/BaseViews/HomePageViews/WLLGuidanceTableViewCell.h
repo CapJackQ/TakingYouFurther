@@ -10,6 +10,5 @@
 
 @interface WLLGuidanceTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UICollectionView *guidanceCollectionView;
 
 @end
