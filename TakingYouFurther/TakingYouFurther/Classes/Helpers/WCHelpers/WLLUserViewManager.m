@@ -47,7 +47,6 @@ static WLLUserViewManager *manager = nil;
 //    }];
     [WC_NetTools solveDataWithUrl:url HttpMethod:@"GET" HttpBody:nil revokeBlock:^(NSData *data) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-        NSLog(@"%@", dic);
         self.firstModel = [NOfiticationRadioFirstModel mj_objectWithKeyValues:dic];
         dispatch_async(dispatch_get_main_queue(), ^{
             block();

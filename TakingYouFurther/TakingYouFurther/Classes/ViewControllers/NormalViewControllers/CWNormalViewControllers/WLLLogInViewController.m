@@ -95,6 +95,8 @@
             break;
     }
 }
+- (IBAction)sendVerificationCode:(UIButton *)sender {
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

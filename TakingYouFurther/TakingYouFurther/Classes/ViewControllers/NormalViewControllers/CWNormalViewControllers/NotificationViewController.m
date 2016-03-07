@@ -123,10 +123,12 @@
 #pragma mark - notificationRadio栏 tableView delegate方法
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     return 4;
 }
 
@@ -156,19 +158,13 @@
     cell.contentLabel.text = rModel.contentString;
     [cell.radioImageView sd_setImageWithURL:[NSURL URLWithString:rModel.radioImageUrlString]];
     
+//    [cell setNeedsUpdateConstraints];
+//    [cell updateConstraintsIfNeeded];
     
-    
-    [cell setNeedsUpdateConstraints];
-    [cell updateConstraintsIfNeeded];
-
-    
-    
+    //UILayoutFittingCompressedSize求出最小的能包含它所有子视图的contentView
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     
-    
-    NSLog(@"%f", height);
     return height;
-
 }
 
 
