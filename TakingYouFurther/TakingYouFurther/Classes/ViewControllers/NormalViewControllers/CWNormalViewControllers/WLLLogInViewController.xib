@@ -16,7 +16,6 @@
                 <outlet property="buttonTwoLeadingContraint" destination="Vm7-My-aCk" id="4YA-rH-paA"/>
                 <outlet property="logInButton" destination="IdT-JW-P6e" id="27J-7W-sSI"/>
                 <outlet property="passWordTextField" destination="Pmx-y0-r8c" id="koA-gB-k7g"/>
-                <outlet property="phoneLogInButton" destination="vao-yW-JWs" id="c9S-XO-b5R"/>
                 <outlet property="phoneNumber" destination="kOh-QE-R6Z" id="4SW-gt-RoH"/>
                 <outlet property="phoneNumberIdentifyTextField" destination="WDb-YE-DHA" id="1R5-nF-YSF"/>
                 <outlet property="phoneNumberTextField" destination="ux1-6N-udH" id="sgw-zd-lCL"/>
@@ -75,6 +74,9 @@
                     <rect key="frame" x="20" y="246" width="374" height="30"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="登陆"/>
+                    <connections>
+                        <action selector="phoneNumberSignIn:" destination="-1" eventType="touchUpInside" id="cn0-bt-yku"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方账号登陆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzO-sc-CZq">
                     <rect key="frame" x="20" y="326" width="374" height="21"/>
@@ -116,6 +118,9 @@
                     <color key="tintColor" red="1" green="0.31729536990000001" blue="0.03039476214" alpha="1" colorSpace="calibratedRGB"/>
                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     <state key="normal" title="手机快速注册"/>
+                    <connections>
+                        <action selector="phoneNumberSignUp:" destination="-1" eventType="touchUpInside" id="g9V-2i-JPT"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ab-Vf-BjC">
                     <rect key="frame" x="20" y="397" width="86" height="86"/>
@@ -127,7 +132,7 @@
                     <state key="normal" image="weixin"/>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOh-QE-R6Z" userLabel="Phone Number logInView">
-                    <rect key="frame" x="0.0" y="51" width="414" height="621"/>
+                    <rect key="frame" x="0.0" y="51" width="414" height="553"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ux1-6N-udH">
                             <rect key="frame" x="81" y="30" width="313" height="39"/>
@@ -171,11 +176,6 @@
                                 <action selector="phoneNumberLogIn:" destination="-1" eventType="touchUpInside" id="AhP-EW-bGt"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vao-yW-JWs">
-                            <rect key="frame" x="20" y="571" width="374" height="30"/>
-                            <color key="tintColor" red="1" green="0.42769059230000001" blue="0.20220559799999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="手机快速注册"/>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -185,18 +185,15 @@
                         <constraint firstItem="yHj-Hz-IW6" firstAttribute="bottom" secondItem="WDb-YE-DHA" secondAttribute="bottom" constant="-5" id="Awn-Gr-lT5"/>
                         <constraint firstItem="WDb-YE-DHA" firstAttribute="centerY" secondItem="VST-MX-KjL" secondAttribute="centerY" id="BaE-hY-hod"/>
                         <constraint firstItem="VST-MX-KjL" firstAttribute="top" secondItem="KSD-FX-Odm" secondAttribute="bottom" constant="50" id="EmJ-f0-c4e"/>
-                        <constraint firstItem="vao-yW-JWs" firstAttribute="trailing" secondItem="pZj-Xf-rxR" secondAttribute="trailing" id="INd-aZ-6n1"/>
                         <constraint firstItem="KSD-FX-Odm" firstAttribute="leading" secondItem="kOh-QE-R6Z" secondAttribute="leading" constant="20" id="N9y-k4-tMM"/>
                         <constraint firstAttribute="trailing" secondItem="pZj-Xf-rxR" secondAttribute="trailing" constant="20" id="Or7-zF-ZpF"/>
                         <constraint firstItem="ux1-6N-udH" firstAttribute="centerY" secondItem="KSD-FX-Odm" secondAttribute="centerY" id="P6I-BQ-cLu"/>
                         <constraint firstItem="ux1-6N-udH" firstAttribute="top" secondItem="KSD-FX-Odm" secondAttribute="top" id="QPm-1x-9Ck"/>
-                        <constraint firstAttribute="bottom" secondItem="vao-yW-JWs" secondAttribute="bottom" constant="20" id="VtU-2r-Ufu"/>
                         <constraint firstItem="yHj-Hz-IW6" firstAttribute="top" secondItem="WDb-YE-DHA" secondAttribute="top" constant="5" id="YUV-eL-5tE"/>
                         <constraint firstItem="KSD-FX-Odm" firstAttribute="height" secondItem="VST-MX-KjL" secondAttribute="height" id="b4k-8z-yRZ"/>
                         <constraint firstItem="yHj-Hz-IW6" firstAttribute="height" secondItem="WDb-YE-DHA" secondAttribute="height" id="bXf-46-vKt"/>
                         <constraint firstItem="ux1-6N-udH" firstAttribute="leading" secondItem="KSD-FX-Odm" secondAttribute="trailing" constant="10" id="bwx-ys-rMC"/>
                         <constraint firstItem="VST-MX-KjL" firstAttribute="leading" secondItem="kOh-QE-R6Z" secondAttribute="leading" constant="20" id="czV-1m-0Z1"/>
-                        <constraint firstItem="vao-yW-JWs" firstAttribute="leading" secondItem="pZj-Xf-rxR" secondAttribute="leading" id="dUb-Im-g1G"/>
                         <constraint firstAttribute="trailing" secondItem="ux1-6N-udH" secondAttribute="trailing" constant="20" id="dkG-Xx-BcW"/>
                         <constraint firstItem="pZj-Xf-rxR" firstAttribute="leading" secondItem="kOh-QE-R6Z" secondAttribute="leading" constant="20" id="fXv-JE-esD"/>
                         <constraint firstItem="pZj-Xf-rxR" firstAttribute="top" secondItem="WDb-YE-DHA" secondAttribute="bottom" constant="50" id="hOG-g3-QOh"/>
@@ -238,11 +235,12 @@
                 <constraint firstItem="yxQ-oC-IMh" firstAttribute="top" secondItem="3ab-Vf-BjC" secondAttribute="top" id="Qkp-0X-mkM"/>
                 <constraint firstItem="emr-lw-rNb" firstAttribute="leading" secondItem="fhG-JG-zaH" secondAttribute="leading" id="SAQ-ne-X4f"/>
                 <constraint firstItem="iAr-s4-CYa" firstAttribute="leading" secondItem="emr-lw-rNb" secondAttribute="leading" id="Sk8-on-sb2"/>
-                <constraint firstAttribute="bottom" secondItem="kOh-QE-R6Z" secondAttribute="bottom" id="VQO-Nl-HC8"/>
+                <constraint firstAttribute="bottom" secondItem="kOh-QE-R6Z" secondAttribute="bottom" constant="50" id="VQO-Nl-HC8"/>
                 <constraint firstItem="Ssc-o2-X4O" firstAttribute="leading" secondItem="3ab-Vf-BjC" secondAttribute="trailing" constant="25" id="Vm7-My-aCk"/>
                 <constraint firstItem="Pmx-y0-r8c" firstAttribute="width" secondItem="6n7-jn-duf" secondAttribute="width" id="WBy-61-f9h"/>
                 <constraint firstItem="CgX-1h-vtA" firstAttribute="leading" secondItem="yxQ-oC-IMh" secondAttribute="trailing" constant="30" id="WV3-UN-tbu"/>
                 <constraint firstItem="kOh-QE-R6Z" firstAttribute="top" secondItem="lgY-Tu-ISN" secondAttribute="bottom" constant="1" id="ZaM-lH-Qja"/>
+                <constraint firstItem="IdT-JW-P6e" firstAttribute="top" secondItem="kOh-QE-R6Z" secondAttribute="bottom" constant="20" id="dGh-FI-VbO"/>
                 <constraint firstItem="lgY-Tu-ISN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gTX-nb-KEe"/>
                 <constraint firstItem="TaN-Mo-baB" firstAttribute="centerY" secondItem="Pmx-y0-r8c" secondAttribute="centerY" id="gw9-OE-tt4"/>
                 <constraint firstItem="Pmx-y0-r8c" firstAttribute="centerY" secondItem="emr-lw-rNb" secondAttribute="centerY" id="h44-QX-usI"/>
@@ -262,10 +260,11 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="VQO-Nl-HC8"/>
                     <exclude reference="xYp-u4-dpc"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="325" y="399"/>
+            <point key="canvasLocation" x="289" y="380"/>
         </view>
     </objects>
     <resources>

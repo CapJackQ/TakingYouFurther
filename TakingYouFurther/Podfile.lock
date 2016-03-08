@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - AVOSCloudCrashReportingDynamic (3.2.6):
+    - AVOSCloudDynamic
+  - AVOSCloudDynamic (3.2.6)
   - MJExtension (3.0.10)
   - MOBFoundation_IDFA (1.4.0)
   - SDWebImage (3.7.5):
@@ -23,6 +26,8 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
+  - AVOSCloudCrashReportingDynamic (~> 3.2.6)
+  - AVOSCloudDynamic (~> 3.2.6)
   - MJExtension (~> 3.0.10)
   - MOBFoundation_IDFA (~> 1.4.0)
   - SDWebImage (~> 3.7.5)
@@ -30,6 +35,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  AVOSCloudCrashReportingDynamic: 02995feaf6a0e3d0c40c6cd691de41418339cbf9
+  AVOSCloudDynamic: ee54914de9102316ee26f4ae9387d95f1dcfc7c4
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MOBFoundation_IDFA: 3c837e657549ded25f21dc3f34808065a4238502
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461

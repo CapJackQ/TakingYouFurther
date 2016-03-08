@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8F4392DFC54211A4C6A6C54D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F72FA55B1A9167E3A182948E /* libPods.a */; };
+		C21574A41C8E82420021A172 /* WLLPhoneNumberSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21574A21C8E82420021A172 /* WLLPhoneNumberSignUpViewController.m */; };
+		C21574A51C8E82420021A172 /* WLLPhoneNumberSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21574A31C8E82420021A172 /* WLLPhoneNumberSignUpViewController.xib */; };
+		C21574AC1C8EF0440021A172 /* logInFirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C21574AA1C8EF0440021A172 /* logInFirstTableViewCell.m */; };
+		C21574AD1C8EF0440021A172 /* logInFirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21574AB1C8EF0440021A172 /* logInFirstTableViewCell.xib */; };
+		C21574B01C8EF9270021A172 /* LogInfirstCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C21574AF1C8EF9270021A172 /* LogInfirstCellModel.m */; };
+		C21574B31C8EFBA20021A172 /* LogInSecondCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C21574B21C8EFBA20021A172 /* LogInSecondCellModel.m */; };
+		C21574B71C8EFC830021A172 /* LogInSecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C21574B51C8EFC830021A172 /* LogInSecondTableViewCell.m */; };
+		C21574B81C8EFC830021A172 /* LogInSecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21574B61C8EFC830021A172 /* LogInSecondTableViewCell.xib */; };
 		C2431EF01C84672A0061FAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EEF1C84672A0061FAB1 /* main.m */; };
 		C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2431EF71C84672A0061FAB1 /* Main.storyboard */; };
 		C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2431EFA1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld */; };
@@ -65,6 +73,19 @@
 
 /* Begin PBXFileReference section */
 		4B75252F52C4AAA28E41E917 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C21574A11C8E82420021A172 /* WLLPhoneNumberSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPhoneNumberSignUpViewController.h; sourceTree = "<group>"; };
+		C21574A21C8E82420021A172 /* WLLPhoneNumberSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPhoneNumberSignUpViewController.m; sourceTree = "<group>"; };
+		C21574A31C8E82420021A172 /* WLLPhoneNumberSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPhoneNumberSignUpViewController.xib; sourceTree = "<group>"; };
+		C21574A91C8EF0440021A172 /* logInFirstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logInFirstTableViewCell.h; sourceTree = "<group>"; };
+		C21574AA1C8EF0440021A172 /* logInFirstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = logInFirstTableViewCell.m; sourceTree = "<group>"; };
+		C21574AB1C8EF0440021A172 /* logInFirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = logInFirstTableViewCell.xib; sourceTree = "<group>"; };
+		C21574AE1C8EF9270021A172 /* LogInfirstCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInfirstCellModel.h; sourceTree = "<group>"; };
+		C21574AF1C8EF9270021A172 /* LogInfirstCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInfirstCellModel.m; sourceTree = "<group>"; };
+		C21574B11C8EFBA20021A172 /* LogInSecondCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInSecondCellModel.h; sourceTree = "<group>"; };
+		C21574B21C8EFBA20021A172 /* LogInSecondCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInSecondCellModel.m; sourceTree = "<group>"; };
+		C21574B41C8EFC830021A172 /* LogInSecondTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInSecondTableViewCell.h; sourceTree = "<group>"; };
+		C21574B51C8EFC830021A172 /* LogInSecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInSecondTableViewCell.m; sourceTree = "<group>"; };
+		C21574B61C8EFC830021A172 /* LogInSecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInSecondTableViewCell.xib; sourceTree = "<group>"; };
 		C2431EEB1C84672A0061FAB1 /* TakingYouFurther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakingYouFurther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2431EEF1C84672A0061FAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2431EF81C84672A0061FAB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -264,6 +285,10 @@
 				C266EC711C8C14D000586C17 /* CWMFWRecommendedMOdels */,
 				C266EC741C8C14D000586C17 /* CWNOtificationModels */,
 				C2431F1C1C8468BE0061FAB1 /* file3 */,
+				C21574AE1C8EF9270021A172 /* LogInfirstCellModel.h */,
+				C21574AF1C8EF9270021A172 /* LogInfirstCellModel.m */,
+				C21574B11C8EFBA20021A172 /* LogInSecondCellModel.h */,
+				C21574B21C8EFBA20021A172 /* LogInSecondCellModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -416,6 +441,9 @@
 				C266ECAA1C8C168A00586C17 /* WLLMyDownloadViewController.h */,
 				C266ECAB1C8C168A00586C17 /* WLLMyDownloadViewController.m */,
 				C266ECAC1C8C168A00586C17 /* WLLMyDownloadViewController.xib */,
+				C21574A11C8E82420021A172 /* WLLPhoneNumberSignUpViewController.h */,
+				C21574A21C8E82420021A172 /* WLLPhoneNumberSignUpViewController.m */,
+				C21574A31C8E82420021A172 /* WLLPhoneNumberSignUpViewController.xib */,
 			);
 			path = CWNormalViewControllers;
 			sourceTree = "<group>";
@@ -432,6 +460,12 @@
 				C266ECBC1C8C16FF00586C17 /* UserTableViewCell.h */,
 				C266ECBD1C8C16FF00586C17 /* UserTableViewCell.m */,
 				C266ECBE1C8C16FF00586C17 /* UserTableViewCell.xib */,
+				C21574A91C8EF0440021A172 /* logInFirstTableViewCell.h */,
+				C21574AA1C8EF0440021A172 /* logInFirstTableViewCell.m */,
+				C21574AB1C8EF0440021A172 /* logInFirstTableViewCell.xib */,
+				C21574B41C8EFC830021A172 /* LogInSecondTableViewCell.h */,
+				C21574B51C8EFC830021A172 /* LogInSecondTableViewCell.m */,
+				C21574B61C8EFC830021A172 /* LogInSecondTableViewCell.xib */,
 			);
 			path = CWBaseViews;
 			sourceTree = "<group>";
@@ -514,11 +548,14 @@
 				C2431F191C8468A90061FAB1 /* file1 in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2431F1F1C8468C60061FAB1 /* file4 in Resources */,
+				C21574B81C8EFC830021A172 /* LogInSecondTableViewCell.xib in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* file3 in Resources */,
 				C2431F251C8468DD0061FAB1 /* file6 in Resources */,
+				C21574AD1C8EF0440021A172 /* logInFirstTableViewCell.xib in Resources */,
 				C2431F211C8468CE0061FAB1 /* file5 in Resources */,
 				C266ECC01C8C16FF00586C17 /* NotificationRadioTableViewCell.xib in Resources */,
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
+				C21574A51C8E82420021A172 /* WLLPhoneNumberSignUpViewController.xib in Resources */,
 				C266ECC41C8C16FF00586C17 /* UserTableViewCell.xib in Resources */,
 				C2431F271C8468E60061FAB1 /* file7 in Resources */,
 				C266ECC21C8C16FF00586C17 /* SettingInTableViewCell.xib in Resources */,
@@ -590,6 +627,7 @@
 			files = (
 				C266EC911C8C14D000586C17 /* TheExtModel.m in Sources */,
 				C266EC8F1C8C14D000586C17 /* TheContentModel.m in Sources */,
+				C21574B31C8EFBA20021A172 /* LogInSecondCellModel.m in Sources */,
 				C266ECC31C8C16FF00586C17 /* UserTableViewCell.m in Sources */,
 				C266EC931C8C14D000586C17 /* TheMessageModel.m in Sources */,
 				C266EC951C8C14D000586C17 /* TheSenderModel.m in Sources */,
@@ -600,8 +638,12 @@
 				C266EC901C8C14D000586C17 /* TheDataModel.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
 				C266ECB11C8C168A00586C17 /* WLLLogInViewController.m in Sources */,
+				C21574B71C8EFC830021A172 /* LogInSecondTableViewCell.m in Sources */,
+				C21574AC1C8EF0440021A172 /* logInFirstTableViewCell.m in Sources */,
 				C2431EF01C84672A0061FAB1 /* main.m in Sources */,
 				C266EC8D1C8C14D000586C17 /* NOfiticationRadioFirstModel.m in Sources */,
+				C21574A41C8E82420021A172 /* WLLPhoneNumberSignUpViewController.m in Sources */,
+				C21574B01C8EF9270021A172 /* LogInfirstCellModel.m in Sources */,
 				C266ECC11C8C16FF00586C17 /* SettingInTableViewCell.m in Sources */,
 				C266EC8E1C8C14D000586C17 /* RadioModel.m in Sources */,
 				C266EC941C8C14D000586C17 /* TheMoreModel.m in Sources */,
@@ -726,7 +768,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/lanou3g/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/CWHeaderPCH/UserPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lanou3g/Desktop/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/CWHeaderPCH/UserPrefixHeader.pch;
 				INFOPLIST_FILE = TakingYouFurther/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -741,7 +783,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/lanou3g/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/CWHeaderPCH/UserPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lanou3g/Desktop/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/CWHeaderPCH/UserPrefixHeader.pch;
 				INFOPLIST_FILE = TakingYouFurther/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

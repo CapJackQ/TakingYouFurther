@@ -14,8 +14,15 @@
 #import "SettingInTableViewController.h"
 #import "NotificationViewController.h"
 #import "WLLUserViewManager.h"
+#import "LogInfirstCellModel.h"
+#import "LogInSecondCellModel.h"
+#import "logInFirstTableViewCell.h"
+#import "LogInSecondTableViewCell.h"
+
 
 #define kReuseIdentifier @"CWCell"
+#define kReuseIdentifierTwo @"CWCell2"
+#define kReuseIdentifierThree @"CWCell3"
 
 @interface WLLUserViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -30,14 +37,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    NSLog(@"11111");
     [self update];
+    
     
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
     
     [self.tableview registerNib:[UINib nibWithNibName:@"UserTableViewCell" bundle:nil]
          forCellReuseIdentifier:kReuseIdentifier];
+    
+    [self.tableview registerNib:[UINib nibWithNibName:@"logInFirstTableViewCell" bundle:nil] forCellReuseIdentifier:kReuseIdentifierTwo];
+    
+    [self.tableview registerNib:[UINib nibWithNibName:@"LogInSecondTableViewCell" bundle:nil] forCellReuseIdentifier:kReuseIdentifierThree];
 
 }
 
@@ -57,6 +69,34 @@
                                                              target:self
                                                              action:@selector(rightAction)];
     self.tabBarController.navigationItem.rightBarButtonItem = right;
+    
+    if ([WLLUserViewManager shareInstance].isLogIning == YES) {
+        
+        //先删除原来的第一列的cell
+        [self.data removeObjectAtIndex:0];
+        
+        NSMutableArray *array1 = [NSMutableArray array];
+        LogInfirstCellModel *model1 = [[LogInfirstCellModel alloc] init];
+        model1.headImage = [UIImage imageNamed:@"iconfont-user"];
+        model1.userName = @"TakingYouFurther";
+        model1.focusNumber = 1;
+        model1.followers = 0;
+        [array1 addObject:model1];
+        [self.data insertObject:array1 atIndex:0];
+        
+        NSMutableArray *array2 = [NSMutableArray array];
+        LogInSecondCellModel *model2 = [[LogInSecondCellModel alloc] init];
+        model2.headImage = [UIImage imageNamed:@"iconfont-pingzi"];
+        model2.myActivity = @"我的蜜蜂";
+        model2.honeyNumber = 0;
+        [array2 addObject:model2];
+        
+        [self.data insertObject:array2 atIndex:1];
+        
+        [self.tableview reloadData];
+        
+    }
+
 }
 
 #pragma mark - 设置和消息按钮
@@ -88,58 +128,100 @@
 #pragma mark - tableview 代理方法
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSLog(@"AAAA%ld", self.data.count);
     return self.data.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case 0: {
-            return 1;
-            break;
-        }
-        case 1: {
-            return 2;
-            break;
-        }
-        case 2: {
-            return 2;
-            break;
-        }
-        case 3: {
-            return 2;
-            break;
-        }
-        case 4: {
-            return 1;
-            break;
-        }
-        default:
-            break;
-    }
-    return 10;
+//    switch (section) {
+//        case 0: {
+//            return 1;
+//            break;
+//        }
+//        case 1: {
+//            return 2;
+//            break;
+//        }
+//        case 2: {
+//            return 2;
+//            break;
+//        }
+//        case 3: {
+//            return 2;
+//            break;
+//        }
+//        case 4: {
+//            return 1;
+//            break;
+//        }
+//        default:
+//            break;
+//    }
+//    return 10;
+    NSLog(@"%ld", [self.data[section] count]);
+    return [self.data[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifier forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kReuseIdentifier];
+    
+    if ([WLLUserViewManager shareInstance].isLogIning == NO) {
+        UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifier forIndexPath:indexPath];
+        if (!cell) {
+            cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kReuseIdentifier];
+        }
+        
+        UserModel *model = self.data[indexPath.section][indexPath.row];
+        cell.photoImageView.image = model.photoImage;
+        cell.activityLabel.text = model.myActivity;
+        
+        if (indexPath.section != 0) {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+        return cell;
+        
+    } else {
+        
+        if (indexPath.section == 0 && indexPath.row == 0) {
+            
+            logInFirstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifierTwo forIndexPath:indexPath];
+            
+            LogInfirstCellModel *model = self.data[0][0];
+            
+            cell.headImageView.image = model.headImage;
+            cell.nameLabel.text = model.userName;
+            cell.focusLabel.text = [NSString stringWithFormat:@"%ld", model.focusNumber];
+            cell.followsLable.text = [NSString stringWithFormat:@"%ld", model.followers];
+            
+            return cell;
+        } else if (indexPath.section == 1) {
+        
+            LogInSecondCellModel *model = self.data[1][0];
+            
+            LogInSecondTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifierThree forIndexPath:indexPath];
+            cell.photoImageView.image = model.headImage;
+            cell.activityLabel.text = model.myActivity;
+            cell.honeyNumberLabel.text = [NSString stringWithFormat:@"%ld", model.honeyNumber];
+            return cell;
+        } else {
+            
+            UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifier forIndexPath:indexPath];
+            if (!cell) {
+                cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kReuseIdentifier];
+            }
+            
+            UserModel *model = self.data[indexPath.section][indexPath.row];
+            cell.photoImageView.image = model.photoImage;
+            cell.activityLabel.text = model.myActivity;
+            return cell;
+        }
     }
     
-    UserModel *model = self.data[indexPath.section][indexPath.row];
-    cell.photoImageView.image = model.photoImage;
-    cell.activityLabel.text = model.myActivity;
-
-    if (indexPath.section != 0) {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
-    
-    
-    return cell;
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 60;
+        return 80;
     }
     return 30;
 }
@@ -152,6 +234,7 @@
 #pragma mark - 给self.data 数组添加数据，加载tableview
 
 - (void)update {
+    
     self.data = [NSMutableArray array];
     
     NSMutableArray *array1 = [NSMutableArray array];
@@ -217,6 +300,7 @@
         }
     } else {
         //推出登陆状态的界面
+        
     }
     
 }

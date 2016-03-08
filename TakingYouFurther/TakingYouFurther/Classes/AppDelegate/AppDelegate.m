@@ -15,7 +15,8 @@
 #import <SMS_SDK/Extend/SMSSDKCountryAndAreaCode.h>
 #import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
 #import <SMS_SDK/Extend/SMSSDK+ExtexdMethods.h>
-//#import <MOBFoundation/MOBFoundation.h>
+
+#import <AVOSCloud/AVOSCloud.h>
 
 
 
@@ -56,6 +57,9 @@
     
 #pragma mark - 开启短信验证第一步
     [SMSSDK registerApp:@"101fb0e266a8a" withSecret:@"e3ba228c8c01e91c919f880990368c3d"];
+    
+#pragma mark - 使用LeanCloud 第一步
+    [AVOSCloud setApplicationId:@"DjJ5PS7YM9UXFSNjCxzapHQ6-gzGzoHsz" clientKey:@"zTKVA8zJbe8RKgQhImxpH8Pp"];
     
     return YES;
 }

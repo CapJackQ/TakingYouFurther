@@ -7,11 +7,15 @@
 //
 
 #import "WLLLogInViewController.h"
+#import "WLLUserViewController.h"
 #import <SMS_SDK/SMSSDK.h>
 #import <SMS_SDK/Extend/SMSSDKCountryAndAreaCode.h>
 #import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
 #import <SMS_SDK/Extend/SMSSDK+ExtexdMethods.h>
 #import <MOBFoundation/MOBFoundation.h>
+#import "WLLPhoneNumberSignUpViewController.h"
+#import "WLLUserViewManager.h"
+
 
 
 @interface WLLLogInViewController ()
@@ -109,29 +113,62 @@
 #pragma mark - 手机验证登陆方法
 
 - (IBAction)sendVerificationCode:(UIButton *)sender {
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNumberTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
-        if (error == nil) {
-            NSLog(@"获取验证码成功");
-        } else {
-            NSLog(@"获取验证码失败");
-        }
-    }];
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS
+                            phoneNumber:self.phoneNumberTextField.text
+                                   zone:@"86" customIdentifier:nil
+                                 result:^(NSError *error) {
+                                     if (error == nil) {
+                                         NSLog(@"获取验证码成功");
+                                     } else {
+                                         NSLog(@"获取验证码失败");
+                                     }
+                                 }];
 }
 - (IBAction)phoneNumberLogIn:(UIButton *)sender {
-    [SMSSDK commitVerificationCode:self.phoneNumberIdentifyTextField.text phoneNumber:self.phoneNumberTextField.text zone:@"86" result:^(NSError *error) {
-        if (error == nil) {
+    [SMSSDK commitVerificationCode:self.phoneNumberIdentifyTextField.text
+                       phoneNumber:self.phoneNumberTextField.text
+                              zone:@"86"
+                            result:^(NSError *error) {
+                                if (error == nil) {
+                                    [self.navigationController popViewControllerAnimated:YES];
+                                } else {
+                                    NSLog(@"%@", error);
+                                }
+                            }];
+}
 
+
+#pragma mark - 切换至手机号注册页面
+
+- (IBAction)phoneNumberSignUp:(UIButton *)sender {
+    WLLPhoneNumberSignUpViewController *phoneVC = [[WLLPhoneNumberSignUpViewController alloc]
+                                                   initWithNibName:@"WLLPhoneNumberSignUpViewController" bundle:nil];
+    [self.navigationController pushViewController:phoneVC animated:YES];
+}
+
+#pragma mark - 利用手机号码登陆
+
+- (IBAction)phoneNumberSignIn:(UIButton *)sender {
+    
+    [AVUser logInWithUsernameInBackground:self.accountTextField.text password:self.passWordTextField.text block:^(AVUser *user, NSError *error) {
+        if (error == nil) {
+            NSLog(@"登陆成功");
+            
+            //把登陆状态切换为已经登陆
+            [WLLUserViewManager shareInstance].isLogIning = YES;
+            
             [self.navigationController popViewControllerAnimated:YES];
-//            NSString *passWord = [NSString stringWithFormat:@"%d", arc4random() % 1000000];
-//            NSString *str = [NSString stringWithFormat:@"电话号码: %@/n 密码: %@", self.phoneNumberTextField.text, passWord];
-//            [SMSSDK sendSMS:self.phoneNumberTextField.text AndMessage:str];
+            
         } else {
+            
+            NSLog(@"%@", error);
             
         }
     }];
 }
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

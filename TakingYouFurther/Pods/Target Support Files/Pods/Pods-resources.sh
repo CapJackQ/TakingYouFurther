@@ -58,10 +58,14 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "AVOSCloudCrashReportingDynamic/iOS/release-v3.2.6/Dynamic/AVOSCloudCrashReporting.framework"
+  install_resource "AVOSCloudDynamic/iOS/release-v3.2.6/Dynamic/AVOSCloud.framework"
   install_resource "SMSSDK/SMS_SDK/en.lproj"
   install_resource "SMSSDK/SMS_SDK/zh-Hans.lproj"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "AVOSCloudCrashReportingDynamic/iOS/release-v3.2.6/Dynamic/AVOSCloudCrashReporting.framework"
+  install_resource "AVOSCloudDynamic/iOS/release-v3.2.6/Dynamic/AVOSCloud.framework"
   install_resource "SMSSDK/SMS_SDK/en.lproj"
   install_resource "SMSSDK/SMS_SDK/zh-Hans.lproj"
 fi
