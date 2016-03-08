@@ -15,18 +15,24 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - MJExtension (3.0.10)
+  - MOBFoundation_IDFA (1.4.0)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - SMSSDK (2.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
   - MJExtension (~> 3.0.10)
+  - MOBFoundation_IDFA (~> 1.4.0)
   - SDWebImage (~> 3.7.5)
+  - SMSSDK (~> 2.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MOBFoundation_IDFA: 3c837e657549ded25f21dc3f34808065a4238502
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SMSSDK: 4c369e5df6d6998b5341f53bf98a0c18a5b90719
 
 COCOAPODS: 0.39.0

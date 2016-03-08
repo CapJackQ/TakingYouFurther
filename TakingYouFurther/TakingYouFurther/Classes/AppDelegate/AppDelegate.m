@@ -11,6 +11,14 @@
 #import "WLLDestinationViewController.h"
 #import "WLLUserViewController.h"
 
+#import <SMS_SDK/SMSSDK.h>
+#import <SMS_SDK/Extend/SMSSDKCountryAndAreaCode.h>
+#import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
+#import <SMS_SDK/Extend/SMSSDK+ExtexdMethods.h>
+//#import <MOBFoundation/MOBFoundation.h>
+
+
+
 @interface AppDelegate ()
 
 @end
@@ -45,6 +53,9 @@
     UINavigationController *NavigationVC = [[UINavigationController alloc] initWithRootViewController:tabBarController];
     
     self.window.rootViewController = NavigationVC;
+    
+#pragma mark - 开启短信验证第一步
+    [SMSSDK registerApp:@"101fb0e266a8a" withSecret:@"e3ba228c8c01e91c919f880990368c3d"];
     
     return YES;
 }

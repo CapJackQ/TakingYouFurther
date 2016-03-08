@@ -56,6 +56,11 @@
 		C266ECC21C8C16FF00586C17 /* SettingInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECBB1C8C16FF00586C17 /* SettingInTableViewCell.xib */; };
 		C266ECC31C8C16FF00586C17 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C266ECBD1C8C16FF00586C17 /* UserTableViewCell.m */; };
 		C266ECC41C8C16FF00586C17 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C266ECBE1C8C16FF00586C17 /* UserTableViewCell.xib */; };
+		C2D0D3F31C8D726900555F58 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D0D3F21C8D726900555F58 /* libicucore.tbd */; };
+		C2D0D3F51C8D728900555F58 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D0D3F41C8D728900555F58 /* libz.tbd */; };
+		C2D0D3F71C8D72A900555F58 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D0D3F61C8D72A900555F58 /* MessageUI.framework */; };
+		C2D0D3F91C8D72C800555F58 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D0D3F81C8D72C800555F58 /* JavaScriptCore.framework */; };
+		C2D0D3FB1C8D72D800555F58 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D0D3FA1C8D72D800555F58 /* libstdc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +141,11 @@
 		C266ECBC1C8C16FF00586C17 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewCell.h; sourceTree = "<group>"; };
 		C266ECBD1C8C16FF00586C17 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewCell.m; sourceTree = "<group>"; };
 		C266ECBE1C8C16FF00586C17 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		C2D0D3F21C8D726900555F58 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		C2D0D3F41C8D728900555F58 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C2D0D3F61C8D72A900555F58 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C2D0D3F81C8D72C800555F58 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C2D0D3FA1C8D72D800555F58 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		F72FA55B1A9167E3A182948E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBD28042374DBC921FDACE7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +155,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D0D3FB1C8D72D800555F58 /* libstdc++.tbd in Frameworks */,
+				C2D0D3F91C8D72C800555F58 /* JavaScriptCore.framework in Frameworks */,
+				C2D0D3F71C8D72A900555F58 /* MessageUI.framework in Frameworks */,
+				C2D0D3F51C8D728900555F58 /* libz.tbd in Frameworks */,
+				C2D0D3F31C8D726900555F58 /* libicucore.tbd in Frameworks */,
 				8F4392DFC54211A4C6A6C54D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +439,11 @@
 		F34BFDCBEF020DC1B7AEBDD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2D0D3FA1C8D72D800555F58 /* libstdc++.tbd */,
+				C2D0D3F81C8D72C800555F58 /* JavaScriptCore.framework */,
+				C2D0D3F61C8D72A900555F58 /* MessageUI.framework */,
+				C2D0D3F41C8D728900555F58 /* libz.tbd */,
+				C2D0D3F21C8D726900555F58 /* libicucore.tbd */,
 				F72FA55B1A9167E3A182948E /* libPods.a */,
 			);
 			name = Frameworks;
@@ -705,8 +725,10 @@
 			baseConfigurationReference = FEBD28042374DBC921FDACE7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = /Users/lanou3g/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/CWHeaderPCH/UserPrefixHeader.pch;
 				INFOPLIST_FILE = TakingYouFurther/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.TakingYouFurther;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -718,8 +740,10 @@
 			baseConfigurationReference = 4B75252F52C4AAA28E41E917 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = /Users/lanou3g/TakingYouFurther/TakingYouFurther/TakingYouFurther/Classes/Headers/CWHeaderPCH/UserPrefixHeader.pch;
 				INFOPLIST_FILE = TakingYouFurther/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanou3g.TakingYouFurther;
 				PRODUCT_NAME = "$(TARGET_NAME)";

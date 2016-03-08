@@ -7,9 +7,14 @@
 //
 
 #import "WLLLogInViewController.h"
+#import <SMS_SDK/SMSSDK.h>
+#import <SMS_SDK/Extend/SMSSDKCountryAndAreaCode.h>
+#import <SMS_SDK/Extend/SMSSDK+DeprecatedMethods.h>
+#import <SMS_SDK/Extend/SMSSDK+ExtexdMethods.h>
+#import <MOBFoundation/MOBFoundation.h>
+
 
 @interface WLLLogInViewController ()
-
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *trailingContraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonTwoLeadingContraint;
@@ -26,9 +31,10 @@
 @property (weak, nonatomic) IBOutlet UIView *phoneNumber;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumberIdentifyTextField;
-
 @property (weak, nonatomic) IBOutlet UIButton *phoneLogInButton;
+
 @end
+
 @implementation WLLLogInViewController
 
 - (void)viewDidLoad {
@@ -81,6 +87,9 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+
+#pragma mark - 切换登陆方式的方法
+
 - (void)switchAction:(UISegmentedControl *)sender {
     switch (sender.selectedSegmentIndex) {
         case 0: {
@@ -95,7 +104,31 @@
             break;
     }
 }
+
+
+#pragma mark - 手机验证登陆方法
+
 - (IBAction)sendVerificationCode:(UIButton *)sender {
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNumberTextField.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+        if (error == nil) {
+            NSLog(@"获取验证码成功");
+        } else {
+            NSLog(@"获取验证码失败");
+        }
+    }];
+}
+- (IBAction)phoneNumberLogIn:(UIButton *)sender {
+    [SMSSDK commitVerificationCode:self.phoneNumberIdentifyTextField.text phoneNumber:self.phoneNumberTextField.text zone:@"86" result:^(NSError *error) {
+        if (error == nil) {
+
+            [self.navigationController popViewControllerAnimated:YES];
+//            NSString *passWord = [NSString stringWithFormat:@"%d", arc4random() % 1000000];
+//            NSString *str = [NSString stringWithFormat:@"电话号码: %@/n 密码: %@", self.phoneNumberTextField.text, passWord];
+//            [SMSSDK sendSMS:self.phoneNumberTextField.text AndMessage:str];
+        } else {
+            
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,6 +13,7 @@
 #import "WLLMyDownloadViewController.h"
 #import "SettingInTableViewController.h"
 #import "NotificationViewController.h"
+#import "WLLUserViewManager.h"
 
 #define kReuseIdentifier @"CWCell"
 
@@ -203,13 +204,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     WLLLogInViewController *logInVC = [[WLLLogInViewController alloc] initWithNibName:@"WLLLogInViewController" bundle:nil];
+    
     WLLMyDownloadViewController *downloadVC = [[WLLMyDownloadViewController alloc] initWithNibName:@"WLLMyDownloadViewController" bundle:nil];
-    if (indexPath.section == 1 && indexPath.row == 0) {
-        [self.navigationController pushViewController:downloadVC animated:YES];
+    
+    if ([WLLUserViewManager shareInstance].isLogIning == NO) {
+        if (indexPath.section == 1 && indexPath.row == 0) {
+            [self.navigationController pushViewController:downloadVC animated:YES];
+        } else {
+            [self.navigationController pushViewController:logInVC animated:YES];
+        }
     } else {
-        [self.navigationController pushViewController:logInVC animated:YES];
+        //推出登陆状态的界面
     }
+    
 }
 
 /*
