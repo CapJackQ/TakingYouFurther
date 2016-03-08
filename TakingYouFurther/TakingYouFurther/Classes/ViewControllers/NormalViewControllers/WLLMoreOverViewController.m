@@ -8,6 +8,10 @@
 
 #import "WLLMoreOverViewController.h"
 #import "WLLPopDestinationCollectionViewCell.h"
+#import "WLLHomePageDataManager.h"
+#import "WLLMoreOverModel.h"
+#import "WLLHomePageUrlHeader.h"
+#import "WLLPopViewController.h"
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 
@@ -26,6 +30,13 @@
     self.moreOverCollectionVeiw.delegate = self;
     
     [self.moreOverCollectionVeiw registerNib:[UINib nibWithNibName:@"WLLPopDestinationCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"popdestination_item"];
+    
+    self.navigationItem.title = @"热门目的地";
+    self.navigationController.navigationBar.backgroundColor = [UIColor purpleColor];
+    
+    [[WLLHomePageDataManager shareInstance] requestMoreOverDataWithUrl:kMoreOverUrl finished:^{
+        [self.moreOverCollectionVeiw reloadData];
+    }];
 }
 
 #pragma mark - 显示系统 NavigationBar
@@ -40,13 +51,15 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 12;
+    return [[WLLHomePageDataManager shareInstance] countOfMoreOverArray];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-        WLLPopDestinationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"popdestination_item" forIndexPath:indexPath];
-        return cell;
+    WLLPopDestinationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"popdestination_item" forIndexPath:indexPath];
+    WLLMoreOverModel *model = [[WLLHomePageDataManager shareInstance] moreOverModelWithIndex:indexPath.row];
+    cell.Mmodel = model;
+    return cell;
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -56,6 +69,13 @@
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(10, 10, 10, 10);
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    WLLPopViewController *popVC = [[WLLPopViewController alloc] initWithNibName:@"WLLPopViewController" bundle:nil];
+    [WLLHomePageDataManager shareInstance].index = indexPath.row;
+    [self.navigationController pushViewController:popVC animated:YES];
 }
 
 

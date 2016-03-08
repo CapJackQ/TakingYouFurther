@@ -11,8 +11,15 @@
 @class WLLTodayNotesModel;
 @class WLLDestinationModel;
 @class WLLRecommendModel;
+@class WLLPopModel;
+@class WLLMoreOverModel;
+@class WLLMoreCheckModel;
 
 @interface WLLHomePageDataManager : NSObject
+
+
+@property (nonatomic, strong) NSMutableArray *pathArray;
+@property (nonatomic, assign) NSInteger index;
 
 /**
  *  单例
@@ -20,6 +27,8 @@
  *  @return 单例
  */
 +(instancetype)shareInstance;
+
+/*----------------------------------首页-----------------------------*/
 
 /**
  *  根据url来请求数据
@@ -58,5 +67,66 @@
 -(WLLRecommendModel *)recommendModelWithIndex:(NSInteger)index;
 
 -(NSInteger)countOfModelArray;
+
+/*----------------------------------热门目的地-----------------------------*/
+
+/**
+ *  根据url请求数据
+ *
+ *  @param url      url
+ *  @param finished 回调刷新页面
+ */
+-(void)requestPopDestinationDataWithUrl:(NSString *)url didFinished:(void(^)())finished;
+
+/**
+ *  返回数组个数
+ *
+ *  @return 返回数组个数
+ */
+-(NSInteger)countOfPopDestinationArray;
+
+/**
+ *  根据下标返回model
+ *
+ *  @param index 下标
+ *
+ *  @return 返回model
+ */
+-(WLLPopModel *)popModelWithIndex:(NSInteger)index;
+
+
+
+/*----------------------------------查看更多-----------------------------*/
+
+/**
+ *  根据url请求数据
+ *
+ *  @param url      url
+ *  @param finished 回调刷新页面
+ */
+-(void)requestMoreOverDataWithUrl:(NSString *)url finished:(void(^)())finished;
+
+/**
+ *  返回数组个数
+ *
+ *  @return 返回数组个数
+ */
+-(NSInteger)countOfMoreOverArray;
+
+/**
+ *  根据下标返回model
+ *
+ *  @param index 下标
+ *
+ *  @return 返回model
+ */
+-(WLLMoreOverModel *)moreOverModelWithIndex:(NSInteger)index;
+
+
+-(void)requestMoreCheckDataWithUrl:(NSString *)url finished:(void(^)())finished;
+
+-(NSInteger)countOfMoreCheckArray;
+
+-(WLLMoreCheckModel *)moreCheckModelWithIdex:(NSInteger)index;
 
 @end

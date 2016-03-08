@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLLSeekViewController">
             <connections>
+                <outlet property="contentTableView" destination="Fvs-yf-Kth" id="2Fg-6i-kTn"/>
+                <outlet property="guidanceTableView" destination="rdN-nu-oYg" id="5iq-3w-NCP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,51 +20,45 @@
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-8i-9Yy">
                     <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                     <animations/>
-                    <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rdN-nu-oYg">
-                    <rect key="frame" x="0.0" y="108" width="124" height="628"/>
+                    <rect key="frame" x="0.0" y="108" width="103" height="628"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isw-Py-5h2">
-                    <rect key="frame" x="124" y="108" width="1" height="628"/>
+                    <rect key="frame" x="103" y="108" width="1" height="628"/>
                     <animations/>
                     <color key="backgroundColor" red="1" green="0.44048021040000002" blue="0.072703392059999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="Ppl-Z3-99i"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lMq-Xd-Ves">
-                    <rect key="frame" x="124" y="108" width="290" height="628"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fvs-yf-Kth">
+                    <rect key="frame" x="104" y="108" width="310" height="628"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O9d-bO-teO">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </tableView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="rdN-nu-oYg" secondAttribute="bottom" id="3eQ-1i-TPm"/>
                 <constraint firstItem="ND2-8i-9Yy" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="8BJ-s0-rF3"/>
+                <constraint firstItem="Fvs-yf-Kth" firstAttribute="leading" secondItem="isw-Py-5h2" secondAttribute="trailing" id="9Mt-rV-PvF"/>
                 <constraint firstItem="isw-Py-5h2" firstAttribute="height" secondItem="rdN-nu-oYg" secondAttribute="height" id="BHF-dp-O2X"/>
-                <constraint firstAttribute="trailing" secondItem="lMq-Xd-Ves" secondAttribute="trailing" id="BM5-gm-fJX"/>
                 <constraint firstItem="rdN-nu-oYg" firstAttribute="top" secondItem="ND2-8i-9Yy" secondAttribute="bottom" id="E1N-kq-Hr1"/>
                 <constraint firstItem="rdN-nu-oYg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EnG-ke-cv9"/>
                 <constraint firstItem="ND2-8i-9Yy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="HQ4-qd-1H5"/>
                 <constraint firstItem="isw-Py-5h2" firstAttribute="leading" secondItem="rdN-nu-oYg" secondAttribute="trailing" id="W4e-vu-FdT"/>
-                <constraint firstItem="lMq-Xd-Ves" firstAttribute="top" secondItem="ND2-8i-9Yy" secondAttribute="bottom" id="XoY-cP-xQJ"/>
-                <constraint firstItem="rdN-nu-oYg" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.3" constant="-1" id="cIq-2t-wWr"/>
+                <constraint firstItem="rdN-nu-oYg" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.25" constant="-1" id="cIq-2t-wWr"/>
                 <constraint firstItem="ND2-8i-9Yy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dXX-6t-wNh"/>
-                <constraint firstItem="lMq-Xd-Ves" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="gKF-BG-rZ5"/>
+                <constraint firstAttribute="bottom" secondItem="Fvs-yf-Kth" secondAttribute="bottom" id="dhQ-mQ-yea"/>
                 <constraint firstItem="isw-Py-5h2" firstAttribute="top" secondItem="ND2-8i-9Yy" secondAttribute="bottom" id="h3o-8a-Lub"/>
-                <constraint firstAttribute="bottom" secondItem="lMq-Xd-Ves" secondAttribute="bottom" id="iEp-vp-6Kn"/>
+                <constraint firstItem="Fvs-yf-Kth" firstAttribute="top" secondItem="ND2-8i-9Yy" secondAttribute="bottom" id="jbM-Ni-xPH"/>
+                <constraint firstAttribute="trailing" secondItem="Fvs-yf-Kth" secondAttribute="trailing" id="jko-EG-wCt"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="392" y="415"/>

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface WLLSeekViewController : UIViewController
-
 @property (nonatomic, assign) NSInteger index;
 
 @end

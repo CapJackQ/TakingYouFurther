@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WLLPopModel;
 
 @interface WLLMainTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) WLLPopModel *model;
 @end

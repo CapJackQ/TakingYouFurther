@@ -35,12 +35,17 @@
 @interface WLLHomePageViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     UIImageView *headerImage;
+    CGPoint startPoint;
+    CGPoint framePoint;
+    
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *homePageTableView;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *view_barConstraint;
 @property (strong, nonatomic) IBOutlet UITextField *searchBar;
 @property (nonatomic, strong) WLLPopDstinationTableViewCell *popDTableViewCell;
+
+@property (strong, nonatomic) IBOutlet UIView *backButton;
 
 @end
 
@@ -97,13 +102,25 @@
     [self setHeaderView];
     // searchBar 添加左视图
     [self setTextFiledLeftImage:self.searchBar image:@"1"];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backTopAction)];
+    [self.backButton addGestureRecognizer:tap];
 }
-
 // searchBar 添加左视图
 -(void)setTextFiledLeftImage:(UITextField*)textFiled image:(NSString*)image{
     textFiled.leftViewMode = UITextFieldViewModeAlways;
     textFiled.leftView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:image]];
 }
+
+
+#pragma mark - 返回顶部
+-(void)backTopAction {
+    
+    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.homePageTableView selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionBottom];
+    self.backButton.alpha = 0.7;
+}
+
 
 #pragma mark - 搜索栏跳转
 - (IBAction)searchAction:(UIButton *)sender {
@@ -132,7 +149,7 @@
 
 // 返回分区个数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"%ld", [[WLLHomePageDataManager shareInstance] countOfModelArray]);
+
     return [[WLLHomePageDataManager shareInstance] countOfModelArray]; // 返回model数据重新解析
 }
 
@@ -295,6 +312,10 @@
     }
 
 }
+
+
+
+
 
 
 

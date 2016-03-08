@@ -80,6 +80,16 @@
 		C2907F911C8989770029A367 /* WLLRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2907F901C8989770029A367 /* WLLRecommendModel.m */; settings = {ASSET_TAGS = (); }; };
 		C2907F951C89B22E0029A367 /* WLLPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2907F931C89B22E0029A367 /* WLLPopViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2907F961C89B22E0029A367 /* WLLPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2907F941C89B22E0029A367 /* WLLPopViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C29260B71C8EE752008BEA92 /* pop.json in Resources */ = {isa = PBXBuildFile; fileRef = C29260B61C8EE752008BEA92 /* pop.json */; settings = {ASSET_TAGS = (); }; };
+		C29260BD1C8EF62A008BEA92 /* WLLMoreOverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C29260BC1C8EF62A008BEA92 /* WLLMoreOverModel.m */; settings = {ASSET_TAGS = (); }; };
+		C29260C01C8EFFBF008BEA92 /* WLLMoreCheckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C29260BF1C8EFFBF008BEA92 /* WLLMoreCheckModel.m */; settings = {ASSET_TAGS = (); }; };
+		C29260C61C8F0C54008BEA92 /* WLLPopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C29260C51C8F0C54008BEA92 /* WLLPopModel.m */; settings = {ASSET_TAGS = (); }; };
+		C29260C91C8F0C8C008BEA92 /* WLLBoracayIslandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C29260C81C8F0C8C008BEA92 /* WLLBoracayIslandModel.m */; settings = {ASSET_TAGS = (); }; };
+		C29260CD1C8F15B7008BEA92 /* CTD.json in Resources */ = {isa = PBXBuildFile; fileRef = C29260CC1C8F15B7008BEA92 /* CTD.json */; settings = {ASSET_TAGS = (); }; };
+		C29260CF1C8F16ED008BEA92 /* DJ.json in Resources */ = {isa = PBXBuildFile; fileRef = C29260CE1C8F16ED008BEA92 /* DJ.json */; settings = {ASSET_TAGS = (); }; };
+		C29260D11C8F19CA008BEA92 /* HG.json in Resources */ = {isa = PBXBuildFile; fileRef = C29260D01C8F19CA008BEA92 /* HG.json */; settings = {ASSET_TAGS = (); }; };
+		C29260D31C8F1A90008BEA92 /* CS.json in Resources */ = {isa = PBXBuildFile; fileRef = C29260D21C8F1A90008BEA92 /* CS.json */; settings = {ASSET_TAGS = (); }; };
+		C29260D51C8F1AD2008BEA92 /* TG.json in Resources */ = {isa = PBXBuildFile; fileRef = C29260D41C8F1AD2008BEA92 /* TG.json */; settings = {ASSET_TAGS = (); }; };
 		C2B039B91C8DC6CE00E1D394 /* WLLTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B039B71C8DC6CE00E1D394 /* WLLTodayViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2B039BA1C8DC6CE00E1D394 /* WLLTodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B039B81C8DC6CE00E1D394 /* WLLTodayViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C2B2D7501C8D4E8C00DF050A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B2D74F1C8D4E8C00DF050A /* Model.m */; settings = {ASSET_TAGS = (); }; };
@@ -210,6 +220,20 @@
 		C2907F921C89B22E0029A367 /* WLLPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPopViewController.h; sourceTree = "<group>"; };
 		C2907F931C89B22E0029A367 /* WLLPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPopViewController.m; sourceTree = "<group>"; };
 		C2907F941C89B22E0029A367 /* WLLPopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPopViewController.xib; sourceTree = "<group>"; };
+		C29260B61C8EE752008BEA92 /* pop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pop.json; sourceTree = "<group>"; };
+		C29260BB1C8EF62A008BEA92 /* WLLMoreOverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMoreOverModel.h; sourceTree = "<group>"; };
+		C29260BC1C8EF62A008BEA92 /* WLLMoreOverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMoreOverModel.m; sourceTree = "<group>"; };
+		C29260BE1C8EFFBF008BEA92 /* WLLMoreCheckModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMoreCheckModel.h; sourceTree = "<group>"; };
+		C29260BF1C8EFFBF008BEA92 /* WLLMoreCheckModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMoreCheckModel.m; sourceTree = "<group>"; };
+		C29260C41C8F0C54008BEA92 /* WLLPopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPopModel.h; sourceTree = "<group>"; };
+		C29260C51C8F0C54008BEA92 /* WLLPopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPopModel.m; sourceTree = "<group>"; };
+		C29260C71C8F0C8C008BEA92 /* WLLBoracayIslandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLBoracayIslandModel.h; sourceTree = "<group>"; };
+		C29260C81C8F0C8C008BEA92 /* WLLBoracayIslandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLBoracayIslandModel.m; sourceTree = "<group>"; };
+		C29260CC1C8F15B7008BEA92 /* CTD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CTD.json; sourceTree = "<group>"; };
+		C29260CE1C8F16ED008BEA92 /* DJ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DJ.json; sourceTree = "<group>"; };
+		C29260D01C8F19CA008BEA92 /* HG.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HG.json; sourceTree = "<group>"; };
+		C29260D21C8F1A90008BEA92 /* CS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CS.json; sourceTree = "<group>"; };
+		C29260D41C8F1AD2008BEA92 /* TG.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TG.json; sourceTree = "<group>"; };
 		C2B039B61C8DC6CE00E1D394 /* WLLTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLTodayViewController.h; sourceTree = "<group>"; };
 		C2B039B71C8DC6CE00E1D394 /* WLLTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLTodayViewController.m; sourceTree = "<group>"; };
 		C2B039B81C8DC6CE00E1D394 /* WLLTodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLTodayViewController.xib; sourceTree = "<group>"; };
@@ -356,6 +380,7 @@
 		C2431F0E1C84687E0061FAB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C29260C31C8F0C54008BEA92 /* PopDestinationModels */,
 				C2431F1C1C8468BE0061FAB1 /* File3 */,
 				C2907F541C8941290029A367 /* WLLGuidanceModel.h */,
 				C2907F551C8941290029A367 /* WLLGuidanceModel.m */,
@@ -367,6 +392,10 @@
 				C2907F901C8989770029A367 /* WLLRecommendModel.m */,
 				C2B2D74E1C8D4E8C00DF050A /* Model.h */,
 				C2B2D74F1C8D4E8C00DF050A /* Model.m */,
+				C29260BB1C8EF62A008BEA92 /* WLLMoreOverModel.h */,
+				C29260BC1C8EF62A008BEA92 /* WLLMoreOverModel.m */,
+				C29260BE1C8EFFBF008BEA92 /* WLLMoreCheckModel.h */,
+				C29260BF1C8EFFBF008BEA92 /* WLLMoreCheckModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,6 +403,12 @@
 		C2431F0F1C84687E0061FAB1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C29260B61C8EE752008BEA92 /* pop.json */,
+				C29260CC1C8F15B7008BEA92 /* CTD.json */,
+				C29260CE1C8F16ED008BEA92 /* DJ.json */,
+				C29260D01C8F19CA008BEA92 /* HG.json */,
+				C29260D21C8F1A90008BEA92 /* CS.json */,
+				C29260D41C8F1AD2008BEA92 /* TG.json */,
 				C2431F1E1C8468C60061FAB1 /* File4 */,
 			);
 			path = Resources;
@@ -527,6 +562,17 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		C29260C31C8F0C54008BEA92 /* PopDestinationModels */ = {
+			isa = PBXGroup;
+			children = (
+				C29260C41C8F0C54008BEA92 /* WLLPopModel.h */,
+				C29260C51C8F0C54008BEA92 /* WLLPopModel.m */,
+				C29260C71C8F0C8C008BEA92 /* WLLBoracayIslandModel.h */,
+				C29260C81C8F0C8C008BEA92 /* WLLBoracayIslandModel.m */,
+			);
+			path = PopDestinationModels;
+			sourceTree = "<group>";
+		};
 		C2B039B01C8DC6A000E1D394 /* TodayWebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,11 +653,13 @@
 				C2431F191C8468A90061FAB1 /* File1 in Resources */,
 				C214DBC51C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
+				C29260CD1C8F15B7008BEA92 /* CTD.json in Resources */,
 				C2907F451C892C7E0029A367 /* WLLReviewTableViewCell.xib in Resources */,
 				C2431F1F1C8468C60061FAB1 /* File4 in Resources */,
 				C2907F961C89B22E0029A367 /* WLLPopViewController.xib in Resources */,
 				C2431F1D1C8468BE0061FAB1 /* File3 in Resources */,
 				C2B039BA1C8DC6CE00E1D394 /* WLLTodayViewController.xib in Resources */,
+				C29260D11C8F19CA008BEA92 /* HG.json in Resources */,
 				C2C85A051C8C155C0092C6EB /* WLLMoreCheckViewController.xib in Resources */,
 				C26E9BFA1C887317001EACFB /* WLLSearchedTableViewCell.xib in Resources */,
 				C214DBC01C872021000C269E /* WLLSearchedCollectionViewCell.xib in Resources */,
@@ -627,14 +675,18 @@
 				C2471F2F1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.xib in Resources */,
 				C2471F391C8B106E001042A8 /* WLLMoreOverViewController.xib in Resources */,
 				C2907F401C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib in Resources */,
+				C29260D51C8F1AD2008BEA92 /* TG.json in Resources */,
 				C2C85A2F1C8C35DE0092C6EB /* WLLSeekViewController.xib in Resources */,
 				C26E9BA41C87D086001EACFB /* WLLTodayNotesTableViewCell.xib in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
 				C26E9BFF1C887A57001EACFB /* WLLGuidanceTableViewCell.xib in Resources */,
 				C26E9C041C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib in Resources */,
+				C29260CF1C8F16ED008BEA92 /* DJ.json in Resources */,
 				C26E9BAE1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib in Resources */,
 				C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */,
+				C29260D31C8F1A90008BEA92 /* CS.json in Resources */,
 				C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */,
+				C29260B71C8EE752008BEA92 /* pop.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +703,7 @@
 				C2B2D7501C8D4E8C00DF050A /* Model.m in Sources */,
 				C2907F801C89534D0029A367 /* SDWebImageManager.m in Sources */,
 				C2907F7C1C89534D0029A367 /* SDWebImageCompat.m in Sources */,
+				C29260BD1C8EF62A008BEA92 /* WLLMoreOverModel.m in Sources */,
 				C2471F121C8AD3C7001042A8 /* WLLSearchViewController.m in Sources */,
 				C2907F811C89534D0029A367 /* SDWebImagePrefetcher.m in Sources */,
 				C2907F4F1C89357A0029A367 /* WLLHomePageDataManager.m in Sources */,
@@ -666,6 +719,7 @@
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
 				C2907F8B1C8956B10029A367 /* WLLTodayNotesModel.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
+				C29260C91C8F0C8C008BEA92 /* WLLBoracayIslandModel.m in Sources */,
 				C2471F331C8B0621001042A8 /* WLLRecommendViewController.m in Sources */,
 				C2907F831C89534D0029A367 /* UIImage+GIF.m in Sources */,
 				C2B039B91C8DC6CE00E1D394 /* WLLTodayViewController.m in Sources */,
@@ -690,10 +744,12 @@
 				C26E9BF91C887317001EACFB /* WLLSearchedTableViewCell.m in Sources */,
 				C2907F561C8941290029A367 /* WLLGuidanceModel.m in Sources */,
 				C2907F8E1C897A600029A367 /* WLLDestinationModel.m in Sources */,
+				C29260C01C8EFFBF008BEA92 /* WLLMoreCheckModel.m in Sources */,
 				C2907F871C89534D0029A367 /* UIImageView+WebCache.m in Sources */,
 				C2907F3F1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.m in Sources */,
 				C2907F951C89B22E0029A367 /* WLLPopViewController.m in Sources */,
 				C2907F441C892C7E0029A367 /* WLLReviewTableViewCell.m in Sources */,
+				C29260C61C8F0C54008BEA92 /* WLLPopModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 //
 
 #import "WLLMainTableViewCell.h"
+#import "WLLPopModel.h"
+#import "UIImageView+WebCache.h"
 
 @interface WLLMainTableViewCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *mainImage;
@@ -21,6 +23,20 @@
 
 @implementation WLLMainTableViewCell
 
+
+-(void)setModel:(WLLPopModel *)model {
+    
+    _model = model;
+    
+    [self.mainImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.img]]];
+    
+    self.destinationLabel.text = model.destination;
+    self.styleLabel.text = model.tag_name;
+    self.descriptionLabel.text = model.top_name;
+    self.priceLabel.text = model.price;
+    self.suffixLabel.text = model.price_suffix;
+    self.barginLabel.text = model.red_str;
+}
 
 - (void)awakeFromNib {
     // Initialization code

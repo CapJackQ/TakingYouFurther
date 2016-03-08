@@ -9,6 +9,7 @@
 #import "WLLPopDestinationCollectionViewCell.h"
 #import "WLLDestinationModel.h"
 #import "UIImageView+WebCache.h"
+#import "WLLMoreOverModel.h"
 
 @interface WLLPopDestinationCollectionViewCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *destinationImage;
@@ -36,6 +37,17 @@
     self.actionLabel.text = model.sub_title;
     self.priceLabel.text = model.price;
     self.suffixLabel.text = model.price_suffix;
+}
+
+-(void)setMmodel:(WLLMoreOverModel *)Mmodel {
+    _Mmodel = Mmodel;
+    
+    [self.destinationImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", Mmodel.icon]]];
+    
+    self.destinationLabel.text = Mmodel.title;
+    self.actionLabel.text = Mmodel.sub_title;
+    self.priceLabel.text = Mmodel.price;
+    self.suffixLabel.text = Mmodel.price_suffix;
 }
 
 @end

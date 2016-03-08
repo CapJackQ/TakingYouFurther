@@ -8,6 +8,10 @@
 
 #import "WLLPopViewController.h"
 #import "WLLMainTableViewCell.h"
+#import "WLLHomePageDataManager.h"
+#import "WLLPopModel.h"
+#import "WLLHomePageUrlHeader.h"
+
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 #define kHeight CGRectGetHeight([UIScreen mainScreen].bounds)
@@ -18,10 +22,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *secondTableView;
 @property (strong, nonatomic) IBOutlet UITableView *thirdTableView;
 @property (strong, nonatomic) IBOutlet UITableView *mainTableView;
-
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *firstToLabel;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *secToLabel;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *thirdToLabel;
 
 @property (strong, nonatomic) IBOutlet UIButton *typeButton;
 @property (strong, nonatomic) IBOutlet UIButton *departureButton;
@@ -48,6 +48,14 @@
     self.mainTableView.delegate = self;
     
     [self.mainTableView registerNib:[UINib nibWithNibName:@"WLLMainTableViewCell" bundle:nil] forCellReuseIdentifier:@"main_cell"];
+    NSInteger index = [WLLHomePageDataManager shareInstance].index;
+    
+    NSMutableArray *array = [WLLHomePageDataManager shareInstance].pathArray;
+    
+    
+    [[WLLHomePageDataManager shareInstance] requestPopDestinationDataWithUrl:array[index] didFinished:^{
+        [self.mainTableView reloadData];
+    }];
 }
 
 #pragma mark - 显示系统 NavigationBar
@@ -57,14 +65,16 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [self setNaviBarHidden:NO];
-    self.firstToLabel.constant = kHeight;
 
-    self.secToLabel.constant = kHeight;
-    self.thirdToLabel.constant = kHeight;
     self.typeButton.selected = NO;
     self.departureButton.selected = NO;
     self.filteButton.selected = NO;
     self.ensureButton.hidden = YES;
+    
+    self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+    self.secondTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+    self.thirdTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+    self.mainTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
 }
 
 #pragma mark - UITableView Delegate
@@ -72,15 +82,15 @@
 #pragma mark number Of Rows In Section
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if ([tableView isEqual:self.firstTableView]) {
-        return 30;
+        return 5;
     }
     if ([tableView isEqual:self.secondTableView]) {
         return 10;
     }
-    if ([tableView isEqual:self.thirdToLabel]) {
-        return 20;
+    if ([tableView isEqual:self.thirdTableView]) {
+        return 10;
     }
-    return 10;
+    return [[WLLHomePageDataManager shareInstance] countOfPopDestinationArray];
 }
 
 #pragma mark cell For Row At IndexPath
@@ -115,6 +125,8 @@
 
     }
     WLLMainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"main_cell" forIndexPath:indexPath];
+    WLLPopModel *model = [[WLLHomePageDataManager shareInstance] popModelWithIndex:indexPath.row];
+    cell.model = model;
     return cell;
 }
 
@@ -132,61 +144,85 @@
 - (IBAction)clickAllTypeAction:(UIButton *)sender {
     
     if (sender.selected == NO) {
-        self.secToLabel.constant = kHeight;
-        self.thirdToLabel.constant = kHeight;
-        
-        self.firstToLabel.constant = 0;
-        
+
         self.departureButton.selected = NO;
         self.filteButton.selected = NO;
-        self.mainTableView.hidden = YES;
+        
         self.ensureButton.hidden = YES;
         sender.selected = YES;
         
+//        self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+        [UIView animateWithDuration:0.5 animations:^{
+
+            self.mainTableView.hidden = YES;
+            self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, kHeight);
+        }];
+        
     
     } else {
-        self.firstToLabel.constant = kHeight;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+        } completion:^(BOOL finished) {
+            self.mainTableView.hidden = NO;
+        }];
         sender.selected = NO;
-        self.mainTableView.hidden = NO;
-        
     }
 }
 
 #pragma mark 出发地
 - (IBAction)clickDepartureAction:(UIButton *)sender {
     if (sender.selected == NO) {
-        self.firstToLabel.constant = kHeight;
-        self.thirdToLabel.constant = kHeight;
-        self.secToLabel.constant = 0;
         self.typeButton.selected = NO;
         self.filteButton.selected = NO;
-        self.mainTableView.hidden = YES;
         self.ensureButton.hidden = YES;
         sender.selected = YES;
         
+//        self.secondTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            
+            self.mainTableView.hidden = YES;
+            self.mainTableView.frame = CGRectMake(0, kHeight, kWidth, 0);
+            self.secondTableView.frame = CGRectMake(0, 64+48, kWidth, kHeight);
+        }];
+        
     } else {
-        self.secToLabel.constant = kHeight;
+
+        [UIView animateWithDuration:0.5 animations:^{
+            self.secondTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+            self.mainTableView.frame = CGRectMake(0, 64+48, kWidth, kHeight);
+        } completion:^(BOOL finished) {
+            
+        }];
+
         sender.selected = NO;
-        self.mainTableView.hidden = NO;
     }
 }
 
 #pragma mark 筛选
 - (IBAction)clickFilterAction:(UIButton *)sender {
     if (sender.selected == NO) {
-        self.firstToLabel.constant = kHeight;
-        self.secToLabel.constant = kHeight;
-        self.thirdToLabel.constant = 0;
         sender.selected = YES;
         self.typeButton.selected = NO;
         self.departureButton.selected = NO;
         self.ensureButton.hidden = NO;
         self.mainTableView.hidden = YES;
+        
+//        self.thirdTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+        [UIView animateWithDuration:0.5 animations:^{
+            self.thirdTableView.frame = CGRectMake(0, 64+48, kWidth, kHeight);
+        }];
+        
     } else {
-        self.thirdToLabel.constant = kHeight;
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            self.thirdTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+        } completion:^(BOOL finished) {
+            self.ensureButton.hidden = YES;
+            self.mainTableView.hidden = NO;
+        }];
         sender.selected = NO;
-        self.ensureButton.hidden = YES;
-        self.mainTableView.hidden = NO;
+        
     }
 }
 

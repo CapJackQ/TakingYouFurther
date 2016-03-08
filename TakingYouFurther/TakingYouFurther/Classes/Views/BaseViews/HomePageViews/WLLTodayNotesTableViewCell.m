@@ -42,15 +42,6 @@
     self.headImage.layer.cornerRadius = self.headImage.frame.size.height / 2;
 }
 
--(CGSize)sizeThatFits:(CGSize)size {
-    
-    size = CGSizeMake(kWidth, self.titleLabel.frame.size.height + 100);
-    return size;
-}
-
--(void)setFrame:(CGRect)frame {
-    frame.size = CGSizeMake(kWidth,CGRectGetMaxY(self.titleLabel.frame) + 100);
-}
 
 
 

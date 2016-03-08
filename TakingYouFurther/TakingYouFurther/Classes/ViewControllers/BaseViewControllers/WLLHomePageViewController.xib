@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLLHomePageViewController">
             <connections>
+                <outlet property="backButton" destination="gXX-Tg-sp8" id="tfI-Zt-rdV"/>
                 <outlet property="homePageTableView" destination="TFQ-YC-Yq6" id="Atn-BK-59C"/>
                 <outlet property="searchBar" destination="wu3-8f-ilV" id="e9k-sg-gme"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -76,6 +77,54 @@
                         <constraint firstItem="Hjx-fJ-eZ4" firstAttribute="width" secondItem="wu3-8f-ilV" secondAttribute="width" id="wu1-0p-ygg"/>
                     </constraints>
                 </view>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXX-Tg-sp8">
+                    <rect key="frame" x="324" y="596" width="60" height="60"/>
+                    <subviews>
+                        <view userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqE-0g-MYi">
+                            <rect key="frame" x="9" y="9" width="42" height="42"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="GqE-0g-MYi" secondAttribute="height" id="6rG-N9-ONX"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="21"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCv-7P-Mt1">
+                            <rect key="frame" x="18" y="18" width="24" height="24"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dCv-7P-Mt1" secondAttribute="height" id="9R3-gm-zET"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="0.5973372535" green="0.40132407980000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="dCv-7P-Mt1" firstAttribute="centerY" secondItem="gXX-Tg-sp8" secondAttribute="centerY" id="9y7-36-4yO"/>
+                        <constraint firstItem="GqE-0g-MYi" firstAttribute="width" secondItem="gXX-Tg-sp8" secondAttribute="width" multiplier="0.7" id="Pdc-ge-Efz"/>
+                        <constraint firstItem="dCv-7P-Mt1" firstAttribute="width" secondItem="gXX-Tg-sp8" secondAttribute="width" multiplier="0.4" id="Pop-ks-g0W"/>
+                        <constraint firstAttribute="width" secondItem="gXX-Tg-sp8" secondAttribute="height" id="QON-4L-EYz"/>
+                        <constraint firstAttribute="width" constant="60" id="YJ9-Pg-aQ1"/>
+                        <constraint firstItem="GqE-0g-MYi" firstAttribute="centerX" secondItem="gXX-Tg-sp8" secondAttribute="centerX" id="cyB-ir-C5q"/>
+                        <constraint firstItem="dCv-7P-Mt1" firstAttribute="centerX" secondItem="gXX-Tg-sp8" secondAttribute="centerX" id="hQx-KF-61V"/>
+                        <constraint firstItem="GqE-0g-MYi" firstAttribute="centerY" secondItem="gXX-Tg-sp8" secondAttribute="centerY" id="rJP-yL-8TG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <animations/>
             <constraints>
@@ -85,6 +134,8 @@
                 <constraint firstItem="9pb-y0-c3F" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SsL-er-cNd"/>
                 <constraint firstItem="9pb-y0-c3F" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1082" constant="-10" id="T68-Uo-APb"/>
                 <constraint firstItem="9pb-y0-c3F" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="W5g-1m-hop"/>
+                <constraint firstAttribute="trailing" secondItem="gXX-Tg-sp8" secondAttribute="trailing" constant="30" id="X8S-lG-C4j"/>
+                <constraint firstAttribute="bottom" secondItem="gXX-Tg-sp8" secondAttribute="bottom" constant="80" id="Ya7-i2-8fg"/>
                 <constraint firstItem="TFQ-YC-Yq6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-20" id="eu6-Y4-DnH"/>
                 <constraint firstAttribute="trailing" secondItem="TFQ-YC-Yq6" secondAttribute="trailing" id="gNk-Sg-ymb"/>
             </constraints>

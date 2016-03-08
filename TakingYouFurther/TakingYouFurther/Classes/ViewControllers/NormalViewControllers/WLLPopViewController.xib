@@ -12,12 +12,9 @@
                 <outlet property="ensureButton" destination="KPv-OP-Qh1" id="X0m-xe-0WU"/>
                 <outlet property="filteButton" destination="f0L-1m-dvC" id="cYp-H7-qPn"/>
                 <outlet property="firstTableView" destination="AjR-zv-rPc" id="FHn-0N-b32"/>
-                <outlet property="firstToLabel" destination="FVY-oM-x0c" id="hRc-99-uWh"/>
                 <outlet property="mainTableView" destination="DkO-T3-oG3" id="zVI-mD-riD"/>
-                <outlet property="secToLabel" destination="ops-3c-wmu" id="s6F-bn-rNL"/>
                 <outlet property="secondTableView" destination="z91-QN-2XY" id="lej-l9-CUf"/>
                 <outlet property="thirdTableView" destination="ZyT-3l-3g8" id="GMA-ec-Laf"/>
-                <outlet property="thirdToLabel" destination="iif-z6-52q" id="yxh-GG-MtR"/>
                 <outlet property="typeButton" destination="xxW-Oj-I3X" id="9t8-Y7-Cxb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

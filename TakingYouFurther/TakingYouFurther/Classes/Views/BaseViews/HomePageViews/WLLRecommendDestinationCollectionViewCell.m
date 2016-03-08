@@ -9,6 +9,7 @@
 #import "WLLRecommendDestinationCollectionViewCell.h"
 #import "WLLRecommendModel.h"
 #import "UIImageView+WebCache.h"
+#import "WLLMoreCheckModel.h"
 
 @interface WLLRecommendDestinationCollectionViewCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *recommendImage;
@@ -29,6 +30,14 @@
     [self.recommendImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.img_url]]];
     self.monthLabel.text = model.title;
     self.descriptionLabel.text = model.sub_title;
+}
+
+-(void)setMmodel:(WLLMoreCheckModel *)Mmodel {
+    _Mmodel = Mmodel;
+    
+    [self.recommendImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", Mmodel.img_url]]];
+    self.monthLabel.text = Mmodel.title;
+    self.descriptionLabel.text =Mmodel.sub_title;
 }
 
 @end

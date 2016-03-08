@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 @class WLLRecommendModel;
+@class WLLMoreCheckModel;
 
 @interface WLLRecommendDestinationCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) WLLRecommendModel *model;
+
+@property (nonatomic, strong) WLLMoreCheckModel *Mmodel;
 
 @end

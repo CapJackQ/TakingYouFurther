@@ -8,6 +8,9 @@
 
 #import "WLLMoreCheckViewController.h"
 #import "WLLRecommendDestinationCollectionViewCell.h"
+#import "WLLMoreCheckModel.h"
+#import "WLLHomePageDataManager.h"
+#import "WLLHomePageUrlHeader.h"
 
 @interface WLLMoreCheckViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) IBOutlet UICollectionView *moreCheckCollectionView;
@@ -23,6 +26,10 @@
     self.moreCheckCollectionView.delegate = self;
     
     [self.moreCheckCollectionView registerNib:[UINib nibWithNibName:@"WLLRecommendDestinationCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"recommend_item"];
+    
+    [[WLLHomePageDataManager shareInstance] requestMoreCheckDataWithUrl:kMoreCheckUrl finished:^{
+        [self.moreCheckCollectionView reloadData];
+    }];
 }
 
 #pragma mark - 显示系统 NavigationBar
@@ -36,12 +43,15 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 10;
+    return [[WLLHomePageDataManager shareInstance] countOfMoreCheckArray];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     WLLRecommendDestinationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recommend_item" forIndexPath:indexPath];
+    
+    WLLMoreCheckModel *model = [[WLLHomePageDataManager shareInstance] moreCheckModelWithIdex:indexPath.row];
+    cell.Mmodel = model;
     return cell;
 }
 

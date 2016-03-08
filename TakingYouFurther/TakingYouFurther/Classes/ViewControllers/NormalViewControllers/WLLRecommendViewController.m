@@ -9,6 +9,7 @@
 #import "WLLRecommendViewController.h"
 #import "WLLRecommendCollectionViewCell.h"
 
+
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 
 @interface WLLRecommendViewController ()<UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate>
@@ -25,6 +26,7 @@
     self.recommendCollectionView.delegate = self;
     
     [self.recommendCollectionView registerNib:[UINib nibWithNibName:@"WLLRecommendCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"image_item"];
+    
 }
 
 #pragma mark - 显示系统 NavigationBar
@@ -44,6 +46,7 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     WLLRecommendCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"image_item" forIndexPath:indexPath];
+
     return cell;
 }
 

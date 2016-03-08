@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class WLLDestinationModel;
+@class WLLMoreOverModel;
 
 @interface WLLPopDestinationCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) WLLDestinationModel *model;
+@property (nonatomic, strong) WLLMoreOverModel *Mmodel;
 
 @end

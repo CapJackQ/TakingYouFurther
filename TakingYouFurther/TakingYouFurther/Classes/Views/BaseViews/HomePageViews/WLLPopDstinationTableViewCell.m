@@ -61,8 +61,9 @@
 
 // cell点击事件
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    WLLPopViewController *popVC = [[WLLPopViewController alloc] initWithNibName:@"WLLPopViewController" bundle:nil];
-    popVC.index = indexPath.row;
+    
+    [WLLHomePageDataManager shareInstance].index = indexPath.row;
+    
     [self registerNotification];
 }
 

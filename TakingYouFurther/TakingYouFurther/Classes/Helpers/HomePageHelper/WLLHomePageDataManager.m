@@ -13,6 +13,9 @@
 #import "WLLDestinationModel.h"
 #import "WLLRecommendModel.h"
 #import "Model.h"
+#import "WLLPopModel.h"
+#import "WLLMoreOverModel.h"
+#import "WLLMoreCheckModel.h"
 
 @interface WLLHomePageDataManager ()
 
@@ -20,6 +23,11 @@
 @property (nonatomic, strong) NSMutableArray *todayNotesArray;
 @property (nonatomic, strong) NSMutableArray *destinationArray;
 @property (nonatomic, strong) NSMutableArray *recommendArray;
+@property (nonatomic, strong) NSMutableArray *popDestArray;
+@property (nonatomic, strong) NSMutableArray *moreCheckArray;
+
+@property (nonatomic, strong) NSMutableArray *moreOverArray;
+
 
 @property (nonatomic, strong) NSMutableArray *modelArray;
 
@@ -39,7 +47,27 @@ static WLLHomePageDataManager *manager = nil;
     return manager;
 }
 
+-(instancetype)init {
+    
+    NSString *pathTW = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"json"];
+    NSString *pathCTD = [[NSBundle mainBundle] pathForResource:@"CTD" ofType:@"json"];
+    NSString *pathDJ = [[NSBundle mainBundle] pathForResource:@"DJ" ofType:@"json"];
+    NSString *pathHG = [[NSBundle mainBundle] pathForResource:@"HG" ofType:@"json"];
+    NSString *pathCS = [[NSBundle mainBundle] pathForResource:@"CS" ofType:@"json"];
+    NSString *pathTG = [[NSBundle mainBundle] pathForResource:@"TG" ofType:@"json"];
+    
+    self.pathArray = @[pathTW, pathCTD, pathDJ, pathHG, pathCS, pathTG].mutableCopy;
+    return self;
+}
+
 #pragma mark - 数组懒加载
+
+-(NSMutableArray *)pathArray {
+    if (!_pathArray) {
+        _pathArray = [NSMutableArray array];
+    }
+    return _pathArray;
+}
 
 -(NSMutableArray *)guidanceArray {
     
@@ -78,6 +106,27 @@ static WLLHomePageDataManager *manager = nil;
     return _modelArray;
 }
 
+-(NSMutableArray *)popDestArray {
+    if (_popDestArray == nil) {
+        _popDestArray = [NSMutableArray array];
+    }
+    return _popDestArray;
+}
+
+-(NSMutableArray *)moreOverArray {
+    if (!_moreOverArray) {
+        _moreOverArray = [NSMutableArray array];
+    }
+    return _moreOverArray;
+}
+
+-(NSMutableArray *)moreCheckArray {
+    if (!_moreCheckArray) {
+        _moreCheckArray = [NSMutableArray array];
+    }
+    return _moreCheckArray;
+}
+
 #pragma mark - 解析 HomePage 数据
 -(void)requestHomePageDataWithUrl:(NSString *)url didFinished:(void (^)())finished {
     
@@ -110,12 +159,7 @@ static WLLHomePageDataManager *manager = nil;
             [self.guidanceArray addObject:model];
         }
         
-//        for (NSDictionary *dict in listArray) {
-//            
-//            WLLTodayNotesModel *model = [[WLLTodayNotesModel alloc] init];
-//            [model setValuesForKeysWithDictionary:dict];
-//            [self.todayNotesArray addObject:model];
-//        }
+
         NSDictionary *eliteDict = listArray[1];
         WLLTodayNotesModel *model = [[WLLTodayNotesModel alloc] init];
         
@@ -216,5 +260,118 @@ static WLLHomePageDataManager *manager = nil;
     return self.modelArray.count;
 }
 
+
+#pragma mark - 解析热门目的地
+
+-(void)requestPopDestinationDataWithUrl:(NSString *)url didFinished:(void (^)())finished {
+    
+    [self.popDestArray removeAllObjects];
+    
+    NSData *data = [NSData dataWithContentsOfFile:url];
+   
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    
+    if (!dict) {
+        return;
+    }
+    NSDictionary *dataDict = dict[@"data"];
+    
+    NSArray *dataArray = dataDict[@"data"];
+    for (NSDictionary *dict in dataArray) {
+        WLLPopModel *model = [[WLLPopModel alloc] init];
+
+        [model setValuesForKeysWithDictionary:dict];
+        [self.popDestArray addObject:model];
+    }
+    
+    for (WLLPopModel *model in self.popDestArray) {
+        NSLog(@"%@==%@==%@", model.title, model.destination, model.tag_name);
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+            finished();
+        });
+}
+
+-(NSInteger)countOfPopDestinationArray {
+    return self.popDestArray.count;
+}
+
+-(WLLPopModel *)popModelWithIndex:(NSInteger)index {
+    WLLPopModel *model = self.popDestArray[index];
+    return model;
+}
+
+#pragma mark - 解析查看更多
+
+-(void)requestMoreOverDataWithUrl:(NSString *)url finished:(void (^)())finished {
+    
+    [self.moreOverArray removeAllObjects];
+    [BC_NetTools solveDataWithUrl:url httpMethod:@"get" httpBody:nil revokeBlock:^(NSData *data) {
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        
+        if (!dict) {
+            return ;
+        }
+        NSDictionary *dataDict = dict[@"data"];
+        
+        NSArray *listArray = dataDict[@"list"];
+        for (NSDictionary *dict in listArray) {
+            WLLMoreOverModel *model = [[WLLMoreOverModel alloc] init];
+            [model setValuesForKeysWithDictionary:dict];
+            [self.moreOverArray addObject:model];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            finished();
+        });
+    }];
+}
+
+-(NSInteger)countOfMoreOverArray {
+    return self.moreOverArray.count;
+}
+
+-(WLLMoreOverModel *)moreOverModelWithIndex:(NSInteger)index {
+    WLLMoreOverModel *model = self.moreOverArray[index];
+    return model;
+}
+
+
+-(void)requestMoreCheckDataWithUrl:(NSString *)url finished:(void (^)())finished {
+    
+    [self.moreCheckArray removeAllObjects];
+    [BC_NetTools sessionDataWithUrl:url HttpMethod:@"get" HttpBody:nil revokeBlock:^(NSData *data) {
+        
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        
+        if (!dict) {
+            return ;
+        }
+        NSDictionary *dataDict = dict[@"data"];
+        
+        NSArray *listArr = dataDict[@"list"];
+        for (NSDictionary *dict in listArr) {
+            WLLMoreCheckModel *model = [[WLLMoreCheckModel alloc] init];
+            [model setValuesForKeysWithDictionary:dict];
+            [self.moreCheckArray addObject:model];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            finished();
+        });
+        
+    }];
+}
+
+-(NSInteger)countOfMoreCheckArray {
+    return self.moreCheckArray.count;
+}
+
+-(WLLMoreCheckModel *)moreCheckModelWithIdex:(NSInteger)index {
+    WLLMoreCheckModel *model = self.moreCheckArray[index];
+    return model;
+}
 
 @end
