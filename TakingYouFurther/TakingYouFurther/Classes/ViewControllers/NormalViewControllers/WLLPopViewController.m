@@ -11,12 +11,16 @@
 #import "WLLHomePageDataManager.h"
 #import "WLLPopModel.h"
 #import "WLLHomePageUrlHeader.h"
+#import "WLLTodayViewController.h"
 
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 #define kHeight CGRectGetHeight([UIScreen mainScreen].bounds)
 
 @interface WLLPopViewController ()<UITableViewDataSource, UITableViewDelegate>
+{
+    NSInteger index;
+}
 
 @property (strong, nonatomic) IBOutlet UITableView *firstTableView;
 @property (strong, nonatomic) IBOutlet UITableView *secondTableView;
@@ -48,11 +52,18 @@
     self.mainTableView.delegate = self;
     
     [self.mainTableView registerNib:[UINib nibWithNibName:@"WLLMainTableViewCell" bundle:nil] forCellReuseIdentifier:@"main_cell"];
-    NSInteger index = [WLLHomePageDataManager shareInstance].index;
+    
+    [self requestData];
+    [self naviBarItem];
+}
+
+// 请求数据
+-(void)requestData {
+    index = [WLLHomePageDataManager shareInstance].index;
     
     NSMutableArray *array = [WLLHomePageDataManager shareInstance].pathArray;
     
-    
+
     [[WLLHomePageDataManager shareInstance] requestPopDestinationDataWithUrl:array[index] didFinished:^{
         [self.mainTableView reloadData];
     }];
@@ -135,6 +146,15 @@
         return kHeight/3.68;
     }
     return 50;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    WLLTodayViewController *todayVC = [[WLLTodayViewController alloc] initWithNibName:@"WLLTodayViewController" bundle:nil];
+    
+    [WLLHomePageDataManager shareInstance].index = 2;
+    todayVC.index = indexPath.row;
+    [self.navigationController pushViewController:todayVC animated:YES];
 }
 
 
@@ -226,7 +246,33 @@
     }
 }
 
-
+-(void)naviBarItem {
+    if (index == 0) {
+        self.navigationItem.title = @"台湾";
+    } else if (index == 1) {
+        self.navigationItem.title = @"长滩岛";
+    } else if (index == 2) {
+        self.navigationItem.title = @"东京";
+    } else if (index == 3) {
+        self.navigationItem.title = @"韩国签证";
+    } else if (index == 4) {
+        self.navigationItem.title = @"冲绳一日游";
+    } else if (index == 5) {
+        self.navigationItem.title = @"泰国wifi/电话卡";
+    } else if (index == 6) {
+        self.navigationItem.title = @"吴哥窟";
+    } else if (index == 7) {
+        self.navigationItem.title = @"清迈";
+    } else if (index == 8) {
+        self.navigationItem.title = @"吉普岛";
+    } else if (index == 9) {
+        self.navigationItem.title = @"大阪";
+    } else if (index == 10) {
+        self.navigationItem.title = @"帕劳";
+    } else {
+        self.navigationItem.title = @"马尔代夫";
+    }
+}
 
 
 

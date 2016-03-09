@@ -6,6 +6,8 @@
 //  Copyright © 2016年 lanou3g. All rights reserved.
 //
 
+
+/// 目的地推荐 item
 #import <UIKit/UIKit.h>
 @class WLLRecommendModel;
 @class WLLMoreCheckModel;

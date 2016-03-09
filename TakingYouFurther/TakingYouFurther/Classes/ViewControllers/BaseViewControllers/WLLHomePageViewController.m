@@ -25,6 +25,7 @@
 #import "WLLMoreCheckViewController.h"
 #import "WLLSeekViewController.h"
 #import "WLLTodayViewController.h"
+#import "WLLPlaneHotelViewController.h"
 
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
@@ -245,9 +246,11 @@
         
         WLLTodayViewController *todayVC = [[WLLTodayViewController alloc] initWithNibName:@"WLLTodayViewController" bundle:nil];
         
+        [WLLHomePageDataManager shareInstance].path = 0;
         todayVC.index = indexPath.row;
         
         [self.navigationController pushViewController:todayVC animated:YES];
+        
     }
 }
 
@@ -265,6 +268,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popDestination) name:@"seekpop" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushRecommend) name:@"recommend" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToPlaneHotelAction) name:@"planeHotel" object:nil];
 }
 
 #pragma mark - 推送页面
@@ -296,6 +301,13 @@
 -(void)pushRecommend {
     WLLRecommendViewController *recommendVC = [[WLLRecommendViewController alloc] initWithNibName:@"WLLRecommendViewController" bundle:nil];
     [self.navigationController pushViewController:recommendVC animated:YES];
+}
+
+// 机+酒
+-(void)pushToPlaneHotelAction {
+    
+    WLLPlaneHotelViewController *PHVC = [[WLLPlaneHotelViewController alloc] initWithNibName:@"WLLPlaneHotelViewController" bundle:nil];
+    [self.navigationController pushViewController:PHVC animated:YES];
 }
 
 #pragma makr - Nvibar 滚动

@@ -59,8 +59,9 @@
 // 选中cell响应事件
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    WLLRecommendViewController *recommendVC = [[WLLRecommendViewController alloc] initWithNibName:@"WLLRecommendViewController" bundle:nil];
-    recommendVC.index = indexPath.row;
+    [WLLHomePageDataManager shareInstance].path = 1;
+    [WLLHomePageDataManager shareInstance].index = indexPath.row;
+    NSLog(@"00 %ld",[WLLHomePageDataManager shareInstance].index);
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(action) name:@"recommend" object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"recommend" object:nil];

@@ -6,6 +6,10 @@
 //  Copyright © 2016年 lanou3g. All rights reserved.
 //
 
+
+/**
+ *  热门目的地 table
+ */
 #import <UIKit/UIKit.h>
 
 @interface WLLPopDstinationTableViewCell : UITableViewCell

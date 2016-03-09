@@ -6,6 +6,8 @@
 //  Copyright © 2016年 lanou3g. All rights reserved.
 //
 
+
+/// 热门目的地 导航table
 #import <UIKit/UIKit.h>
 @class WLLPopModel;
 

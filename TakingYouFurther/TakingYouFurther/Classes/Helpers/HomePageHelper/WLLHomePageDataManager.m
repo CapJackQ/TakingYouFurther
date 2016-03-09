@@ -16,6 +16,7 @@
 #import "WLLPopModel.h"
 #import "WLLMoreOverModel.h"
 #import "WLLMoreCheckModel.h"
+#import "WLLBoracayIslandModel.h"
 
 @interface WLLHomePageDataManager ()
 
@@ -30,6 +31,8 @@
 
 
 @property (nonatomic, strong) NSMutableArray *modelArray;
+
+@property (nonatomic, strong) NSMutableArray *monthDataArray;
 
 @end
 
@@ -49,18 +52,52 @@ static WLLHomePageDataManager *manager = nil;
 
 -(instancetype)init {
     
+    [self addPopDestPathArray];
+    [self addRecoPathArray];
+    return self;
+}
+
+-(void)addRecoPathArray {
+    NSString *pathJan = [[NSBundle mainBundle] pathForResource:@"Jan" ofType:@"json"];
+    NSString *pathFeb = [[NSBundle mainBundle] pathForResource:@"Feb" ofType:@"json"];
+    NSString *pathMar = [[NSBundle mainBundle] pathForResource:@"Mar" ofType:@"json"];
+    NSString *pathApr = [[NSBundle mainBundle] pathForResource:@"Apr" ofType:@"json"];
+    NSString *pathMay = [[NSBundle mainBundle] pathForResource:@"May" ofType:@"json"];
+    NSString *pathJun = [[NSBundle mainBundle] pathForResource:@"Jun" ofType:@"json"];
+    NSString *pathJul = [[NSBundle mainBundle] pathForResource:@"Jul" ofType:@"json"];
+    NSString *pathAug = [[NSBundle mainBundle] pathForResource:@"Aug" ofType:@"json"];
+    NSString *pathNov = [[NSBundle mainBundle] pathForResource:@"Nov" ofType:@"json"];
+    NSString *pathOct = [[NSBundle mainBundle] pathForResource:@"Oct" ofType:@"json"];
+    NSString *pahtSep = [[NSBundle mainBundle] pathForResource:@"Sep" ofType:@"json"];
+    NSString *pathDce = [[NSBundle mainBundle] pathForResource:@"Dce" ofType:@"json"];
+    self.monthArray = @[pathMar, pathFeb, pathJan, pathApr, pathMay, pathJun, pathJul, pathAug, pahtSep, pathOct, pathNov, pathDce].mutableCopy;
+}
+
+-(void)addPopDestPathArray {
     NSString *pathTW = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"json"];
     NSString *pathCTD = [[NSBundle mainBundle] pathForResource:@"CTD" ofType:@"json"];
     NSString *pathDJ = [[NSBundle mainBundle] pathForResource:@"DJ" ofType:@"json"];
     NSString *pathHG = [[NSBundle mainBundle] pathForResource:@"HG" ofType:@"json"];
     NSString *pathCS = [[NSBundle mainBundle] pathForResource:@"CS" ofType:@"json"];
     NSString *pathTG = [[NSBundle mainBundle] pathForResource:@"TG" ofType:@"json"];
+    NSString *pathWGK = [[NSBundle mainBundle] pathForResource:@"WGK" ofType:@"json"];
+    NSString *pathQM = [[NSBundle mainBundle] pathForResource:@"QM" ofType:@"json"];
+    NSString *pathPJD = [[NSBundle mainBundle] pathForResource:@"PJD" ofType:@"json"];
+    NSString *pathDB = [[NSBundle mainBundle] pathForResource:@"DB" ofType:@"json"];
+    NSString *pahtPL = [[NSBundle mainBundle] pathForResource:@"PL" ofType:@"json"];
+    NSString *pathMEDF = [[NSBundle mainBundle] pathForResource:@"MEDF" ofType:@"json"];
     
-    self.pathArray = @[pathTW, pathCTD, pathDJ, pathHG, pathCS, pathTG].mutableCopy;
-    return self;
+    self.pathArray = @[pathTW, pathCTD, pathDJ, pathHG, pathCS, pathTG, pathWGK, pathQM, pathPJD, pathDB, pahtPL, pathMEDF].mutableCopy;
 }
 
 #pragma mark - 数组懒加载
+
+-(NSMutableArray *)monthArray {
+    if (!_monthArray) {
+        _monthArray = [NSMutableArray array];
+    }
+    return _monthArray;
+}
 
 -(NSMutableArray *)pathArray {
     if (!_pathArray) {
@@ -125,6 +162,13 @@ static WLLHomePageDataManager *manager = nil;
         _moreCheckArray = [NSMutableArray array];
     }
     return _moreCheckArray;
+}
+
+-(NSMutableArray *)monthDataArray {
+    if (!_monthDataArray) {
+        _monthDataArray = [NSMutableArray array];
+    }
+    return _monthDataArray;
 }
 
 #pragma mark - 解析 HomePage 数据
@@ -274,18 +318,28 @@ static WLLHomePageDataManager *manager = nil;
     if (!dict) {
         return;
     }
-    NSDictionary *dataDict = dict[@"data"];
     
+    // 热门目的地
+    NSDictionary *dataDict = dict[@"data"];
     NSArray *dataArray = dataDict[@"data"];
+   
     for (NSDictionary *dict in dataArray) {
         WLLPopModel *model = [[WLLPopModel alloc] init];
-
         [model setValuesForKeysWithDictionary:dict];
         [self.popDestArray addObject:model];
     }
     
-    for (WLLPopModel *model in self.popDestArray) {
-        NSLog(@"%@==%@==%@", model.title, model.destination, model.tag_name);
+    
+    // 目的地推荐
+    [self.monthDataArray removeAllObjects];
+    NSDictionary *Ddict = dict[@"data"];
+    NSArray *listArray = Ddict[@"list"];
+    NSDictionary *listDict = [listArray firstObject];
+    NSArray *itemsArray = listDict[@"items"];
+    for (NSDictionary *dict in itemsArray) {
+        WLLBoracayIslandModel *model = [[WLLBoracayIslandModel alloc] init];
+        [model setValuesForKeysWithDictionary:dict];
+        [self.monthDataArray addObject:model];
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -301,6 +355,16 @@ static WLLHomePageDataManager *manager = nil;
     WLLPopModel *model = self.popDestArray[index];
     return model;
 }
+
+-(NSInteger)countOfMonthDataArray {
+    return self.monthDataArray.count;
+}
+
+-(WLLBoracayIslandModel *)monthModelWithIndex:(NSInteger)index {
+    WLLBoracayIslandModel *model = self.monthDataArray[index];
+    return model;
+}
+
 
 #pragma mark - 解析查看更多
 

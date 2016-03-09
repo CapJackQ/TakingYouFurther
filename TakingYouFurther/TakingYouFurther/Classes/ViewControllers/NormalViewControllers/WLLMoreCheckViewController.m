@@ -11,6 +11,7 @@
 #import "WLLMoreCheckModel.h"
 #import "WLLHomePageDataManager.h"
 #import "WLLHomePageUrlHeader.h"
+#import "WLLRecommendViewController.h"
 
 @interface WLLMoreCheckViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) IBOutlet UICollectionView *moreCheckCollectionView;
@@ -61,6 +62,13 @@
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(20, 20, 20, 20);
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    WLLRecommendViewController *recoVC = [[WLLRecommendViewController alloc] initWithNibName:@"WLLRecommendViewController" bundle:nil];
+    [WLLHomePageDataManager shareInstance].index = indexPath.row;
+    [self.navigationController pushViewController:recoVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

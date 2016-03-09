@@ -12,6 +12,7 @@
 #import "WLLGuidanceModel.h"
 #import "WLLHomePageUrlHeader.h"
 #import "WLLSeekViewController.h"
+#import "WLLPlaneHotelViewController.h"
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 
@@ -54,19 +55,38 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    WLLSeekViewController *seekVC = [[WLLSeekViewController alloc] initWithNibName:@"WLLSeekViewController" bundle:nil];
-    seekVC.index = indexPath.row;
+    if (indexPath.row == 0) {
+        WLLSeekViewController *seekVC = [[WLLSeekViewController alloc] initWithNibName:@"WLLSeekViewController" bundle:nil];
+        seekVC.index = indexPath.row;
+        
+    [self registerSeekNotification];
+    }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(seekAction) name:@"seek" object:@"seekVC"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"seek" object:nil];
+    if (indexPath.row == 2) {
+        WLLPlaneHotelViewController *PHVC = [[WLLPlaneHotelViewController alloc] initWithNibName:@"WLLPlaneHotelViewController" bundle:nil];
+        PHVC.index = indexPath.row;
+        
+        [self registerPlaneHotelNotification];
+    }
+
     
     
-//    [self registerSeekNotification];
+
+    
+    
 }
 
+// 找攻略
 -(void)registerSeekNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(seekAction) name:@"seek" object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"seek" object:nil];
+}
+
+// 机+酒
+-(void)registerPlaneHotelNotification {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(seekAction) name:@"planeHotel" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"planeHotel" object:nil];
 }
 
 -(void)seekAction {

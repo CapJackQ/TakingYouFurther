@@ -6,9 +6,12 @@
 //  Copyright © 2016年 lanou3g. All rights reserved.
 //
 
+
+/**
+ *  目的地推荐详情
+ */
 #import <UIKit/UIKit.h>
 
 @interface WLLRecommendViewController : UIViewController
-@property (nonatomic, assign) NSInteger index;
 
 @end

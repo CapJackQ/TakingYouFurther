@@ -10,4 +10,10 @@
 
 @interface WLLBoracayIslandModel : NSObject
 
+@property (nonatomic, copy) NSString *nid;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
+@property (nonatomic, copy) NSString *img;
+@property (nonatomic, copy) NSString *url;
+
 @end

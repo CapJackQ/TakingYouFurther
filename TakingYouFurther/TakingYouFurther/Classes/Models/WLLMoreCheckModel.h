@@ -13,6 +13,6 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *sub_title;
 @property (nonatomic, copy) NSString *img_url;
-@property (nonatomic, copy) NSString *jump_url;
+@property (nonatomic, copy) NSString *url;
 
 @end

@@ -14,12 +14,18 @@
 @class WLLPopModel;
 @class WLLMoreOverModel;
 @class WLLMoreCheckModel;
+@class WLLBoracayIslandModel;
 
 @interface WLLHomePageDataManager : NSObject
 
 
 @property (nonatomic, strong) NSMutableArray *pathArray;
+
+@property (nonatomic, strong) NSMutableArray *monthArray;
+
 @property (nonatomic, assign) NSInteger index;
+
+@property (nonatomic, assign) NSInteger path;
 
 /**
  *  单例
@@ -128,5 +134,10 @@
 -(NSInteger)countOfMoreCheckArray;
 
 -(WLLMoreCheckModel *)moreCheckModelWithIdex:(NSInteger)index;
+
+
+-(NSInteger)countOfMonthDataArray;
+-(WLLBoracayIslandModel *)monthModelWithIndex:(NSInteger)index;
+
 
 @end
