@@ -18,6 +18,9 @@
 #import "LogInSecondCellModel.h"
 #import "logInFirstTableViewCell.h"
 #import "LogInSecondTableViewCell.h"
+#import "WLLPersonalPageViewController.h"
+#import "WLLCollectionViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 
 #define kReuseIdentifier @"CWCell"
@@ -37,7 +40,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"11111");
     [self update];
     
     
@@ -70,11 +72,38 @@
                                                              action:@selector(rightAction)];
     self.tabBarController.navigationItem.rightBarButtonItem = right;
     
+    //判断，当为登陆状态时，弹出登陆状态的页面（数据和未登陆时的不一样）
     if ([WLLUserViewManager shareInstance].isLogIning == YES) {
+        
+//        AVObject *destinationObject = [[AVObject alloc] initWithClassName:@"Destination"];
+//        
+//        [destinationObject setObject:@"id1234" forKey:@"destination"];
+//        destinationObject.fetchWhenSave = YES;
+//        [destinationObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//            AVRelation *relationShip = [[AVUser currentUser] relationForKey:@"userDestination"];
+//            [relationShip addObject:destinationObject];
+//            [[AVUser currentUser] saveInBackground];
+//        }];
+//        
+//        AVUser *user = [AVUser objectWithoutDataWithClassName:@"_User" objectId:[AVUser currentUser].objectId];
+//        AVRelation *relation = [user relationForKey:@"userDestination"];
+//        AVQuery *query = [relation query];
+//        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//            for (AVObject *ob in objects) {
+//                NSString *str = ob[@"destination"];
+//                NSLog(@"%@", str);
+//            };
+//        }];
+        
+        
+        if (self.data.count == 6) {
+            return;
+        }
         
         //先删除原来的第一列的cell
         [self.data removeObjectAtIndex:0];
         
+        //插入第一区
         NSMutableArray *array1 = [NSMutableArray array];
         LogInfirstCellModel *model1 = [[LogInfirstCellModel alloc] init];
         model1.headImage = [UIImage imageNamed:@"iconfont-user"];
@@ -84,6 +113,7 @@
         [array1 addObject:model1];
         [self.data insertObject:array1 atIndex:0];
         
+        //插入第二区
         NSMutableArray *array2 = [NSMutableArray array];
         LogInSecondCellModel *model2 = [[LogInSecondCellModel alloc] init];
         model2.headImage = [UIImage imageNamed:@"iconfont-pingzi"];
@@ -95,8 +125,20 @@
         
         [self.tableview reloadData];
         
+    } else {
+        [self update];
+        [self.tableview reloadData];
     }
 
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    self.parentViewController.navigationItem.title = nil;
+    
+    self.tabBarController.navigationItem.leftBarButtonItem = nil;
+    
+    self.tabBarController.navigationItem.rightBarButtonItem = nil;
 }
 
 #pragma mark - 设置和消息按钮
@@ -112,13 +154,7 @@
     [self.navigationController pushViewController:nVC animated:YES];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    self.parentViewController.navigationItem.title = nil;
-    
-    self.tabBarController.navigationItem.leftBarButtonItem = nil;
-    
-    self.tabBarController.navigationItem.rightBarButtonItem = nil;
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -128,42 +164,18 @@
 #pragma mark - tableview 代理方法
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"AAAA%ld", self.data.count);
+ 
     return self.data.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    switch (section) {
-//        case 0: {
-//            return 1;
-//            break;
-//        }
-//        case 1: {
-//            return 2;
-//            break;
-//        }
-//        case 2: {
-//            return 2;
-//            break;
-//        }
-//        case 3: {
-//            return 2;
-//            break;
-//        }
-//        case 4: {
-//            return 1;
-//            break;
-//        }
-//        default:
-//            break;
-//    }
-//    return 10;
-    NSLog(@"%ld", [self.data[section] count]);
+    
     return [self.data[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    //未登陆时，进入的页面
     if ([WLLUserViewManager shareInstance].isLogIning == NO) {
         UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifier forIndexPath:indexPath];
         if (!cell) {
@@ -179,6 +191,7 @@
         }
         return cell;
         
+    //登录时进入的页面
     } else {
         
         if (indexPath.section == 0 && indexPath.row == 0) {
@@ -201,17 +214,19 @@
             cell.photoImageView.image = model.headImage;
             cell.activityLabel.text = model.myActivity;
             cell.honeyNumberLabel.text = [NSString stringWithFormat:@"%ld", model.honeyNumber];
+            
             return cell;
         } else {
             
             UserTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kReuseIdentifier forIndexPath:indexPath];
-            if (!cell) {
-                cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kReuseIdentifier];
-            }
+//            if (!cell) {
+//                cell = [[UserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kReuseIdentifier];
+//            }
             
             UserModel *model = self.data[indexPath.section][indexPath.row];
             cell.photoImageView.image = model.photoImage;
             cell.activityLabel.text = model.myActivity;
+            
             return cell;
         }
     }
@@ -228,6 +243,39 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 10;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    WLLLogInViewController *logInVC = [[WLLLogInViewController alloc] initWithNibName:@"WLLLogInViewController" bundle:nil];
+    
+    WLLMyDownloadViewController *downloadVC = [[WLLMyDownloadViewController alloc] initWithNibName:@"WLLMyDownloadViewController" bundle:nil];
+    
+    WLLPersonalPageViewController *pgVC = [[WLLPersonalPageViewController alloc] initWithNibName:@"WLLPersonalPageViewController" bundle:nil];
+    
+    WLLCollectionViewController *clVC = [[WLLCollectionViewController alloc] initWithNibName:@"WLLCollectionViewController" bundle:nil];
+    
+    
+    if ([WLLUserViewManager shareInstance].isLogIning == NO) {
+        
+        if (indexPath.section == 1 && indexPath.row == 0) {
+            [self.navigationController pushViewController:downloadVC animated:YES];
+        } else {
+            [self.navigationController pushViewController:logInVC animated:YES];
+        }
+        
+    } else {
+        
+        //推出登陆状态的界面
+        if (indexPath.section == 0 ) {
+            [self.navigationController pushViewController:pgVC animated:YES];
+        } else if (indexPath.section == 2 && indexPath.row == 1) {
+            [self.navigationController pushViewController:clVC animated:YES];
+        }
+        
+    }
+    
 }
 
 
@@ -283,25 +331,6 @@
     model8.myActivity = @"我的活动";
     [array5 addObject:model8];
     [self.data addObject:array5];
-    
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    WLLLogInViewController *logInVC = [[WLLLogInViewController alloc] initWithNibName:@"WLLLogInViewController" bundle:nil];
-    
-    WLLMyDownloadViewController *downloadVC = [[WLLMyDownloadViewController alloc] initWithNibName:@"WLLMyDownloadViewController" bundle:nil];
-    
-    if ([WLLUserViewManager shareInstance].isLogIning == NO) {
-        if (indexPath.section == 1 && indexPath.row == 0) {
-            [self.navigationController pushViewController:downloadVC animated:YES];
-        } else {
-            [self.navigationController pushViewController:logInVC animated:YES];
-        }
-    } else {
-        //推出登陆状态的界面
-        
-    }
     
 }
 

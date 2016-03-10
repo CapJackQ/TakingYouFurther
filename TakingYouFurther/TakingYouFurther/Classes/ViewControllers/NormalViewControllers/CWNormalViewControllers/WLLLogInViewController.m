@@ -15,6 +15,8 @@
 #import <MOBFoundation/MOBFoundation.h>
 #import "WLLPhoneNumberSignUpViewController.h"
 #import "WLLUserViewManager.h"
+#import "WLLResetPasswordViewController.h"
+
 
 
 
@@ -44,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"无限视觉";
+    self.navigationItem.title = @"TakingYouFurther";
     
     
     CGFloat screenWidth = self.view.frame.size.width;
@@ -165,6 +167,14 @@
             
         }
     }];
+}
+
+
+#pragma mark - 重置密码
+
+- (IBAction)resetPassword:(UIButton *)sender {
+    WLLResetPasswordViewController *reVC = [[WLLResetPasswordViewController alloc] initWithNibName:@"WLLResetPasswordViewController" bundle:nil];
+    [self.navigationController pushViewController:reVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

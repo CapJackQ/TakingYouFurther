@@ -43,13 +43,7 @@
 }
 
 - (IBAction)getVerificationCode:(UIButton *)sender {
-//    [AVOSCloud requestSmsCodeWithPhoneNumber:self.phoneNumber.text callback:^(BOOL succeeded, NSError *error) {
-//        if (nil == error) {
-//            NSLog(@"获取验证码成功");
-//        } else {
-//            NSLog(@"%@", error);
-//        }
-//    }];
+
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNumber.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
         if (error == nil) {
             NSLog(@"获取验证码成功");

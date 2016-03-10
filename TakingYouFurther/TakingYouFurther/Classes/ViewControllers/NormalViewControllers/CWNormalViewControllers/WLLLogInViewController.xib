@@ -27,7 +27,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lgY-Tu-ISN">
@@ -69,6 +69,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpE-Rg-cVe">
                     <rect key="frame" x="327" y="212" width="60" height="30"/>
                     <state key="normal" title="忘记密码"/>
+                    <connections>
+                        <action selector="resetPassword:" destination="-1" eventType="touchUpInside" id="hEQ-Sc-KYx"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAr-s4-CYa">
                     <rect key="frame" x="20" y="246" width="374" height="30"/>
@@ -114,7 +117,7 @@
                     <state key="normal" title="button" image="renren"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-JW-P6e">
-                    <rect key="frame" x="20" y="624" width="374" height="28"/>
+                    <rect key="frame" x="20" y="688" width="374" height="28"/>
                     <color key="tintColor" red="1" green="0.31729536990000001" blue="0.03039476214" alpha="1" colorSpace="calibratedRGB"/>
                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     <state key="normal" title="手机快速注册"/>
@@ -132,7 +135,7 @@
                     <state key="normal" image="weixin"/>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOh-QE-R6Z" userLabel="Phone Number logInView">
-                    <rect key="frame" x="0.0" y="51" width="414" height="553"/>
+                    <rect key="frame" x="0.0" y="51" width="414" height="617"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ux1-6N-udH">
                             <rect key="frame" x="81" y="30" width="313" height="39"/>
@@ -256,7 +259,7 @@
                 <constraint firstItem="kOh-QE-R6Z" firstAttribute="bottom" secondItem="IdT-JW-P6e" secondAttribute="top" id="xYp-u4-dpc"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <variation key="default">
                 <mask key="constraints">

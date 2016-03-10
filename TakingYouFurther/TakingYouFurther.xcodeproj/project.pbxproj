@@ -16,6 +16,15 @@
 		C21574B31C8EFBA20021A172 /* LogInSecondCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C21574B21C8EFBA20021A172 /* LogInSecondCellModel.m */; };
 		C21574B71C8EFC830021A172 /* LogInSecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C21574B51C8EFC830021A172 /* LogInSecondTableViewCell.m */; };
 		C21574B81C8EFC830021A172 /* LogInSecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21574B61C8EFC830021A172 /* LogInSecondTableViewCell.xib */; };
+		C21EBB901C8FB7BC00AB15CB /* WLLPersonalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21EBB8E1C8FB7BC00AB15CB /* WLLPersonalPageViewController.m */; };
+		C21EBB911C8FB7BC00AB15CB /* WLLPersonalPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21EBB8F1C8FB7BC00AB15CB /* WLLPersonalPageViewController.xib */; };
+		C21EBBA41C9014A400AB15CB /* WLLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21EBBA21C9014A400AB15CB /* WLLCollectionViewController.m */; };
+		C21EBBA51C9014A400AB15CB /* WLLCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21EBBA31C9014A400AB15CB /* WLLCollectionViewController.xib */; };
+		C21EBBA91C9020E700AB15CB /* LogOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C21EBBA71C9020E700AB15CB /* LogOutTableViewCell.m */; };
+		C21EBBAA1C9020E700AB15CB /* LogOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21EBBA81C9020E700AB15CB /* LogOutTableViewCell.xib */; };
+		C21EBBAD1C90216000AB15CB /* LogOutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C21EBBAC1C90216000AB15CB /* LogOutModel.m */; };
+		C21EBBBB1C905AAD00AB15CB /* WLLResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21EBBB91C905AAD00AB15CB /* WLLResetPasswordViewController.m */; };
+		C21EBBBC1C905AAD00AB15CB /* WLLResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21EBBBA1C905AAD00AB15CB /* WLLResetPasswordViewController.xib */; };
 		C2431EF01C84672A0061FAB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2431EEF1C84672A0061FAB1 /* main.m */; };
 		C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2431EF71C84672A0061FAB1 /* Main.storyboard */; };
 		C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2431EFA1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld */; };
@@ -86,6 +95,20 @@
 		C21574B41C8EFC830021A172 /* LogInSecondTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInSecondTableViewCell.h; sourceTree = "<group>"; };
 		C21574B51C8EFC830021A172 /* LogInSecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInSecondTableViewCell.m; sourceTree = "<group>"; };
 		C21574B61C8EFC830021A172 /* LogInSecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInSecondTableViewCell.xib; sourceTree = "<group>"; };
+		C21EBB8D1C8FB7BC00AB15CB /* WLLPersonalPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPersonalPageViewController.h; sourceTree = "<group>"; };
+		C21EBB8E1C8FB7BC00AB15CB /* WLLPersonalPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPersonalPageViewController.m; sourceTree = "<group>"; };
+		C21EBB8F1C8FB7BC00AB15CB /* WLLPersonalPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPersonalPageViewController.xib; sourceTree = "<group>"; };
+		C21EBBA11C9014A400AB15CB /* WLLCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLCollectionViewController.h; sourceTree = "<group>"; };
+		C21EBBA21C9014A400AB15CB /* WLLCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLCollectionViewController.m; sourceTree = "<group>"; };
+		C21EBBA31C9014A400AB15CB /* WLLCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLCollectionViewController.xib; sourceTree = "<group>"; };
+		C21EBBA61C9020E700AB15CB /* LogOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOutTableViewCell.h; sourceTree = "<group>"; };
+		C21EBBA71C9020E700AB15CB /* LogOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOutTableViewCell.m; sourceTree = "<group>"; };
+		C21EBBA81C9020E700AB15CB /* LogOutTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogOutTableViewCell.xib; sourceTree = "<group>"; };
+		C21EBBAB1C90216000AB15CB /* LogOutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogOutModel.h; sourceTree = "<group>"; };
+		C21EBBAC1C90216000AB15CB /* LogOutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogOutModel.m; sourceTree = "<group>"; };
+		C21EBBB81C905AAD00AB15CB /* WLLResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLResetPasswordViewController.h; sourceTree = "<group>"; };
+		C21EBBB91C905AAD00AB15CB /* WLLResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLResetPasswordViewController.m; sourceTree = "<group>"; };
+		C21EBBBA1C905AAD00AB15CB /* WLLResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLResetPasswordViewController.xib; sourceTree = "<group>"; };
 		C2431EEB1C84672A0061FAB1 /* TakingYouFurther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakingYouFurther.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2431EEF1C84672A0061FAB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2431EF81C84672A0061FAB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -399,6 +422,8 @@
 				C266EC841C8C14D000586C17 /* TheMessageModel.m */,
 				C266EC851C8C14D000586C17 /* TheMoreModel.h */,
 				C266EC861C8C14D000586C17 /* TheMoreModel.m */,
+				C21EBBAB1C90216000AB15CB /* LogOutModel.h */,
+				C21EBBAC1C90216000AB15CB /* LogOutModel.m */,
 				C266EC871C8C14D000586C17 /* TheSenderModel.h */,
 				C266EC881C8C14D000586C17 /* TheSenderModel.m */,
 				C266EC891C8C14D000586C17 /* UserModel.h */,
@@ -444,6 +469,15 @@
 				C21574A11C8E82420021A172 /* WLLPhoneNumberSignUpViewController.h */,
 				C21574A21C8E82420021A172 /* WLLPhoneNumberSignUpViewController.m */,
 				C21574A31C8E82420021A172 /* WLLPhoneNumberSignUpViewController.xib */,
+				C21EBB8D1C8FB7BC00AB15CB /* WLLPersonalPageViewController.h */,
+				C21EBB8E1C8FB7BC00AB15CB /* WLLPersonalPageViewController.m */,
+				C21EBB8F1C8FB7BC00AB15CB /* WLLPersonalPageViewController.xib */,
+				C21EBBA11C9014A400AB15CB /* WLLCollectionViewController.h */,
+				C21EBBA21C9014A400AB15CB /* WLLCollectionViewController.m */,
+				C21EBBA31C9014A400AB15CB /* WLLCollectionViewController.xib */,
+				C21EBBB81C905AAD00AB15CB /* WLLResetPasswordViewController.h */,
+				C21EBBB91C905AAD00AB15CB /* WLLResetPasswordViewController.m */,
+				C21EBBBA1C905AAD00AB15CB /* WLLResetPasswordViewController.xib */,
 			);
 			path = CWNormalViewControllers;
 			sourceTree = "<group>";
@@ -457,6 +491,9 @@
 				C266ECB91C8C16FF00586C17 /* SettingInTableViewCell.h */,
 				C266ECBA1C8C16FF00586C17 /* SettingInTableViewCell.m */,
 				C266ECBB1C8C16FF00586C17 /* SettingInTableViewCell.xib */,
+				C21EBBA61C9020E700AB15CB /* LogOutTableViewCell.h */,
+				C21EBBA71C9020E700AB15CB /* LogOutTableViewCell.m */,
+				C21EBBA81C9020E700AB15CB /* LogOutTableViewCell.xib */,
 				C266ECBC1C8C16FF00586C17 /* UserTableViewCell.h */,
 				C266ECBD1C8C16FF00586C17 /* UserTableViewCell.m */,
 				C266ECBE1C8C16FF00586C17 /* UserTableViewCell.xib */,
@@ -545,6 +582,7 @@
 			files = (
 				C266ECB01C8C168A00586C17 /* SettingInTableViewController.xib in Resources */,
 				C266ECB41C8C168A00586C17 /* WLLMyDownloadViewController.xib in Resources */,
+				C21EBBA51C9014A400AB15CB /* WLLCollectionViewController.xib in Resources */,
 				C2431F191C8468A90061FAB1 /* file1 in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2431F1F1C8468C60061FAB1 /* file4 in Resources */,
@@ -561,12 +599,15 @@
 				C266ECC21C8C16FF00586C17 /* SettingInTableViewCell.xib in Resources */,
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
 				C2431F291C8468EE0061FAB1 /* file8 in Resources */,
+				C21EBBAA1C9020E700AB15CB /* LogOutTableViewCell.xib in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
 				C266ECB21C8C168A00586C17 /* WLLLogInViewController.xib in Resources */,
 				C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */,
 				C266ECAE1C8C168A00586C17 /* NotificationViewController.xib in Resources */,
+				C21EBB911C8FB7BC00AB15CB /* WLLPersonalPageViewController.xib in Resources */,
 				C2431F1B1C8468B40061FAB1 /* file2 in Resources */,
 				C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */,
+				C21EBBBC1C905AAD00AB15CB /* WLLResetPasswordViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,8 +667,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C266EC911C8C14D000586C17 /* TheExtModel.m in Sources */,
+				C21EBB901C8FB7BC00AB15CB /* WLLPersonalPageViewController.m in Sources */,
+				C21EBBA91C9020E700AB15CB /* LogOutTableViewCell.m in Sources */,
 				C266EC8F1C8C14D000586C17 /* TheContentModel.m in Sources */,
 				C21574B31C8EFBA20021A172 /* LogInSecondCellModel.m in Sources */,
+				C21EBBA41C9014A400AB15CB /* WLLCollectionViewController.m in Sources */,
 				C266ECC31C8C16FF00586C17 /* UserTableViewCell.m in Sources */,
 				C266EC931C8C14D000586C17 /* TheMessageModel.m in Sources */,
 				C266EC951C8C14D000586C17 /* TheSenderModel.m in Sources */,
@@ -637,6 +681,8 @@
 				C2431F371C846BBE0061FAB1 /* WLLDestinationViewController.m in Sources */,
 				C266EC901C8C14D000586C17 /* TheDataModel.m in Sources */,
 				C2431EFC1C84672A0061FAB1 /* TakingYouFurther.xcdatamodeld in Sources */,
+				C21EBBAD1C90216000AB15CB /* LogOutModel.m in Sources */,
+				C21EBBBB1C905AAD00AB15CB /* WLLResetPasswordViewController.m in Sources */,
 				C266ECB11C8C168A00586C17 /* WLLLogInViewController.m in Sources */,
 				C21574B71C8EFC830021A172 /* LogInSecondTableViewCell.m in Sources */,
 				C21574AC1C8EF0440021A172 /* logInFirstTableViewCell.m in Sources */,

@@ -10,7 +10,11 @@
 #import "TheMoreModel.h"
 #import "RecommendedModel.h"
 #import "SettingInTableViewCell.h"
-
+#import "WLLUserViewManager.h"
+#import "LogOutModel.h"
+#import "LogOutTableViewCell.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "WLLLogInViewController.h"
 
 @interface SettingInTableViewController ()
 
@@ -27,11 +31,14 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:@"SettingInTableViewCell" bundle:nil] forCellReuseIdentifier:@"CW"];
     
+    [self.tableView registerNib:[UINib nibWithNibName:@"LogOutTableViewCell" bundle:nil] forCellReuseIdentifier:@"CWCellCW"];
+    
     [self update];
 }
 
 
 - (void)update {
+    
     self.data = [NSMutableArray array];
     
     NSMutableArray *array1 = [NSMutableArray array];
@@ -65,13 +72,32 @@
     model7.firstImage = [UIImage imageNamed:@"recommendOne"];
     model7.secondImage = [UIImage imageNamed:@"recommendTwo"];
     model7.thirdImage = [UIImage imageNamed:@"recommendThree"];
-    TheMoreModel *model8 = [[TheMoreModel alloc] init];
-    model8.theMoreTitle = @"更多应用推荐";
     [array3 addObject:model7];
-    [array3 addObject:model8];
+
     [self.data addObject:array3];
     
-    NSLog(@"%@", self.data);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.data.count == 4) {
+        return;
+    }
+    if ([WLLUserViewManager shareInstance].isLogIning == YES) {
+        //在self.data中吧第一个数组取出来，加一个model，然后再替换进去
+        NSMutableArray *array = self.data[0];
+        TheMoreModel *model = [[TheMoreModel alloc] init];
+        model.theMoreTitle = @"账户绑定与设置";
+        [array insertObject:model atIndex:0];
+        [self.data replaceObjectAtIndex:0 withObject:array];
+        
+        NSMutableArray *array2 = [NSMutableArray array];
+        LogOutModel *model2 = [[LogOutModel alloc] init];
+        model2.labelTitle = @"退出当前账号";
+        [array2 addObject:model2];
+        [self.data addObject:array2];
+        
+        [self.tableView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,35 +109,43 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 3;
+    return self.data.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case 0: {
-            return 2;
-            break;
-        }
-        case 1: {
-            return 4;
-            break;
-        }
-        case 2: {
-            return 2;
-            break;
-        }
-            
-        default:
-            break;
-    }
-    return 10;
+//    switch (section) {
+//        case 0: {
+//            return 2;
+//            break;
+//        }
+//        case 1: {
+//            return 4;
+//            break;
+//        }
+//        case 2: {
+//            return 2;
+//            break;
+//        }
+//            
+//        default:
+//            break;
+//    }
+//    return 0;
+    return [self.data[section] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 2 && indexPath.row == 0) {
+        
         SettingInTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CW" forIndexPath:indexPath];
+        return cell;
+    } else if (indexPath.section == 3) {
+        
+        LogOutTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CWCellCW" forIndexPath:indexPath];
+        LogOutModel *model = self.data[3][0];
+        cell.logOutLabel.text = model.labelTitle;
         return cell;
     } else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CWCell"];
@@ -123,6 +157,7 @@
         TheMoreModel *model1 = self.data[indexPath.section][indexPath.row];
         cell.textLabel.text = model1.theMoreTitle;
         cell.detailTextLabel.text = model1.theDetailInfo;
+        
         return cell;
     }
     
@@ -137,7 +172,35 @@
     };
 }
 
+-  (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 30;
+}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    WLLLogInViewController *logVC = [[WLLLogInViewController alloc] initWithNibName:@"WLLLogInViewController" bundle:nil];
+    
+    if (indexPath.section == 3) {
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            return ;
+        }];
+        UIAlertAction *excuteAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [AVUser logOut];
+            [self.navigationController pushViewController:logVC animated:YES];
+        }];
+        UIAlertController *alVC = [UIAlertController alertControllerWithTitle:@"确定退出吗" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alVC addAction:cancelAction];
+        [alVC addAction:excuteAction];
+        
+        [self.navigationController presentViewController:alVC animated:YES completion:nil];
+        [WLLUserViewManager shareInstance].isLogIning = NO;
+    
+}
+                                   
+                                   
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
