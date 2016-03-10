@@ -32,7 +32,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pb-y0-c3F">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="6pe-qq-Imi">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat.png" translatesAutoresizingMaskIntoConstraints="NO" id="6pe-qq-Imi">
                             <rect key="frame" x="5" y="5" width="121" height="60"/>
                             <animations/>
                             <color key="backgroundColor" red="0.5973372535" green="0.40132407980000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,6 +144,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Image" width="640" height="360"/>
+        <image name="cat.png" width="1024" height="600"/>
     </resources>
 </document>

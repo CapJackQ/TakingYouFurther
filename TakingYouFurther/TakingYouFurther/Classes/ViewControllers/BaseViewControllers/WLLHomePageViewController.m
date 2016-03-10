@@ -26,6 +26,7 @@
 #import "WLLSeekViewController.h"
 #import "WLLTodayViewController.h"
 #import "WLLPlaneHotelViewController.h"
+#import "Model.h"
 
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
@@ -38,6 +39,9 @@
     UIImageView *headerImage;
     CGPoint startPoint;
     CGPoint framePoint;
+    
+    UIRefreshControl *refreshControl;
+    BOOL isLoading;
     
 }
 
@@ -69,7 +73,16 @@
     [[WLLHomePageDataManager shareInstance] requestHomePageDataWithUrl:kHomePageUrl didFinished:^{
         [self.homePageTableView reloadData];
     }];
+    
+    [self loadReviewData];
+    
+    [self refreshInit];
+}
 
+-(void)loadReviewData {
+    [[WLLHomePageDataManager shareInstance] requestReviewDataWithUrl:kReviewUrl finished:^{
+        [self.homePageTableView reloadData];
+    }];
 }
 
 #pragma mark - homePageTableView注册不同cell
@@ -106,6 +119,8 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backTopAction)];
     [self.backButton addGestureRecognizer:tap];
+    
+    self.backButton.alpha = 0;
 }
 // searchBar 添加左视图
 -(void)setTextFiledLeftImage:(UITextField*)textFiled image:(NSString*)image{
@@ -119,7 +134,7 @@
     
     NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.homePageTableView selectRowAtIndexPath:path animated:YES scrollPosition:UITableViewScrollPositionBottom];
-    self.backButton.alpha = 0.7;
+    
 }
 
 
@@ -133,15 +148,14 @@
 -(void)setHeaderView {
     
     headerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight/4)];
-//    UIImage *img = [UIImage imageNamed:@"6.jpeg"];
-//    CGRect rect = CGRectMake(0, 0, 2000, 400);
+    UIImage *img = [UIImage imageNamed:@"take"];
+    CGRect rect = CGRectMake(0, 0, 2000, 400);
     
-    [headerImage sd_setImageWithURL:[NSURL URLWithString:@"http://file103.mafengwo.net/s9/M00/40/DF/wKgBs1bHCIiAR7FvAAJImz6CsLI83.jpeg"]];
     
-//    CGImageRef imageRef = CGImageCreateWithImageInRect([img CGImage], rect);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([img CGImage], rect);
     
-//    UIImage *image = [UIImage imageWithCGImage:imageRef];
-//    [headerImage setImage:image];
+    UIImage *image = [UIImage imageWithCGImage:imageRef];
+    [headerImage setImage:image];
     
     self.homePageTableView.tableHeaderView = headerImage;
 }
@@ -210,6 +224,8 @@
     }
     
     WLLReviewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"review_cell" forIndexPath:indexPath];
+    Model *model = [[WLLHomePageDataManager shareInstance] modelWithIndex:0];
+    cell.model = model;
     return cell;
 }
 
@@ -250,7 +266,11 @@
         todayVC.index = indexPath.row;
         
         [self.navigationController pushViewController:todayVC animated:YES];
-        
+    }
+    if (indexPath.section == 3 && indexPath.row == 1) {
+        WLLTodayViewController *todayVC = [[WLLTodayViewController alloc] initWithNibName:@"WLLTodayViewController" bundle:nil];
+        [WLLHomePageDataManager shareInstance].path = indexPath.section;
+        [self.navigationController pushViewController:todayVC animated:YES];
     }
 }
 
@@ -269,7 +289,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushRecommend) name:@"recommend" object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToPlaneHotelAction) name:@"planeHotel" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToPlaneHotelAction) name:@"planeHotel" object:nil];
 }
 
 #pragma mark - 推送页面
@@ -287,8 +307,8 @@
 
 // 找攻略
 -(void)pushSeek {
-    WLLSeekViewController *seekVC = [[WLLSeekViewController alloc] initWithNibName:@"WLLSeekViewController" bundle:nil];
-    [self.navigationController pushViewController:seekVC animated:YES];
+    WLLTodayViewController *todayVC = [[WLLTodayViewController alloc] initWithNibName:@"WLLTodayViewController" bundle:nil];
+    [self.navigationController pushViewController:todayVC animated:YES];
 }
 
 // 推送目的地
@@ -304,30 +324,55 @@
 }
 
 // 机+酒
--(void)pushToPlaneHotelAction {
-    
-    WLLPlaneHotelViewController *PHVC = [[WLLPlaneHotelViewController alloc] initWithNibName:@"WLLPlaneHotelViewController" bundle:nil];
-    [self.navigationController pushViewController:PHVC animated:YES];
-}
+//-(void)pushToPlaneHotelAction {
+//    
+//    WLLPlaneHotelViewController *PHVC = [[WLLPlaneHotelViewController alloc] initWithNibName:@"WLLPlaneHotelViewController" bundle:nil];
+//    [self.navigationController pushViewController:PHVC animated:YES];
+//}
 
-#pragma makr - Nvibar 滚动
+#pragma mark - Nvibar 滚动
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     if (scrollView.contentOffset.y > MIN_OFFSET && scrollView.contentOffset.y < kHeight/4) {
         self.view_barConstraint.constant = kHeight/4 - scrollView.contentOffset.y - 20;
+        self.backButton.alpha = 0;
     }
     if (scrollView.contentOffset.y < MIN_OFFSET) {
         self.view_barConstraint.constant = kHeight/4 + fabs(scrollView.contentOffset.y) - 20;
     }
     if (scrollView.contentOffset.y > kHeight/4) {
         self.view_barConstraint.constant = 0;
+        self.backButton.alpha = 0.7;
     }
 
 }
 
 
+#pragma mark - 刷新
 
+-(void)refreshInit {
+    refreshControl = [[UIRefreshControl alloc] init];
 
+    [refreshControl addTarget:self.homePageTableView action:@selector(refreshAction) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:refreshControl];
+    
+    [self loadData];
+}
+
+-(void)refreshAction {
+    if (!isLoading) {
+        return;
+    }
+    [[WLLHomePageDataManager shareInstance] requestHomePageDataWithUrl:kHomePageUrl didFinished:^{
+        [self.homePageTableView reloadData];
+    }];
+    isLoading = NO;
+}
+
+-(void)loadData {
+
+    
+}
 
 
 

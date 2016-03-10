@@ -13,6 +13,7 @@
 #import "WLLHomePageUrlHeader.h"
 #import "WLLSeekViewController.h"
 #import "WLLPlaneHotelViewController.h"
+#import "WLLTodayViewController.h"
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)
 
@@ -55,25 +56,23 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 0) {
-        WLLSeekViewController *seekVC = [[WLLSeekViewController alloc] initWithNibName:@"WLLSeekViewController" bundle:nil];
-        seekVC.index = indexPath.row;
-        
+//    if (indexPath.row == 0) {
+//        WLLSeekViewController *seekVC = [[WLLSeekViewController alloc] initWithNibName:@"WLLSeekViewController" bundle:nil];
+//        seekVC.index = indexPath.row;
+//        
+////    [self registerSeekNotification];
+//    }
+    
+//    if (indexPath.row == 2) {
+//        WLLPlaneHotelViewController *PHVC = [[WLLPlaneHotelViewController alloc] initWithNibName:@"WLLPlaneHotelViewController" bundle:nil];
+//        PHVC.index = indexPath.row;
+//        
+////        [self registerPlaneHotelNotification];
+//    }
+    
+    [WLLHomePageDataManager shareInstance].index = indexPath.row;
+    [WLLHomePageDataManager shareInstance].path = 4;
     [self registerSeekNotification];
-    }
-    
-    if (indexPath.row == 2) {
-        WLLPlaneHotelViewController *PHVC = [[WLLPlaneHotelViewController alloc] initWithNibName:@"WLLPlaneHotelViewController" bundle:nil];
-        PHVC.index = indexPath.row;
-        
-        [self registerPlaneHotelNotification];
-    }
-
-    
-    
-
-    
-    
 }
 
 // 找攻略
@@ -83,11 +82,11 @@
 }
 
 // 机+酒
--(void)registerPlaneHotelNotification {
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(seekAction) name:@"planeHotel" object:nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"planeHotel" object:nil];
-}
+//-(void)registerPlaneHotelNotification {
+//    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(seekAction) name:@"planeHotel" object:nil];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"planeHotel" object:nil];
+//}
 
 -(void)seekAction {
     

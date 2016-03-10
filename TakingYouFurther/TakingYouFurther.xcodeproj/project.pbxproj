@@ -52,6 +52,9 @@
 		C26E9BFF1C887A57001EACFB /* WLLGuidanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9BFD1C887A57001EACFB /* WLLGuidanceTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C26E9C031C8889DE001EACFB /* WLLPopDstinationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26E9C011C8889DE001EACFB /* WLLPopDstinationTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		C26E9C041C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9C021C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C28AA87F1C91063D003FEBA1 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = C28AA87E1C91063D003FEBA1 /* cat.png */; settings = {ASSET_TAGS = (); }; };
+		C28AA8811C9126F8003FEBA1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = C28AA8801C9126F8003FEBA1 /* back.png */; settings = {ASSET_TAGS = (); }; };
+		C28AA8A91C917F71003FEBA1 /* take.png in Resources */ = {isa = PBXBuildFile; fileRef = C28AA8A81C917F71003FEBA1 /* take.png */; settings = {ASSET_TAGS = (); }; };
 		C2907F3F1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2907F3D1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		C2907F401C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2907F3E1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C2907F441C892C7E0029A367 /* WLLReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2907F421C892C7E0029A367 /* WLLReviewTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -191,6 +194,9 @@
 		C26E9C001C8889DE001EACFB /* WLLPopDstinationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPopDstinationTableViewCell.h; sourceTree = "<group>"; };
 		C26E9C011C8889DE001EACFB /* WLLPopDstinationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPopDstinationTableViewCell.m; sourceTree = "<group>"; };
 		C26E9C021C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPopDstinationTableViewCell.xib; sourceTree = "<group>"; };
+		C28AA87E1C91063D003FEBA1 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		C28AA8801C9126F8003FEBA1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		C28AA8A81C917F71003FEBA1 /* take.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take.png; sourceTree = "<group>"; };
 		C2907F3C1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLRecommendDestinationTableViewCell.h; sourceTree = "<group>"; };
 		C2907F3D1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLRecommendDestinationTableViewCell.m; sourceTree = "<group>"; };
 		C2907F3E1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLRecommendDestinationTableViewCell.xib; sourceTree = "<group>"; };
@@ -491,7 +497,10 @@
 				C2431F2F1C846B870061FAB1 /* WLLHomePageViewController.h */,
 				C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */,
 				C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */,
+				C28AA8A81C917F71003FEBA1 /* take.png */,
 				C2471F181C8AF55D001042A8 /* 1.png */,
+				C28AA87E1C91063D003FEBA1 /* cat.png */,
+				C28AA8801C9126F8003FEBA1 /* back.png */,
 				C2431F341C846BBE0061FAB1 /* WLLDestinationViewController.h */,
 				C2431F351C846BBE0061FAB1 /* WLLDestinationViewController.m */,
 				C2431F361C846BBE0061FAB1 /* WLLDestinationViewController.xib */,
@@ -761,12 +770,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A6858B1C8FBEDD00E18581 /* Mar.json in Resources */,
+				C28AA8811C9126F8003FEBA1 /* back.png in Resources */,
 				C2431F191C8468A90061FAB1 /* File1 in Resources */,
 				C214DBC51C872A2C000C269E /* WLLGuidanceCollectionViewCell.xib in Resources */,
 				C2A6858F1C8FBEDD00E18581 /* Apr.json in Resources */,
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2A685731C8FB99900E18581 /* CTD.json in Resources */,
 				C2907F451C892C7E0029A367 /* WLLReviewTableViewCell.xib in Resources */,
+				C28AA8A91C917F71003FEBA1 /* take.png in Resources */,
 				C2431F1F1C8468C60061FAB1 /* File4 in Resources */,
 				C2A685781C8FB99900E18581 /* PJD.json in Resources */,
 				C2A685901C8FBEDD00E18581 /* Aug.json in Resources */,
@@ -790,6 +801,7 @@
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
 				C2A6857B1C8FB99900E18581 /* QM.json in Resources */,
+				C28AA87F1C91063D003FEBA1 /* cat.png in Resources */,
 				C26E9BF31C886CF3001EACFB /* WLLFistTableViewCell.xib in Resources */,
 				C2A685741C8FB99900E18581 /* DB.json in Resources */,
 				C2431F291C8468EE0061FAB1 /* dsfg in Resources */,

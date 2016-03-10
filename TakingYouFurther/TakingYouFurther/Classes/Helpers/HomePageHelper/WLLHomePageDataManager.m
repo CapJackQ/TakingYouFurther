@@ -34,6 +34,8 @@
 
 @property (nonatomic, strong) NSMutableArray *monthDataArray;
 
+@property (nonatomic, strong) NSMutableArray *reviewArray;
+
 @end
 
 static WLLHomePageDataManager *manager = nil;
@@ -169,6 +171,13 @@ static WLLHomePageDataManager *manager = nil;
         _monthDataArray = [NSMutableArray array];
     }
     return _monthDataArray;
+}
+
+-(NSMutableArray *)reviewArray {
+    if (!_reviewArray) {
+        _reviewArray = [NSMutableArray array];
+    }
+    return _reviewArray;
 }
 
 #pragma mark - 解析 HomePage 数据
@@ -437,5 +446,45 @@ static WLLHomePageDataManager *manager = nil;
     WLLMoreCheckModel *model = self.moreCheckArray[index];
     return model;
 }
+
+#pragma mark - 往期回顾
+
+-(void)requestReviewDataWithUrl:(NSString *)url finished:(void (^)())finished {
+    [BC_NetTools sessionDataWithUrl:url HttpMethod:@"get" HttpBody:nil revokeBlock:^(NSData *data) {
+        
+        [self.reviewArray removeAllObjects];
+        
+        NSError *error = nil;
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+        NSLog(@"%@", error);
+        if (dict == nil) {
+            return ;
+        }
+        
+        NSDictionary *dataDict = dict[@"data"];
+        
+        NSArray *listArray = dataDict[@"list"];
+        
+        for (NSDictionary *dict in listArray) {
+            Model *model = [[Model alloc] init];
+            [model setValuesForKeysWithDictionary:dict];
+            [self.reviewArray addObject:model];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            finished();
+        });
+    }];
+}
+
+-(NSInteger)countOfReviewArray {
+    return self.reviewArray.count;
+}
+
+-(Model *)modelWithIndex:(NSInteger)index {
+    Model *model = self.reviewArray[index];
+    return model;
+}
+
 
 @end

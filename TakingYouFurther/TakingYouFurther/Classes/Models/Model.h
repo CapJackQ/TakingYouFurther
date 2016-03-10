@@ -10,4 +10,8 @@
 
 @interface Model : NSObject
 @property (nonatomic, copy) NSString *style;
+
+// 往期回顾
+@property (nonatomic, copy) NSString *img_url;
+@property (nonatomic, copy) NSString *jump_url;
 @end

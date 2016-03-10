@@ -15,6 +15,8 @@
 @class WLLMoreOverModel;
 @class WLLMoreCheckModel;
 @class WLLBoracayIslandModel;
+@class Model;
+
 
 @interface WLLHomePageDataManager : NSObject
 
@@ -26,6 +28,8 @@
 @property (nonatomic, assign) NSInteger index;
 
 @property (nonatomic, assign) NSInteger path;
+
+@property (nonatomic, assign) NSInteger month;
 
 /**
  *  单例
@@ -139,5 +143,13 @@
 -(NSInteger)countOfMonthDataArray;
 -(WLLBoracayIslandModel *)monthModelWithIndex:(NSInteger)index;
 
+
+/*----------------------------------往期回顾-----------------------------*/
+
+-(void)requestReviewDataWithUrl:(NSString *)url finished:(void(^)())finished;
+
+-(NSInteger)countOfReviewArray;
+
+-(Model *)modelWithIndex:(NSInteger)index;
 
 @end

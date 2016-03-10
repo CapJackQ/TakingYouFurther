@@ -60,8 +60,9 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     [WLLHomePageDataManager shareInstance].path = 1;
+    [WLLHomePageDataManager shareInstance].month = indexPath.row;
     [WLLHomePageDataManager shareInstance].index = indexPath.row;
-    NSLog(@"00 %ld",[WLLHomePageDataManager shareInstance].index);
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(action) name:@"recommend" object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"recommend" object:nil];

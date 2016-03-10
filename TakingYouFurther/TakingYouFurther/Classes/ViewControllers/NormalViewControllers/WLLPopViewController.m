@@ -72,6 +72,7 @@
 #pragma mark - 显示系统 NavigationBar
 -(void)setNaviBarHidden:(BOOL)isHidden {
     self.navigationController.navigationBarHidden = isHidden;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -81,12 +82,18 @@
     self.departureButton.selected = NO;
     self.filteButton.selected = NO;
     self.ensureButton.hidden = YES;
+//    self.mainTableView.hidden = YES;
+    self.thirdTableView.hidden = YES;
+    self.secondTableView.hidden = YES;
     
-    self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+    self.firstTableView.frame = CGRectMake(0, 64+48, 0, 0);
     self.secondTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
     self.thirdTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
-    self.mainTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
 }
+
+
+
+
 
 #pragma mark - UITableView Delegate
 
@@ -164,26 +171,26 @@
 - (IBAction)clickAllTypeAction:(UIButton *)sender {
     
     if (sender.selected == NO) {
-
+        
+        
         self.departureButton.selected = NO;
         self.filteButton.selected = NO;
-        
         self.ensureButton.hidden = YES;
         sender.selected = YES;
         
-//        self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
-        [UIView animateWithDuration:0.5 animations:^{
-
-            self.mainTableView.hidden = YES;
+        self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+        [UIView animateWithDuration:1 animations:^{
+            
             self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, kHeight);
+
         }];
         
     
     } else {
         [UIView animateWithDuration:0.5 animations:^{
-            self.firstTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+            
         } completion:^(BOOL finished) {
-            self.mainTableView.hidden = NO;
+            
         }];
         sender.selected = NO;
     }
@@ -196,21 +203,16 @@
         self.filteButton.selected = NO;
         self.ensureButton.hidden = YES;
         sender.selected = YES;
-        
-//        self.secondTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+       
         
         [UIView animateWithDuration:0.5 animations:^{
             
-            self.mainTableView.hidden = YES;
-            self.mainTableView.frame = CGRectMake(0, kHeight, kWidth, 0);
-            self.secondTableView.frame = CGRectMake(0, 64+48, kWidth, kHeight);
         }];
         
     } else {
 
         [UIView animateWithDuration:0.5 animations:^{
-            self.secondTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
-            self.mainTableView.frame = CGRectMake(0, 64+48, kWidth, kHeight);
+        
         } completion:^(BOOL finished) {
             
         }];
@@ -226,20 +228,18 @@
         self.typeButton.selected = NO;
         self.departureButton.selected = NO;
         self.ensureButton.hidden = NO;
-        self.mainTableView.hidden = YES;
         
-//        self.thirdTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+
         [UIView animateWithDuration:0.5 animations:^{
-            self.thirdTableView.frame = CGRectMake(0, 64+48, kWidth, kHeight);
+            
         }];
         
     } else {
         
         [UIView animateWithDuration:0.5 animations:^{
-            self.thirdTableView.frame = CGRectMake(0, 64+48, kWidth, 0);
+            
         } completion:^(BOOL finished) {
             self.ensureButton.hidden = YES;
-            self.mainTableView.hidden = NO;
         }];
         sender.selected = NO;
         

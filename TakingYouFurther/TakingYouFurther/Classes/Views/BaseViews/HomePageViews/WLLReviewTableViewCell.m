@@ -8,6 +8,7 @@
 
 #import "WLLReviewTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "Model.h"
 
 @interface WLLReviewTableViewCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *reviewImage;
@@ -19,7 +20,12 @@
 - (void)awakeFromNib {
     // Initialization code
     
-    [self.reviewImage sd_setImageWithURL:[NSURL URLWithString:@"http://file101.mafengwo.net/s8/M00/61/46/wKgBpVWSUeGAcbCmAABYy7jpfww72.jpeg"]];
+}
+
+-(void)setModel:(Model *)model {
+    _model = model;
+    
+    [self.reviewImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", model.img_url]]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

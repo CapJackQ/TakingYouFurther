@@ -67,7 +67,10 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     WLLRecommendViewController *recoVC = [[WLLRecommendViewController alloc] initWithNibName:@"WLLRecommendViewController" bundle:nil];
+    [WLLHomePageDataManager shareInstance].path = 1;
     [WLLHomePageDataManager shareInstance].index = indexPath.row;
+    [WLLHomePageDataManager shareInstance].month = indexPath.row;
+    NSLog(@"%ld", indexPath.row);
     [self.navigationController pushViewController:recoVC animated:YES];
 }
 

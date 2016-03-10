@@ -11,7 +11,10 @@
  *  往期专题回顾
  */
 #import <UIKit/UIKit.h>
+@class Model;
 
 @interface WLLReviewTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) Model *model;
 
 @end
