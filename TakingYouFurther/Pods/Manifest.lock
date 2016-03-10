@@ -1,0 +1,14 @@
+PODS:
+  - AVOSCloudCrashReportingDynamic (3.2.1):
+    - AVOSCloudDynamic
+  - AVOSCloudDynamic (3.2.1)
+
+DEPENDENCIES:
+  - AVOSCloudCrashReportingDynamic
+  - AVOSCloudDynamic
+
+SPEC CHECKSUMS:
+  AVOSCloudCrashReportingDynamic: deadfe36d8297c8597dd266a045452b6845b1e58
+  AVOSCloudDynamic: bb035a303904c717461df26e42f81c5a88d9e375
+
+COCOAPODS: 0.39.0
