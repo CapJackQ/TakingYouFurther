@@ -159,8 +159,7 @@
     
     WLLTodayViewController *todayVC = [[WLLTodayViewController alloc] initWithNibName:@"WLLTodayViewController" bundle:nil];
     
-    [WLLHomePageDataManager shareInstance].index = 2;
-    todayVC.index = indexPath.row;
+    [WLLHomePageDataManager shareInstance].index = indexPath.row;
     [self.navigationController pushViewController:todayVC animated:YES];
 }
 

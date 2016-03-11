@@ -36,6 +36,7 @@
     
 }
 
+// 加载今日页面
 -(void)loadTodayNotes {
     
     WLLTodayNotesModel *model = [[WLLHomePageDataManager shareInstance] todayNotesModelWithIndex:self.index];
@@ -43,7 +44,7 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:model.jump_url]]];
 }
 
-// 加载热门推荐 目的地
+// 加载推荐 目的地
 -(void)loadRecommend {
     NSInteger path = [WLLHomePageDataManager shareInstance].index;
     NSInteger month = [WLLHomePageDataManager shareInstance].month;
@@ -316,7 +317,7 @@
                 [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11078"]]];
                 break;
         }
-    }
+}
     // 7月
     if (month == 6) {
         switch (path) {
@@ -358,50 +359,351 @@
                 break;
         }
     }
+    // 8月
+    if (month == 7) {
+        switch (path) {
+            case 0:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11340"]]];
+                break;
+            case 1:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10417"]]];
+                break;
+            case 2:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10061"]]];
+                break;
+            case 3:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10219"]]];
+                break;
+            case 4:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10444"]]];
+                break;
+            case 5:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10439"]]];
+                break;
+            case 6:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10489"]]];
+                break;
+            case 7:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10817"]]];
+                break;
+            case 8:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=26480"]]];
+                break;
+            case 9:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=14103"]]];
+                break;
+            case 10:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10240"]]];
+                break;
+            case 11:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10442"]]];
+                break;
+            case 12:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10732"]]];
+                break;
+            case 13:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10072"]]];
+                break;
+            case 14:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10039"]]];
+                break;
+            case 15:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=17993"]]];
+                break;
+            case 16:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=14103"]]];
+                break;
+            case 17:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=13295"]]];
+                break;
+            case 18:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=55762"]]];
+                break;
+            case 19:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10414"]]];
+                break;
+            case 20:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10136"]]];
+                break;
+        }
+    }
+    // 9月
+    if (month == 8) {
+        switch (path) {
+            case 0:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=12522"]]];
+                break;
+            case 1:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=23039"]]];
+                break;
+            case 2:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10774"]]];
+                break;
+            case 3:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=16876"]]];
+                break;
+            case 4:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10170"]]];
+                break;
+            case 5:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11046"]]];
+                break;
+            case 6:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10124"]]];
+                break;
+            case 7:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10168"]]];
+                break;
+            case 8:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10130"]]];
+                break;
+            case 9:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10010"]]];
+                break;
+            case 10:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11221"]]];
+                break;
+            case 11:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10889"]]];
+                break;
+            case 12:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10063"]]];
+                break;
+        }
+    }
+    // 10月
+    if (month == 9) {
+        switch (path) {
+            case 0:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10035"]]];
+                break;
+            case 1:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10222"]]];
+                break;
+            case 2:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10130"]]];
+                break;
+            case 3:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10088"]]];
+                break;
+            case 4:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10061"]]];
+                break;
+            case 5:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10381"]]];
+                break;
+            case 6:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10544"]]];
+                break;
+            case 7:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=14786"]]];
+                break;
+            case 8:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=17019"]]];
+                break;
+            case 9:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10462"]]];
+                break;
+            case 10:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10732"]]];
+                break;
+            case 11:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10651"]]];
+                break;
+            case 12:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11660"]]];
+                break;
+            case 13:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10584"]]];
+                break;
+            case 14:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=13287"]]];
+                break;
+            case 15:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10573"]]];
+                break;
+            case 16:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=16112"]]];
+                break;
+            case 17:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10664"]]];
+                break;
+        }
+    }
+    // 11月
+    if (month == 10) {
+        switch (path) {
+            case 0:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10819"]]];
+                break;
+            case 1:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10746"]]];
+                break;
+            case 2:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10132"]]];
+                break;
+            case 3:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10186"]]];
+                break;
+            case 4:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11045"]]];
+                break;
+            case 5:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10035"]]];
+                break;
+            case 6:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10030"]]];
+                break;
+            case 7:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10737"]]];
+                break;
+            case 8:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10208"]]];
+                break;
+            case 9:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10427"]]];
+                break;
+            case 10:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10206"]]];
+                break;
+            case 11:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11047"]]];
+                break;
+            case 12:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10207"]]];
+                break;
+            case 13:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10169"]]];
+                break;
+            case 14:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10651"]]];
+                break;
+            case 15:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10095"]]];
+                break;
+            case 16:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10547"]]];
+                break;
+            case 17:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10099"]]];
+                break;
+        }
+    }
+    // 12月
+    if (month == 11) {
+        switch (path) {
+            case 0:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10244"]]];
+                break;
+            case 1:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10448"]]];
+                break;
+            case 2:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=64689"]]];
+                break;
+            case 3:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10030"]]];
+                break;
+            case 4:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10855"]]];
+                break;
+            case 5:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10754"]]];
+                break;
+            case 6:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10127"]]];
+                break;
+            case 7:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10088"]]];
+                break;
+            case 8:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11327"]]];
+                break;
+            case 9:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10068"]]];
+                break;
+            case 10:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10651"]]];
+                break;
+            case 11:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=21669"]]];
+                break;
+            case 12:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10807"]]];
+                break;
+            case 13:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10072"]]];
+                break;
+            case 14:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10746"]]];
+                break;
+            case 15:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=13125"]]];
+                break;
+            case 16:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=21910"]]];
+                break;
+            case 17:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10927"]]];
+                break;
+            case 18:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10169"]]];
+                break;
+            case 19:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=18084"]]];
+                break;
+            case 20:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10140"]]];
+                break;
+            case 21:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10178"]]];
+                break;
+            case 22:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10189"]]];
+                break;
+        }
+    }
 }
 
+// 加载 热门目的地
 -(void)loadPopDest {
-    NSInteger path = self.index;
-    switch (path) {
-        case 0:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10156"]]];
-            break;
-        case 1:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10684"]]];
-            break;
-        case 2:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=13366"]]];
-            break;
-        case 3:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10128"]]];
-            break;
-        case 4:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10434"]]];
-            break;
-        case 5:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10807"]]];
-            break;
-        case 6:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10208"]]];
-            break;
-        case 7:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10035"]]];
-            break;
-        case 8:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10222"]]];
-            break;
-        case 9:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=11045"]]];
-            break;
-        case 10:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=10132"]]];
-            break;
-        default:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/nb/public/sharejump.php?type=10&id=12594"]]];
-            break;
+    NSInteger month = [WLLHomePageDataManager shareInstance].month;
+    NSInteger index = [WLLHomePageDataManager shareInstance].index;
+    // 第一个
+    if (month == 0) {
+        switch (index) {
+            case 0:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/359784.html?cid=1300"]]];
+                break;
+            case 1:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/354947.html?cid=1300"]]];
+                break;
+            case 2:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/346660.html?cid=1300"]]];
+                break;
+            case 3:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/358214.html?cid=1300"]]];
+                break;
+            case 4:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/310818.html?cid=1300"]]];
+                break;
+            case 5:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/318137.html?cid=1300"]]];
+                break;
+            case 6:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/365554.html?cid=1300"]]];
+                break;
+            case 7:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/365337.html?cid=1300"]]];
+                break;
+            case 8:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/365360.html?cid=1300"]]];
+                break;
+            case 9:
+                [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/sales/363938.html?cid=1300"]]];
+                break;
+        }
     }
-
-    
 }
 
 #pragma mark - 显示系统 NavigationBar
@@ -468,7 +770,7 @@
             [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.mafengwo.cn/wenda/"]]];
             break;
         default:
-            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://visa.mafengwo.cn"]]];
+            [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.mafengwo.cn/sales/visa/"]]];
             break;
     }
 }

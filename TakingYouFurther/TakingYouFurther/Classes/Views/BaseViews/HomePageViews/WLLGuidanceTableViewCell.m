@@ -11,8 +11,6 @@
 #import "WLLHomePageDataManager.h"
 #import "WLLGuidanceModel.h"
 #import "WLLHomePageUrlHeader.h"
-#import "WLLSeekViewController.h"
-#import "WLLPlaneHotelViewController.h"
 #import "WLLTodayViewController.h"
 
 #define kWidth CGRectGetWidth([UIScreen mainScreen].bounds)

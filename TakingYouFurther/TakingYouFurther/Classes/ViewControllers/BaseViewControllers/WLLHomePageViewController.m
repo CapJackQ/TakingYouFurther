@@ -23,9 +23,8 @@
 #import "WLLRecommendViewController.h"
 #import "WLLMoreOverViewController.h"
 #import "WLLMoreCheckViewController.h"
-#import "WLLSeekViewController.h"
 #import "WLLTodayViewController.h"
-#import "WLLPlaneHotelViewController.h"
+
 #import "Model.h"
 
 
@@ -76,7 +75,8 @@
     
     [self loadReviewData];
     
-    [self refreshInit];
+//    [self refreshInit];
+    
 }
 
 -(void)loadReviewData {
@@ -148,7 +148,7 @@
 -(void)setHeaderView {
     
     headerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight/4)];
-    UIImage *img = [UIImage imageNamed:@"take"];
+    UIImage *img = [UIImage imageNamed:@"header"];
     CGRect rect = CGRectMake(0, 0, 2000, 400);
     
     
@@ -353,26 +353,28 @@
 -(void)refreshInit {
     refreshControl = [[UIRefreshControl alloc] init];
 
-    [refreshControl addTarget:self.homePageTableView action:@selector(refreshAction) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:refreshControl];
-    
-    [self loadData];
+    [refreshControl addTarget:self action:@selector(refreshAction) forControlEvents:UIControlEventValueChanged];
+    [self.homePageTableView addSubview:refreshControl];
+
 }
 
 -(void)refreshAction {
-    if (!isLoading) {
+    if (isLoading) {
         return;
     }
-    [[WLLHomePageDataManager shareInstance] requestHomePageDataWithUrl:kHomePageUrl didFinished:^{
-        [self.homePageTableView reloadData];
-    }];
+    isLoading = YES;
+    [self performSelector:@selector(refreshData) withObject:nil afterDelay:1];
     isLoading = NO;
 }
 
--(void)loadData {
-
+-(void)refreshData {
     
+    [[WLLHomePageDataManager shareInstance] requestHomePageDataWithUrl:kHomePageUrl didFinished:^{
+        [self.homePageTableView reloadData];
+    }];
 }
+
+
 
 
 

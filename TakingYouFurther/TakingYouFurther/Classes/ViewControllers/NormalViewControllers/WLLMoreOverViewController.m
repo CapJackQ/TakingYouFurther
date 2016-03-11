@@ -74,7 +74,9 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     WLLPopViewController *popVC = [[WLLPopViewController alloc] initWithNibName:@"WLLPopViewController" bundle:nil];
-    [WLLHomePageDataManager shareInstance].index = indexPath.row;
+    [WLLHomePageDataManager shareInstance].path = 2;
+    [WLLHomePageDataManager shareInstance].month = indexPath.row;
+
     [self.navigationController pushViewController:popVC animated:YES];
 }
 

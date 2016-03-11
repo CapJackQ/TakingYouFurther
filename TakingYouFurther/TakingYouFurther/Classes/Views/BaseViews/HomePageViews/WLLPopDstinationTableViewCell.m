@@ -62,7 +62,8 @@
 // cell点击事件
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    [WLLHomePageDataManager shareInstance].index = indexPath.row;
+    [WLLHomePageDataManager shareInstance].path = 2;
+    [WLLHomePageDataManager shareInstance].month = indexPath.row;
     
     [self registerNotification];
 }

@@ -54,7 +54,6 @@
 		C26E9C041C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26E9C021C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C28AA87F1C91063D003FEBA1 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = C28AA87E1C91063D003FEBA1 /* cat.png */; settings = {ASSET_TAGS = (); }; };
 		C28AA8811C9126F8003FEBA1 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = C28AA8801C9126F8003FEBA1 /* back.png */; settings = {ASSET_TAGS = (); }; };
-		C28AA8A91C917F71003FEBA1 /* take.png in Resources */ = {isa = PBXBuildFile; fileRef = C28AA8A81C917F71003FEBA1 /* take.png */; settings = {ASSET_TAGS = (); }; };
 		C2907F3F1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2907F3D1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		C2907F401C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2907F3E1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C2907F441C892C7E0029A367 /* WLLReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2907F421C892C7E0029A367 /* WLLReviewTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -111,21 +110,11 @@
 		C2A685941C8FBEDD00E18581 /* Nov.json in Resources */ = {isa = PBXBuildFile; fileRef = C2A685881C8FBEDD00E18581 /* Nov.json */; settings = {ASSET_TAGS = (); }; };
 		C2A685951C8FBEDD00E18581 /* Oct.json in Resources */ = {isa = PBXBuildFile; fileRef = C2A685891C8FBEDD00E18581 /* Oct.json */; settings = {ASSET_TAGS = (); }; };
 		C2A685961C8FBEDD00E18581 /* Sep.json in Resources */ = {isa = PBXBuildFile; fileRef = C2A6858A1C8FBEDD00E18581 /* Sep.json */; settings = {ASSET_TAGS = (); }; };
-		C2A6859A1C8FE32400E18581 /* WLLOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A685981C8FE32400E18581 /* WLLOrderViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2A6859B1C8FE32400E18581 /* WLLOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A685991C8FE32400E18581 /* WLLOrderViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		C2A6859F1C8FE80D00E18581 /* WLLPlaneHotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A6859D1C8FE80D00E18581 /* WLLPlaneHotelViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2A685A01C8FE80D00E18581 /* WLLPlaneHotelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A6859E1C8FE80D00E18581 /* WLLPlaneHotelViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		C2A685A51C90032800E18581 /* WLLLoopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A685A31C90032800E18581 /* WLLLoopTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		C2A685A61C90032800E18581 /* WLLLoopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A685A41C90032800E18581 /* WLLLoopTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		C2A685AA1C90280700E18581 /* WLLDeatinationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A685A81C90280700E18581 /* WLLDeatinationTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		C2A685AB1C90280700E18581 /* WLLDeatinationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A685A91C90280700E18581 /* WLLDeatinationTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C2B039B91C8DC6CE00E1D394 /* WLLTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B039B71C8DC6CE00E1D394 /* WLLTodayViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2B039BA1C8DC6CE00E1D394 /* WLLTodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B039B81C8DC6CE00E1D394 /* WLLTodayViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C2B2D7501C8D4E8C00DF050A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B2D74F1C8D4E8C00DF050A /* Model.m */; settings = {ASSET_TAGS = (); }; };
 		C2C85A041C8C155C0092C6EB /* WLLMoreCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C85A021C8C155C0092C6EB /* WLLMoreCheckViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C2C85A051C8C155C0092C6EB /* WLLMoreCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C85A031C8C155C0092C6EB /* WLLMoreCheckViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		C2C85A2E1C8C35DE0092C6EB /* WLLSeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C85A2C1C8C35DE0092C6EB /* WLLSeekViewController.m */; settings = {ASSET_TAGS = (); }; };
-		C2C85A2F1C8C35DE0092C6EB /* WLLSeekViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C85A2D1C8C35DE0092C6EB /* WLLSeekViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,7 +185,6 @@
 		C26E9C021C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPopDstinationTableViewCell.xib; sourceTree = "<group>"; };
 		C28AA87E1C91063D003FEBA1 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		C28AA8801C9126F8003FEBA1 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		C28AA8A81C917F71003FEBA1 /* take.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take.png; sourceTree = "<group>"; };
 		C2907F3C1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLRecommendDestinationTableViewCell.h; sourceTree = "<group>"; };
 		C2907F3D1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLRecommendDestinationTableViewCell.m; sourceTree = "<group>"; };
 		C2907F3E1C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLRecommendDestinationTableViewCell.xib; sourceTree = "<group>"; };
@@ -284,18 +272,6 @@
 		C2A685881C8FBEDD00E18581 /* Nov.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Nov.json; sourceTree = "<group>"; };
 		C2A685891C8FBEDD00E18581 /* Oct.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Oct.json; sourceTree = "<group>"; };
 		C2A6858A1C8FBEDD00E18581 /* Sep.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sep.json; sourceTree = "<group>"; };
-		C2A685971C8FE32400E18581 /* WLLOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLOrderViewController.h; sourceTree = "<group>"; };
-		C2A685981C8FE32400E18581 /* WLLOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLOrderViewController.m; sourceTree = "<group>"; };
-		C2A685991C8FE32400E18581 /* WLLOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLOrderViewController.xib; sourceTree = "<group>"; };
-		C2A6859C1C8FE80D00E18581 /* WLLPlaneHotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLPlaneHotelViewController.h; sourceTree = "<group>"; };
-		C2A6859D1C8FE80D00E18581 /* WLLPlaneHotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLPlaneHotelViewController.m; sourceTree = "<group>"; };
-		C2A6859E1C8FE80D00E18581 /* WLLPlaneHotelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLPlaneHotelViewController.xib; sourceTree = "<group>"; };
-		C2A685A21C90032800E18581 /* WLLLoopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLLoopTableViewCell.h; sourceTree = "<group>"; };
-		C2A685A31C90032800E18581 /* WLLLoopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLLoopTableViewCell.m; sourceTree = "<group>"; };
-		C2A685A41C90032800E18581 /* WLLLoopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLLoopTableViewCell.xib; sourceTree = "<group>"; };
-		C2A685A71C90280700E18581 /* WLLDeatinationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLDeatinationTableViewCell.h; sourceTree = "<group>"; };
-		C2A685A81C90280700E18581 /* WLLDeatinationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLDeatinationTableViewCell.m; sourceTree = "<group>"; };
-		C2A685A91C90280700E18581 /* WLLDeatinationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLDeatinationTableViewCell.xib; sourceTree = "<group>"; };
 		C2B039B61C8DC6CE00E1D394 /* WLLTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLTodayViewController.h; sourceTree = "<group>"; };
 		C2B039B71C8DC6CE00E1D394 /* WLLTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLTodayViewController.m; sourceTree = "<group>"; };
 		C2B039B81C8DC6CE00E1D394 /* WLLTodayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLTodayViewController.xib; sourceTree = "<group>"; };
@@ -304,9 +280,6 @@
 		C2C85A011C8C155C0092C6EB /* WLLMoreCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLMoreCheckViewController.h; sourceTree = "<group>"; };
 		C2C85A021C8C155C0092C6EB /* WLLMoreCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLMoreCheckViewController.m; sourceTree = "<group>"; };
 		C2C85A031C8C155C0092C6EB /* WLLMoreCheckViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLMoreCheckViewController.xib; sourceTree = "<group>"; };
-		C2C85A2B1C8C35DE0092C6EB /* WLLSeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLLSeekViewController.h; sourceTree = "<group>"; };
-		C2C85A2C1C8C35DE0092C6EB /* WLLSeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLLSeekViewController.m; sourceTree = "<group>"; };
-		C2C85A2D1C8C35DE0092C6EB /* WLLSeekViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WLLSeekViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,7 +470,6 @@
 				C2431F2F1C846B870061FAB1 /* WLLHomePageViewController.h */,
 				C2431F301C846B870061FAB1 /* WLLHomePageViewController.m */,
 				C2431F311C846B870061FAB1 /* WLLHomePageViewController.xib */,
-				C28AA8A81C917F71003FEBA1 /* take.png */,
 				C2471F181C8AF55D001042A8 /* 1.png */,
 				C28AA87E1C91063D003FEBA1 /* cat.png */,
 				C28AA8801C9126F8003FEBA1 /* back.png */,
@@ -515,7 +487,6 @@
 			isa = PBXGroup;
 			children = (
 				C2B039B01C8DC6A000E1D394 /* TodayWebView */,
-				C2C85A2A1C8C35DE0092C6EB /* GuidancePageViewController */,
 				C2907F921C89B22E0029A367 /* WLLPopViewController.h */,
 				C2907F931C89B22E0029A367 /* WLLPopViewController.m */,
 				C2907F941C89B22E0029A367 /* WLLPopViewController.xib */,
@@ -556,7 +527,6 @@
 		C2431F161C84687E0061FAB1 /* NormalViews */ = {
 			isa = PBXGroup;
 			children = (
-				C2A685A11C9002FA00E18581 /* GuidanceViews */,
 				C2431F281C8468EE0061FAB1 /* dsfg */,
 			);
 			path = NormalViews;
@@ -673,19 +643,6 @@
 			path = RecoData;
 			sourceTree = "<group>";
 		};
-		C2A685A11C9002FA00E18581 /* GuidanceViews */ = {
-			isa = PBXGroup;
-			children = (
-				C2A685A21C90032800E18581 /* WLLLoopTableViewCell.h */,
-				C2A685A31C90032800E18581 /* WLLLoopTableViewCell.m */,
-				C2A685A41C90032800E18581 /* WLLLoopTableViewCell.xib */,
-				C2A685A71C90280700E18581 /* WLLDeatinationTableViewCell.h */,
-				C2A685A81C90280700E18581 /* WLLDeatinationTableViewCell.m */,
-				C2A685A91C90280700E18581 /* WLLDeatinationTableViewCell.xib */,
-			);
-			path = GuidanceViews;
-			sourceTree = "<group>";
-		};
 		C2B039B01C8DC6A000E1D394 /* TodayWebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,22 +651,6 @@
 				C2B039B81C8DC6CE00E1D394 /* WLLTodayViewController.xib */,
 			);
 			path = TodayWebView;
-			sourceTree = "<group>";
-		};
-		C2C85A2A1C8C35DE0092C6EB /* GuidancePageViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C2C85A2B1C8C35DE0092C6EB /* WLLSeekViewController.h */,
-				C2C85A2C1C8C35DE0092C6EB /* WLLSeekViewController.m */,
-				C2C85A2D1C8C35DE0092C6EB /* WLLSeekViewController.xib */,
-				C2A685971C8FE32400E18581 /* WLLOrderViewController.h */,
-				C2A685981C8FE32400E18581 /* WLLOrderViewController.m */,
-				C2A685991C8FE32400E18581 /* WLLOrderViewController.xib */,
-				C2A6859C1C8FE80D00E18581 /* WLLPlaneHotelViewController.h */,
-				C2A6859D1C8FE80D00E18581 /* WLLPlaneHotelViewController.m */,
-				C2A6859E1C8FE80D00E18581 /* WLLPlaneHotelViewController.xib */,
-			);
-			path = GuidancePageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -777,7 +718,6 @@
 				C2431F011C84672B0061FAB1 /* LaunchScreen.storyboard in Resources */,
 				C2A685731C8FB99900E18581 /* CTD.json in Resources */,
 				C2907F451C892C7E0029A367 /* WLLReviewTableViewCell.xib in Resources */,
-				C28AA8A91C917F71003FEBA1 /* take.png in Resources */,
 				C2431F1F1C8468C60061FAB1 /* File4 in Resources */,
 				C2A685781C8FB99900E18581 /* PJD.json in Resources */,
 				C2A685901C8FBEDD00E18581 /* Aug.json in Resources */,
@@ -792,12 +732,10 @@
 				C2A685951C8FBEDD00E18581 /* Oct.json in Resources */,
 				C2A6857D1C8FB99900E18581 /* WGK.json in Resources */,
 				C214DBC01C872021000C269E /* WLLSearchedCollectionViewCell.xib in Resources */,
-				C2A6859B1C8FE32400E18581 /* WLLOrderViewController.xib in Resources */,
 				C2471F131C8AD3C7001042A8 /* WLLSearchViewController.xib in Resources */,
 				C26E9BA91C87E821001EACFB /* WLLPopDestinationCollectionViewCell.xib in Resources */,
 				C2A6858D1C8FBEDD00E18581 /* Jan.json in Resources */,
 				C2471F341C8B0621001042A8 /* WLLRecommendViewController.xib in Resources */,
-				C2A685A01C8FE80D00E18581 /* WLLPlaneHotelViewController.xib in Resources */,
 				C2431F381C846BBE0061FAB1 /* WLLDestinationViewController.xib in Resources */,
 				C2431EFE1C84672A0061FAB1 /* Assets.xcassets in Resources */,
 				C2A6857B1C8FB99900E18581 /* QM.json in Resources */,
@@ -817,9 +755,7 @@
 				C2471F391C8B106E001042A8 /* WLLMoreOverViewController.xib in Resources */,
 				C2A685931C8FBEDD00E18581 /* Jul.json in Resources */,
 				C2907F401C8925FE0029A367 /* WLLRecommendDestinationTableViewCell.xib in Resources */,
-				C2C85A2F1C8C35DE0092C6EB /* WLLSeekViewController.xib in Resources */,
 				C2A685961C8FBEDD00E18581 /* Sep.json in Resources */,
-				C2A685A61C90032800E18581 /* WLLLoopTableViewCell.xib in Resources */,
 				C2A685791C8FB99900E18581 /* PL.json in Resources */,
 				C26E9BA41C87D086001EACFB /* WLLTodayNotesTableViewCell.xib in Resources */,
 				C2431EF91C84672A0061FAB1 /* Main.storyboard in Resources */,
@@ -827,7 +763,6 @@
 				C26E9BFF1C887A57001EACFB /* WLLGuidanceTableViewCell.xib in Resources */,
 				C26E9C041C8889DE001EACFB /* WLLPopDstinationTableViewCell.xib in Resources */,
 				C26E9BAE1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.xib in Resources */,
-				C2A685AB1C90280700E18581 /* WLLDeatinationTableViewCell.xib in Resources */,
 				C2431F3D1C846BD60061FAB1 /* WLLUserViewController.xib in Resources */,
 				C2A6858E1C8FBEDD00E18581 /* May.json in Resources */,
 				C2431F331C846B870061FAB1 /* WLLHomePageViewController.xib in Resources */,
@@ -841,12 +776,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C85A2E1C8C35DE0092C6EB /* WLLSeekViewController.m in Sources */,
 				C2907F861C89534D0029A367 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C214DBC41C872A2C000C269E /* WLLGuidanceCollectionViewCell.m in Sources */,
 				C2B2D7501C8D4E8C00DF050A /* Model.m in Sources */,
 				C2907F801C89534D0029A367 /* SDWebImageManager.m in Sources */,
-				C2A6859A1C8FE32400E18581 /* WLLOrderViewController.m in Sources */,
 				C2907F7C1C89534D0029A367 /* SDWebImageCompat.m in Sources */,
 				C29260BD1C8EF62A008BEA92 /* WLLMoreOverModel.m in Sources */,
 				C2471F121C8AD3C7001042A8 /* WLLSearchViewController.m in Sources */,
@@ -854,7 +787,6 @@
 				C2907F4F1C89357A0029A367 /* WLLHomePageDataManager.m in Sources */,
 				C2907F7B1C89534D0029A367 /* SDImageCache.m in Sources */,
 				C2471F2E1C8B05FA001042A8 /* WLLRecommendCollectionViewCell.m in Sources */,
-				C2A685A51C90032800E18581 /* WLLLoopTableViewCell.m in Sources */,
 				C26E9C031C8889DE001EACFB /* WLLPopDstinationTableViewCell.m in Sources */,
 				C2907F821C89534D0029A367 /* UIButton+WebCache.m in Sources */,
 				C26E9BAD1C88141A001EACFB /* WLLRecommendDestinationCollectionViewCell.m in Sources */,
@@ -879,8 +811,6 @@
 				C26E9BFE1C887A57001EACFB /* WLLGuidanceTableViewCell.m in Sources */,
 				C2907F7F1C89534D0029A367 /* SDWebImageDownloaderOperation.m in Sources */,
 				C2471F0D1C8AA835001042A8 /* WLLMainTableViewCell.m in Sources */,
-				C2A6859F1C8FE80D00E18581 /* WLLPlaneHotelViewController.m in Sources */,
-				C2A685AA1C90280700E18581 /* WLLDeatinationTableViewCell.m in Sources */,
 				C2907F791C89534D0029A367 /* MKAnnotationView+WebCache.m in Sources */,
 				C214DBBF1C872021000C269E /* WLLSearchedCollectionViewCell.m in Sources */,
 				C26E9BA81C87E821001EACFB /* WLLPopDestinationCollectionViewCell.m in Sources */,
